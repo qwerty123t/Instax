@@ -1,0 +1,82 @@
+body {background-color: #F3F3F3;
+      color: #A3A3A3;}
+
+a{color: #A3A3A3;}
+
+h2{color: #111111;}
+
+button{color: #A3A3A3;}
+
+
+.third-heading {
+  border-color: #A3A3A3;}
+
+.fourth-heading {
+  border-color: #A3A3A3;}
+
+.fourth-heading p{
+color: #111111;}
+
+.fourth-heading svg{
+ fill: white;}
+
+.sidebar-left-top svg {
+ fill: #111111;}
+
+.sidebar-left-bottom .slogan {
+color: #111111;}
+
+
+
+.first_menu .active > a {
+color: #111111;}
+
+.menu_bottom{
+background-color: white;} 
+
+.help_menu .podcherkivanie{
+color: #111111;} 
+
+nav a:hover {
+color: black;}
+
+
+
+.polosa svg{
+ fill: #444444;}
+
+.center .div1 svg{
+ fill: #A3A3A3;}
+
+
+.center .plus circle{
+ fill: #111111;}
+
+.center .plus path{
+ fill: #F3F3F3;}
+
+.center .button{
+border: 1px solid #A3A3A3;}
+
+.center .button2{
+color:  #111111;}
+
+
+
+.description .beware{
+color: #111111;}
+
+.description .number-first{  
+color: #111111;
+}
+
+.description .number-second{   
+color: white;}
+
+
+.predposledniy .text::after svg circle{
+ fill: #111111;}
+
+
+.sidebar-right{
+background-color: white;} 

@@ -1,0 +1,701 @@
+@font-face {
+  font-family: 'DIN Pro';
+  src: url('font/DINPro.woff') format('woff');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'DIN Pro';
+  src: url('font/DINPro-Light.woff') format('woff');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'DIN Pro';
+  src: url('font/DINPro-Bold.woff') format('woff'); 
+  font-weight: 700;
+}
+
+* { margin: 0;
+    padding: 0;}
+
+body {  
+  font-size: 14px;
+  line-height: 1.4;
+  font-family: 'DIN Pro', 'Helvetica Neue', 'Helvetica', sans-serif;}
+
+p {
+font-family: 'DIN Pro', sans-serif;
+font-weight: 400;}
+
+
+
+
+
+.grid { 
+display: grid;
+gap: 0px;  
+grid-template-columns: 4.17vw 13.54vw 1.04vw 60.42vw 16.66vw 4.17vw;
+grid-template-rows: 7.40vh 11.11vh 31.48vh 27.77vh 22.24vh;}
+
+
+.first-heading {
+  grid-column: 4/5;
+  grid-row: 1/2;
+  border-bottom: 1px solid #DDDDDD;
+  display: flex; 
+  flex-direction: row; 
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+.first-heading p {
+  line-height: 18px;
+  margin-left: 1vw;
+  font-size: 12px; 
+  letter-spacing: -0.03em;}
+
+
+
+
+
+.second-heading {
+  grid-column: 5/-1;
+  grid-row: 1/2;  
+  border-bottom: 1px solid #DDDDDD;
+  display: flex; 
+  flex-direction: row; 
+  justify-content: space-between;
+  align-items: center;}
+
+
+
+.second-heading .change-theme{ 
+  font-family: 'Din Pro', sans-serif;
+  margin-left: 1vw;
+  border: none;
+  background: none;  
+  font-size: 14px; 
+  font-weight: 400;
+  letter-spacing: -0.03em; 
+  text-decoration: underline; 
+  text-underline-offset: 2px;}
+
+
+.second-heading .mobile{ 
+  margin-right: 1vw;
+  font-size: 14px;
+  font-weight: 400; 
+  letter-spacing: -0.03em;
+  text-decoration: underline; 
+  text-underline-offset: 2px;}
+
+
+
+
+
+.third-heading {
+  grid-column: 4/5;
+  grid-row: 2/3;
+  border-bottom: 3px solid #DDDDDD;
+  display: flex; 
+  flex-direction: row; 
+  align-items: center;}
+
+.third-heading h1{
+  margin-left: 1vw;
+  font-family: 'DIN Pro', sans-serif;
+  font-weight: 300; 
+  font-size: 80px;
+  letter-spacing: -0.09em;
+  color: #111111;}
+
+.third-heading span{
+  font-family: 'DIN Pro', sans-serif;
+  font-weight: 700; 
+  font-size: 80px;
+  letter-spacing: -0.09em;
+  color: #111111;}
+
+.third-heading p{
+font-size: 15px;
+line-height: 15px;
+align-self: flex-start;
+margin-top: 2vh;
+margin-left: 1vw;
+font-weight: 300;}
+
+
+
+
+
+
+
+.fourth-heading {
+  grid-column: 5/-1;
+  grid-row: 2/3;  
+  border-bottom: 3px solid #DDDDDD;
+  display: flex; 
+  flex-direction: row; 
+  justify-content: space-between;}
+
+
+.fourth-heading .price{
+font-size: 20px;
+line-height: 20px;
+width: 150px;
+margin-left: 1vw;
+white-space: nowrap; 
+margin-bottom: 3vh;}
+
+.fourth-heading .learn{
+font-size: 14px;
+white-space: nowrap; 
+line-height: 14px;
+letter-spacing: -0.03em; 
+align-self: center;
+text-decoration: none;
+position: absolute;
+transform: translateY(1vh);}
+
+
+.fourth-heading svg{
+align-self: flex-end;
+margin-right: 1vw;
+margin-top: 1vh;
+transform: translateY(1vh);}
+
+
+.fourth-heading .learn::after {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 25px;
+  content:url("data:image/svg+xml;utf8,<svg width='178' height='48' xmlns='http://www.w3.org/2000/svg'> <path fill='white' d='M156.18 6.18018L153.36 9.00018L166.34 22.0002L0 22.0002V26.0002H166.34L153.36 38.9801L156.18 41.8201L174 24.0002L156.18 6.18018Z'/></svg>");
+  height: 48px;
+  width: 178px;}
+
+.sidebar-left-top {
+  display: flex;
+  grid-column: 1/2;
+  grid-row: 1/4;   
+  border-right: 1px solid #DDDDDD;
+  flex-direction: column;
+  align-items: center;}
+
+.sidebar-left-top .logo {
+  margin-top: 3vh;
+  width: 2vw; }
+
+.sidebar-left-bottom {
+  display: flex;
+  grid-column: 1/2;
+  grid-row: 4/-1;   
+  border-right: 1px solid #DDDDDD;
+  flex-direction: column; 
+  justify-content: flex-end;
+  align-items: center;}
+
+  .sidebar-left-bottom .logo {
+  width: 0.8vw; 
+  margin-bottom: 3vh;
+  }
+
+
+
+
+
+
+
+  .menu_top {
+  width: 13.54vw; 
+  display: flex;
+  flex-direction: row;  
+  flex-wrap: wrap;
+  grid-column: 2/3;
+  grid-row: 1/4; 
+  border-bottom: 1px solid #DDDDDD;} 
+
+ .menu_top a {  
+  display: block;
+  width: 12vw; 
+  text-decoration: none;}
+
+
+  .first_menu {  
+  margin-top: 2.4vh;
+  margin-right: 1vw;
+  margin-left: auto;
+  list-style: none; 
+  text-underline-offset: 3px;  
+  text-align: right;}
+ 
+  .first_menu .sub-menu {
+  margin-top: 10px;
+  letter-spacing: -0.03em;
+  line-height: 140%;
+  font-size: 14px;
+  font-weight: 400;}
+
+.first_menu .active > a {
+  font-size: 20px; 
+  line-height: 20px;
+  text-decoration: underline; 
+  letter-spacing: -0.06em;
+  font-weight: 400;}
+
+.menu_top ul {
+  list-style: none;}
+
+  .second_menu {  
+  align-self: flex-end;
+  margin-left: 1.04vw;
+  margin-right: auto;
+  margin-bottom: 3.70vh;
+  list-style: none; 
+  letter-spacing: -0.03em;
+  line-height: 170%;
+  font-size: 12px;
+  font-weight: 400;}  
+
+
+
+
+
+
+
+  .menu_bottom {
+  grid-column: 2/3;
+  grid-row: 4/-1; 
+  display: flex;
+  flex-direction: row;  
+  flex-wrap: wrap;  
+  padding-top: 1vw;
+  padding-left: 1vw;
+  align-content: flex-start;
+  position: relative;}
+
+
+.menu_bottom li {
+  width: 11.45vw;}
+.menu_bottom a {
+  display: block;
+ text-decoration: none;}
+.menu_bottom ul {
+  list-style: none;}
+
+
+
+ .help_menu  .open {
+  font-size: 14px;}
+
+/*Чтобы подчеркивание былао только у Help*/
+.help_menu .podcherkivanie{
+  line-height: 180%;
+  border-bottom: 2px solid #DDDDDD;
+  position: relative;
+  font-weight: 500;} 
+
+.help_menu .podcherkivanie:after{
+  position: absolute;
+  content: "";
+  z-index: 1;
+  background-image: url("img/Arrow5.svg");
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  right: 0px;
+  top: 1px;} 
+
+
+  .help_menu .sub-menu { 
+  margin-top: 10px; 
+  font-size: 12px;
+  list-style: none;}
+
+  .help_menu .sub-menu a{  
+  margin-bottom: 3px;}
+
+
+
+
+/* Cелектор для подменю, если навести курсор на родительский элемент верхнего меню */
+.help_menu > li:hover .sub-menu {display: block;}
+
+
+
+  .other_menu {
+  height: 110px;
+  margin-top: 2vw;
+  list-style: none;}
+
+/*Чтобы полоса была только у родителя*/
+.other_menu > li{  
+  line-height: 180%;
+  border-bottom: 2px solid #DDDDDD;
+  position: relative;} 
+
+
+
+.other_menu > li:after{
+  position: absolute;
+  content: "";
+  z-index: 1;
+  background-image: url("img/Arrow5.svg");
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  right: 0px;
+  top: 1px;
+  transform: rotate(180deg);} 
+
+.other_menu:hover > li:after{
+  transform: rotate(0deg);
+  transition: all 0.3s;
+  transition-timing-function: ease-out;} 
+
+
+  .other_menu .sub-menu {  
+  line-height: 160%;  
+  color: #111111;
+  display: none;
+  font-size: 12px;
+  position: absolute;
+  z-index: 10;
+  list-style: none;
+  padding-top: 7px;
+}
+
+/* Cелектор для подменю, если навести курсор на родительский элемент верхнего меню */
+.other_menu  li:hover .sub-menu {display: block;  color: #111111;}
+
+
+
+.menu_bottom .copyright { 
+  writing-mode: vertical-lr;
+  margin-bottom: 3vh;
+  transform: scale(-1, -1);
+  position: absolute;
+  bottom: 0px;}
+
+
+
+
+  .line {
+  grid-column: 3/4;
+  grid-row: 1/-1;
+  border-left: 1px solid #DDDDDD;
+  border-right: 1px solid #DDDDDD;
+  display: flex;
+  align-items: flex-start;}
+
+  .polosa svg{
+  margin-top: 2.7vh;
+  margin-left: -0.6vw;}
+
+
+ 
+
+
+
+
+
+
+  .center {
+  grid-column: 4/5;  
+  grid-row: 3/-1;
+  border-right: 1px solid #DDDDDD;
+  display: flex; 
+  flex-direction: row;  
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+  align-items: flex-start; 
+  align-content: start;
+  position: relative;}
+
+
+  .center .div1{
+  margin-left: 1vw;  
+  margin-top: 1vw; 
+  display: flex; 
+  flex-direction: column;  
+  align-items: flex-start; 
+  margin-right: calc(60.42vw - 2vw - 320px - 100px);}
+
+
+  .center .small-description{
+  margin-top: 2vh;
+  width: 320px;
+  font-size: 14px; 
+  line-height: 140%;
+  letter-spacing: -0.03em;
+  font-weight: 400;}
+        
+
+
+  .center .div2{ 
+  margin-top: 1vw; 
+  margin-right: 1vw;
+  display: flex; 
+  flex-direction: column;  
+  flex-wrap: nowrap; 
+}
+
+
+  .div2 .div-buy{
+  display: flex; 
+  justify-content: flex-end;
+  height: 40px;}
+
+  .div-buy .buy{
+  font-size: 14px; 
+  line-height: 140%;
+  letter-spacing: -0.03em;
+  font-weight: 400;
+  text-decoration: underline;
+  text-underline-offset: 2px;}
+
+  .div-buy .plus{
+  align-self: flex-start;
+  margin-left: 5px; 
+  margin-top: 1px;}
+
+
+  .div2 .button{
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  margin-top: calc(2vh + 3px);
+  width: 95px;
+  height: 35px;
+  background: none;
+  }
+
+  .div2 .button2{
+  font-size: 15px; 
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  font-weight: 400;
+  margin-bottom: 3px;}
+
+  .div2 a{
+  text-decoration: none;}
+
+
+  .center .photo{
+  margin-left: 13vw;
+  margin-right: auto;
+  }
+  .center img{
+  max-width: 515px;
+  max-height: 60vh;}
+
+
+
+  .center .quiz{
+  display: flex; 
+  flex-direction: column;  
+  flex-wrap: nowrap; 
+  align-items: flex-end;  
+  text-align: right;
+  margin-top: calc(59.25vh);
+  margin-right: 1vw;
+  position: absolute;
+  right: 0;
+} 
+
+  .center .quiz-header{
+  font-size: 12px; 
+  line-height: 140%;
+  letter-spacing: -0.02em;
+  font-weight: 500; 
+  } 
+
+  .center .quiz-text{
+  margin-top: 1vh;
+  width: 230px;
+  font-size: 12px; 
+  line-height: 150%;
+  font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .description {
+  grid-column: 5/6;  
+  grid-row: 3/5;  
+  border-bottom: 1px solid #DDDDDD;
+  border-right: 1px solid #DDDDDD;
+  display: flex; 
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-between;
+  padding: 1vw;
+  }
+
+  
+  .description .top .beware{
+  font-size: 2vh; 
+  line-height: 120%;
+  letter-spacing: -0.06em;
+  font-weight: 400;
+  text-decoration: underline;  
+  text-underline-offset: 3px;
+  width: 220px;}
+
+ .description .top .video{  
+  display: flex;
+  margin-top: 3vh;
+  width: 14.66vw;
+  height: 8.38vw;
+  background-color: #eaeaea;
+  position: relative;}
+
+ .description .top .photo-in-video{  
+  width: 12vw;
+  align-self: flex-end;}
+
+ .description .top .triangle{ 
+  position: absolute;
+  z-index: 2;
+  top: 1vh;
+  left: 10vw;}
+
+
+
+ .description .bottom{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ .description .previous{  
+  width: 14vw;
+  padding-left: 0vw;
+  font-size: 14px; 
+  line-height: 100%;
+  letter-spacing: -0.06em;
+  font-weight: 400;
+  margin-bottom: 0.5vh;}
+
+  .description .number-first{  
+  width: 14.66vw;
+  font-size: 9.25vh; 
+  line-height: 7vh;
+  letter-spacing: -0.10em;
+  font-weight: 300;}
+
+  .description svg {   
+  margin-left: 6.25vw;
+  margin-right: 6.25vw;}
+
+  .description .next{  
+  align-self: end;
+  color: white;
+  width: 2.5vw;
+  margin-left: auto;}
+
+  .description .number-second{  
+  display: flex; 
+  margin-left: 0.5vw;
+  font-size: 18.50vh; 
+  line-height: 14vh;
+  letter-spacing: -0.10em;
+  font-weight: 300;}
+
+
+
+
+  .predposledniy {
+  grid-column: 5/6;  
+  grid-row: 5/-1;
+  border-right: 1px solid #DDDDDD;}
+
+  .predposledniy .now{
+  display: flex; 
+  justify-content: flex-end;
+  align-items: center;
+  height: 20px;
+  margin-top: 3vh; 
+  margin-right: 1vw;
+  margin-left: 1vw;x}
+
+  .predposledniy .text{
+  margin-right: 25px;
+  position: relative;
+  font-size: 14px; 
+  line-height: 140%;
+  letter-spacing: -0.03em;
+  font-weight: 400;
+  text-decoration: none;}
+
+.predposledniy .text::after {
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: -25px;
+  content:url("data:image/svg+xml;utf8,<svg width='21' height='21' xmlns='http://www.w3.org/2000/svg'><circle cx='10.5' cy='10.5' r='10.5'/><path fill='white' d='M14 11h-3v3h-1v-3H7v-1h3V7h1v3h3v1z'/></svg>");
+  /* background-image: url('img/small_circle.svg');background-size: 21px 21px;*/
+  height: 21px;
+  width: 21px;
+}
+
+/* 
+ .predposledniy .plus{
+  margin-left: 5px; 
+  align-self: center;
+ }
+ <a class="plus" href="#">
+ <svg width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10.5" cy="10.5" r="10.5"/><path d="M14 11h-3v3h-1v-3H7v-1h3V7h1v3h3v1z"/></svg>
+ </a>
+*/
+
+
+
+
+
+
+  .sidebar-right {
+  grid-column: 6/-1;
+  grid-row: 3/-1;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between;
+  align-items: center;}  
+
+
+.sidebar-right .top2{  
+margin-top: 1vw;
+display: flex; 
+flex-direction: column; 
+align-items: center;
+width: 2.34vw;}
+
+
+
+.sidebar-right .arrow3{
+margin-top: 6vh;}
+
+
+
+.sidebar-right .smm{
+width: 2.34vw;
+margin-bottom: 4.63vh;}
+
+.sidebar-right .smm img{
+margin-top: 4px;}
