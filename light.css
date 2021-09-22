@@ -1,4 +1,17 @@
-body {background-color: #F3F3F3;
+:root {
+  --basic-black: #000000;
+  --basic-extra-dark: #242424;
+  --basic-dark: #aba9a7;
+  --basic-neutral: #e5e5e5;
+  --basic-extra-light: #f8f5f2;
+  --basic-white: #ffffff;
+
+  --special: #663d15;
+}
+
+
+
+body {background-color: var(--basic-black);
       color: #A3A3A3;}
 
 a{color: #A3A3A3;}

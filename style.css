@@ -1,16 +1,22 @@
 @font-face {
   font-family: 'DIN Pro';
-  src: url('font/DINPro.woff') format('woff');
+  src: local('DIN Pro'),
+       url('font/DINPro.woff2') format('woff2'),
+       url('font/DINPro.woff') format('woff');
   font-weight: 400;
 }
 @font-face {
   font-family: 'DIN Pro';
-  src: url('font/DINPro-Light.woff') format('woff');
+  src: local('DIN Pro'),
+       url('font/DINPro-Light.woff2') format('woff2'),
+       url('font/DINPro-Light.woff') format('woff');
   font-weight: 300;
 }
 @font-face {
   font-family: 'DIN Pro';
-  src: url('font/DINPro-Bold.woff') format('woff'); 
+  src: local('DIN Pro'),
+       url('font/DINPro-Bold.woff2') format('woff2'),
+       url('font/DINPro-Bold.woff') format('woff'); 
   font-weight: 700;
 }
 
