@@ -13,80 +13,72 @@ body {background-color: var(--background);
 
 a{color: var(--grey);}
 
-h2{color: #111111;}
+h2{color: var(--black);}
 
 button{color: var(--grey);}
 
 
 .third-heading {
-  border-color: var(--grey);}
+border-color: var(--grey);}
 
 .fourth-heading {
-  border-color: var(--grey);}
+border-color: var(--grey);}
 
 .fourth-heading p{
-color: #111111;}
+color: var(--black);}
 
 .fourth-heading svg{
- fill: white;}
+fill: var(--full-white);}
 
 .sidebar-left-top svg {
- fill: #111111;}
+fill: var(--black);}
 
 .sidebar-left-bottom .slogan {
-color: #111111;}
+color: var(--black);}
 
 
 
 .first_menu .active > a {
-color: #111111;}
+color: var(--black);}
 
 .menu_bottom{
-background-color: white;} 
+background-color: var(--full-white);} 
 
 .help_menu .podcherkivanie{
-color: #111111;} 
+color: var(--black);} 
 
 nav a:hover {
-color: black;}
+color: var(--full-black);}
 
 
 
 .polosa svg{
  fill: var(--grey);}
 
-.center .div1 svg{
+.top-left-angle svg{
  fill: var(--grey);}
 
 
-.center .plus circle{
- fill: #111111;}
-
-.center .plus path{
- fill: #F3F3F3;}
-
-.center .button{
-border-color: var(--grey);}
-
-.center .button2{
-color:  #111111;}
+.top-right-angle__compare{
+border-color: var(--grey);
+color:  var(--black);}
 
 
 
 .description .beware{
-color: #111111;}
+color: var(--black);}
 
 .description .number-first{  
-color: #111111;
+color: var(--black);
 }
 
 .description .number-second{   
-color: white;}
+color: var(--full-white);}
 
 
 .predposledniy .text::after svg circle{
- fill: #111111;}
+ fill: var(--black);}
 
 
 .sidebar-right{
-background-color: white;} 
+background-color: var(--full-white);} 

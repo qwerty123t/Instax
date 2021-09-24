@@ -170,15 +170,20 @@ margin-right: 1vw;
 margin-top: 1vh;
 transform: translateY(1vh);}
 
+.fourth-heading svg::before {
+  padding-right: 7px;
+  font-size: 14px; color: #c1172c;
+  content: "learn more";}
 
-.fourth-heading .learn::after {
+
+/*.fourth-heading .learn::after {
   display: block;
   position: absolute;
   top: 0px;
   left: 25px;
   content:url("data:image/svg+xml;utf8,<svg width='178' height='48' xmlns='http://www.w3.org/2000/svg'> <path fill='white' d='M156.18 6.18018L153.36 9.00018L166.34 22.0002L0 22.0002V26.0002H166.34L153.36 38.9801L156.18 41.8201L174 24.0002L156.18 6.18018Z'/></svg>");
   height: 48px;
-  width: 178px;}
+  width: 178px;}*/
 
 .sidebar-left-top {
   display: flex;
@@ -419,7 +424,7 @@ transform: translateY(1vh);}
   position: relative;}
 
 
-  .center .div1{
+  .top-left-angle{
   margin-left: 1vw;  
   margin-top: 1vw; 
   display: flex; 
@@ -428,7 +433,7 @@ transform: translateY(1vh);}
   margin-right: calc(60.42vw - 2vw - 320px - 100px);}
 
 
-  .center .small-description{
+  .top-left-angle__description{
   margin-top: 2vh;
   width: 320px;
   font-size: 14px; 
@@ -438,35 +443,45 @@ transform: translateY(1vh);}
         
 
 
-  .center .div2{ 
+  
+  
+  
+  
+  
+  .top-right-angle{ 
   margin-top: 1vw; 
   margin-right: 1vw;
   display: flex; 
   flex-direction: column;  
   flex-wrap: nowrap; 
+  align-items: flex-end;
 }
 
 
-  .div2 .div-buy{
-  display: flex; 
-  justify-content: flex-end;
-  height: 40px;}
-
-  .div-buy .buy{
+  .top-right-angle__buy{
   font-size: 14px; 
   line-height: 140%;
   letter-spacing: -0.03em;
   font-weight: 400;
   text-decoration: underline;
-  text-underline-offset: 2px;}
+  text-underline-offset: 2px;
+  margin-right: 25px;
+  position: relative;
+  border: none;
+  text-decoration: none;}
 
-  .div-buy .plus{
-  align-self: flex-start;
-  margin-left: 5px; 
-  margin-top: 1px;}
+  .top-right-angle__buy::after {
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: -25px;
+    content:url("data:image/svg+xml;utf8,<svg width='21' height='21' xmlns='http://www.w3.org/2000/svg'><circle cx='10.5' cy='10.5' r='10.5'/><path fill='white' d='M14 11h-3v3h-1v-3H7v-1h3V7h1v3h3v1z'/></svg>");
+    height: 21px;
+    width: 21px;
+  }
 
 
-  .div2 .button{
+  .top-right-angle__compare{
   display: flex; 
   justify-content: center;
   align-items: center;
@@ -475,17 +490,12 @@ transform: translateY(1vh);}
   height: 35px;
   background: none;
   border: 1px solid;
-  }
-
-  .div2 .button2{
   font-size: 15px; 
   line-height: 100%;
   letter-spacing: -0.03em;
   font-weight: 400;
-  margin-bottom: 3px;}
+  }
 
-  .div2 a{
-  text-decoration: none;}
 
 
   .center .photo{
@@ -631,9 +641,7 @@ transform: translateY(1vh);}
   .predposledniy {
   grid-column: 5/6;  
   grid-row: 5/-1;
-  border-right: 1px solid #DDDDDD;}
-
-  .predposledniy .now{
+  border-right: 1px solid #DDDDDD;
   display: flex; 
   justify-content: flex-end;
   align-items: center;
@@ -657,22 +665,9 @@ transform: translateY(1vh);}
   top: 0px;
   right: -25px;
   content:url("data:image/svg+xml;utf8,<svg width='21' height='21' xmlns='http://www.w3.org/2000/svg'><circle cx='10.5' cy='10.5' r='10.5'/><path fill='white' d='M14 11h-3v3h-1v-3H7v-1h3V7h1v3h3v1z'/></svg>");
-  /* background-image: url('img/small_circle.svg');background-size: 21px 21px;*/
   height: 21px;
   width: 21px;
 }
-
-/* 
- .predposledniy .plus{
-  margin-left: 5px; 
-  align-self: center;
- }
- <a class="plus" href="#">
- <svg width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10.5" cy="10.5" r="10.5"/><path d="M14 11h-3v3h-1v-3H7v-1h3V7h1v3h3v1z"/></svg>
- </a>
-*/
-
-
 
 
 
