@@ -474,6 +474,7 @@ transform: translateY(1vh);}
   width: 95px;
   height: 35px;
   background: none;
+  border: 1px solid;
   }
 
   .div2 .button2{
