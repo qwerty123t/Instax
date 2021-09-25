@@ -250,9 +250,11 @@ position: relative;}
    list-style: none; 
    text-align: right;}
 
-  .menu-top__menu1 li:first-child { 
+   .menu-top .menu-top__menu1_header { 
   text-decoration: underline;  
-  text-underline-offset: 3px;}
+  text-underline-offset: 3px;
+  color: #111111;
+  margin-bottom: 5px;}
 
   .menu-top__menu2 { 
   list-style: none; }
@@ -267,7 +269,8 @@ position: relative;}
   flex-direction: row;  
   flex-wrap: wrap; 
   display: block; 
-  padding: 1vw 1vw 3.5vh 1vw;}
+  padding: 1vw 1vw 3.5vh 1vw;
+  background-color: #FFFFFF;}
 
   .menu-bottom__menu3 {  
     list-style: none;}
@@ -278,20 +281,68 @@ position: relative;}
     font-size: 15px;
     color: #111111;
     border-bottom: 2px solid #DDDDDD;
-    margin-bottom: 5px;}
+    margin-bottom: 5px;
+    position: relative;}
+
+    .menu-bottom__menu3_header:after{
+    position: absolute;
+    content: "";
+    z-index: 1;
+    background-image: url("img/Arrow5.svg");
+    background-repeat: no-repeat;
+    height: 24px;
+    width: 24px;
+    right: 0px;
+    top: 1px;
+    transform: rotate(180deg);
+    transition: all 0.3s;
+    transition-timing-function: ease-out;} 
 
 
+ 
+
+
+
+/*
   .menu-bottom__menu4 { 
     margin-top: 50px; 
-    list-style: none;}
+    list-style: none;z-index: -5;}
   .menu-bottom__menu4 a{
-    display: block; 
+    display: block;
     text-decoration: none;}
-  .menu-bottom__menu4_header {  
+    .menu-bottom__menu4 .menu-bottom__menu4_header { 
+    opacity: 1;
+    z-index: 5;
+    display: block;
     font-size: 15px;
     color: #111111;
     border-bottom: 2px solid #DDDDDD;
     margin-bottom: 5px;}
+
+    /*.menu-bottom__menu4_sub-menu { 
+      opacity: 0;}
+    /*.menu-bottom__menu4 .menu-bottom__menu4_sub-menu a{
+      display: none;}
+   /*Cелектор для подменю, если навести курсор на родительский элемент верхнего меню 
+   .menu-bottom__menu4:hover .menu-bottom__menu4_sub-menu {
+    opacity: 0;}
+*/
+
+.menu-bottom__menu4 { 
+  margin-top: 50px; 
+  list-style: none;}
+.menu-bottom__menu4 a{
+  display: none;
+  text-decoration: none;}
+  .menu-bottom .menu-bottom__menu4 .menu-bottom__menu4_header { 
+  display: block;
+  font-size: 15px;
+  color: #111111;
+  border-bottom: 2px solid #DDDDDD;
+  margin-bottom: 5px;}
+
+  .menu-bottom__menu4:hover .menu-bottom__menu4_sub-menu {
+    display: block;}
 
 
   .copyright { 
@@ -306,137 +357,6 @@ position: relative;}
 
 
     /* 
-
-
-  .menu-top {
-  width: 13.54vw; 
-  display: flex;
-  flex-direction: row;  
-  flex-wrap: wrap;
-  grid-column: 2/3;
-  grid-row: 1/4; 
-  border-bottom: 1px solid #DDDDDD;} 
-
- .menu-top a {  
-  display: block;
-  width: 12vw; 
-  text-decoration: none;}
-
-
-  .menu-top__menu1 {  
-  margin-top: 2.4vh;
-  margin-right: 1vw;
-  margin-left: auto;
-  list-style: none; 
-  text-underline-offset: 3px;  
-  text-align: right;}
- 
-  .first_menu .sub-menu {
-  margin-top: 10px;
-  letter-spacing: -0.03em;
-  line-height: 140%;
-  font-size: 14px;
-  font-weight: 400;}
-
-.first_menu .active > a {
-  font-size: 20px; 
-  line-height: 20px;
-  text-decoration: underline; 
-  letter-spacing: -0.06em;
-  font-weight: 400;}
-
-.menu-top ul {
-  list-style: none;}
-
-  .menu-top__menu2 {  
-  align-self: flex-end;
-  margin-left: 1.04vw;
-  margin-right: auto;
-  margin-bottom: 3.70vh;
-  list-style: none; 
-  letter-spacing: -0.03em;
-  line-height: 170%;
-  font-size: 12px;
-  font-weight: 400;}  
-
-
-
-
-
-
-
-  .menu-bottom {
-  grid-column: 2/3;
-  grid-row: 4/-1; 
-  display: flex;
-  flex-direction: row;  
-  flex-wrap: wrap;  
-  padding-top: 1vw;
-  padding-left: 1vw;
-  align-content: flex-start;
-  position: relative;}
-
-
-.menu-bottom li {
-  width: 11.45vw;}
-.menu-bottom a {
-  display: block;
- text-decoration: none;}
-.menu-bottom ul {
-  list-style: none;}
-
-
-
- .help_menu  .open {
-  font-size: 14px;}
-
-Чтобы подчеркивание былао только у Help
-.help_menu .podcherkivanie{
-  line-height: 180%;
-  border-bottom: 2px solid #DDDDDD;
-  position: relative;
-  font-weight: 500;} 
-
-.help_menu .podcherkivanie:after{
-  position: absolute;
-  content: "";
-  z-index: 1;
-  background-image: url("img/Arrow5.svg");
-  background-repeat: no-repeat;
-  height: 24px;
-  width: 24px;
-  right: 0px;
-  top: 1px;} 
-
-
-  .help_menu .sub-menu { 
-  margin-top: 10px; 
-  font-size: 12px;
-  list-style: none;}
-
-  .help_menu .sub-menu a{  
-  margin-bottom: 3px;}
-
-
-
-
- Cелектор для подменю, если навести курсор на родительский элемент верхнего меню 
-.help_menu > li:hover .sub-menu {display: block;}
-
-
-
-.menu-bottom__menu4 {
-  height: 110px;
-  margin-top: 2vw;
-  list-style: none;}
-
-Чтобы полоса была только у родителя
-.other_menu > li{  
-  line-height: 180%;
-  border-bottom: 2px solid #DDDDDD;
-  position: relative;} 
-
-
 
 .other_menu > li:after{
   position: absolute;
@@ -456,16 +376,7 @@ position: relative;}
   transition-timing-function: ease-out;} 
 
 
-  .other_menu .sub-menu {  
-  line-height: 160%;  
-  color: #111111;
-  display: none;
-  font-size: 12px;
-  position: absolute;
-  z-index: 10;
-  list-style: none;
-  padding-top: 7px;
-}
+
 
 Cелектор для подменю, если навести курсор на родительский элемент верхнего меню 
 .other_menu  li:hover .sub-menu {display: block;  color: #111111;}
