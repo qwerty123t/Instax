@@ -1,35 +1,30 @@
 @font-face {
   font-family: 'DIN Pro';
-  src: local('DIN Pro'),
-       url('font/DINPro-Light.woff2') format('woff2');
+  src: url('font/DINPro-Light.woff2') format('woff2');
   font-weight: 300;
 }
 
 @font-face {
   font-family: 'DIN Pro';
-  src: local('DIN Pro'),
-       url('font/DINPro.woff2') format('woff2');
+  src: url('font/DINPro.woff2') format('woff2');
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'DIN Pro';
-  src: local('DIN Pro'),
-       url('font/DINPro-Medium.woff2') format('woff2');
+  src: url('font/DINPro-Medium.woff2') format('woff2');
   font-weight: 500;
 }
 
 @font-face {
   font-family: 'DIN Pro';
-  src: local('DIN Pro'),
-       url('font/DINPro-Bold.woff2') format('woff2'); 
+  src: url('font/DINPro-Bold.woff2') format('woff2'); 
   font-weight: 700;
 }
 
 @font-face {
   font-family: 'DIN Pro';
-  src: local('DIN Pro'),
-       url('font/DINPro-Black.woff2') format('woff2'); 
+  src: url('font/DINPro-Black.woff2') format('woff2'); 
   font-weight: 900;
 }
 
@@ -38,6 +33,7 @@
   --black: #111111;
   --full-black: #000000;
   --grey: #A3A3A3;
+  --border: #D2D2D2;
   --background: #F3F3F3;
   --full-white: #FFFFFF;
 }
@@ -47,116 +43,115 @@
     padding: 0;}
 
 body {  
-  font-size: 14px;
-  line-height: 1.4;
   font-family: 'DIN Pro', 'Helvetica Neue', 'Helvetica', sans-serif;
   display: grid;
   gap: 0px;  
   grid-template-columns: 4.17vw 13.54vw 1.04vw 60.42vw 16.66vw 4.17vw;
   grid-template-rows: 7.40vh 11.11vh 31.48vh 27.77vh 22.24vh;
-  background-color: var(--background);
-}
+  background-color: var(--background);}
 
 
 
 
-.first-heading {
+.header1 {
   grid-column: 4/5;
   grid-row: 1/2;
-  border-bottom: 1px solid #DDDDDD;
-  display: flex; 
-  flex-direction: row; 
-  justify-content: flex-start;
-  align-items: center;}
+  border-bottom: 1px solid var(--border);
+  display: flex;}
 
 
-.first-heading p {
-  line-height: 18px;
-  margin-left: 1vw;
+.header1 p {
+  margin: 3.2vh 0px 0px 1vw;
   font-size: 12px; 
-  letter-spacing: -0.03em;}
+  line-height: 12px;
+  letter-spacing: -0.03em;
+  color: var(--grey); 
+  font-weight: 300;}
+  
 
-
-
-
-
-.second-heading {
+.header2 {
   grid-column: 5/-1;
   grid-row: 1/2;  
-  border-bottom: 1px solid #DDDDDD;
+  border-bottom: 1px solid var(--border);
   display: flex; 
-  flex-direction: row; 
   justify-content: space-between;
   align-items: center;}
 
-
-
-.second-heading .personal{ 
-  font-family: 'Din Pro', sans-serif;
+.header2__button_personal{ 
   margin-left: 1vw;
+  color: var(--black);
   border: none;
-  background: none;  
+  background: none; 
+  font-family: 'DIN Pro', 'Helvetica Neue', 'Helvetica', sans-serif; 
   font-size: 14px; 
-  font-weight: 400;
+  line-height: 14px;
+  font-weight: 500;
   letter-spacing: -0.03em; 
   text-decoration: underline; 
-  text-underline-offset: 2px;}
+  text-underline-offset: 1px;}
 
 
-.second-heading .shopping-cart{ 
+.header2__button_shopping-cart{ 
+  color: var(--black);
   border: none;
   margin-right: 1vw;
+  font-family: 'DIN Pro', 'Helvetica Neue', 'Helvetica', sans-serif;
   font-size: 14px;
-  font-weight: 400; 
-  letter-spacing: -0.03em;
-  text-decoration: underline; 
-  text-underline-offset: 2px;}
+  line-height: 14px;
+  font-weight: 300; 
+  letter-spacing: -0.03em;}
+
+  .header2 span{ 
+    color: var(--grey);}
 
 
-
-
-
-.third-heading {
+.header3 {
   grid-column: 4/5;
   grid-row: 2/3;
-  border-bottom: 3px solid #DDDDDD;
-  display: flex; 
-  flex-direction: row; 
-  align-items: center;}
+  border-bottom: 3px solid var(--grey);
+  display: flex; }
 
-.third-heading h1{
-  margin-left: 1vw;
-  font-family: 'DIN Pro', sans-serif;
+.header3 h1{
+  margin: 0.6vh 0px 0px 0.6vw;
   font-weight: 300; 
-  font-size: 80px;
+  font-size: 7.4vh;
+  line-height: 7.4vh;
   letter-spacing: -0.09em;
-  color: #111111;}
+  color: var(--black);}
 
-.third-heading span{
-  font-family: 'DIN Pro', sans-serif;
+.header3 span{
   font-weight: 700; 
-  font-size: 80px;
-  letter-spacing: -0.09em;
-  color: #111111;}
+  font-size: 7.4vh;
+  line-height: 7.4vh;
+  letter-spacing: -0.1em;
+  color: var(--black);}
 
-.third-heading p{
-font-size: 15px;
-line-height: 15px;
-align-self: flex-start;
-margin-top: 2vh;
-margin-left: 1vw;
-font-weight: 300;}
+.header3 p{
+font-size: 20px;
+line-height: 20px;
+margin-top: 1.9vh;
+margin-left: 2.5vw;
+font-weight: 300;
+letter-spacing: -0.1em;
+color: var(--grey);
+position: relative;}
+
+.header3 p:before{
+  position: absolute;
+  content: "";
+  background-image: url("img/color-icon.svg");
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  top: -3px;
+  left: -33px;}
 
 
 
-
-
-
-
-.fourth-heading {
+.header4 {
   grid-column: 5/-1;
   grid-row: 2/3;  
-  border-bottom: 3px solid #DDDDDD;
+  border-bottom: 3px solid var(--border);
   display: flex; 
   flex-direction: row; 
   justify-content: space-between;
@@ -164,7 +159,7 @@ font-weight: 300;}
   
 
 
-.fourth-heading .price{
+.header4 .price{
 font-size: 20px;
 line-height: 20px;
 margin-left: 1vw;
@@ -174,15 +169,15 @@ white-space: nowrap; }
 
 
 
-.fourth-heading a{
-  display: block;
+.header4 a{
+display: block;
 margin-right: 1vw;
 margin-top: 1vh;
 width: 9.270833333vw;
 height: 2.5vw;
 position: relative;}
 
-.fourth-heading a::before {
+.header4 a::before {
   font-size: 14px;
   white-space: nowrap; 
   line-height: 14px;
@@ -192,41 +187,27 @@ position: relative;}
   left: -40px;
   content: "learn more";}
 
-  .fourth-heading svg {
-    width: 100%;
-    height: 100%;
-  }
+.header4 svg {
+  width: 100%;
+  height: 100%;}
 
 
 
-.sidebar-left-top {
+.sidebar-left {
   display: flex;
   grid-column: 1/2;
-  grid-row: 1/4;   
+  grid-row: 1/-1;   
   border-right: 1px solid #DDDDDD;
   flex-direction: column;
-  align-items: center;}
+  align-items: center;
+  justify-content: space-between;
+  padding: 3.5vh 0;}
 
-.sidebar-left-top .logo {
-  margin-top: 3.5vh;
+ .sidebar-left__instax-logo {
   width: 2.1vw; }
 
-
-
-
-.sidebar-left-bottom {
-  display: flex;
-  grid-column: 1/2;
-  grid-row: 4/-1;   
-  border-right: 1px solid #DDDDDD;
-  flex-direction: column; 
-  justify-content: flex-end;
-  align-items: center;}
-
-  .sidebar-left-bottom .logo {
-  width: 0.85vw; 
-  margin-bottom: 3.5vh;
-  }
+  .sidebar-left__fujifilm-logo {
+  width: 0.85vw; }
 
 
 
