@@ -1,24 +1,40 @@
 @font-face {
   font-family: 'DIN Pro';
   src: local('DIN Pro'),
-       url('font/DINPro.woff2') format('woff2'),
-       url('font/DINPro.woff') format('woff');
-  font-weight: 400;
-}
-@font-face {
-  font-family: 'DIN Pro';
-  src: local('DIN Pro'),
-       url('font/DINPro-Light.woff2') format('woff2'),
-       url('font/DINPro-Light.woff') format('woff');
+       url('font/DINPro-Light.woff2') format('woff2');
   font-weight: 300;
 }
+
 @font-face {
   font-family: 'DIN Pro';
   src: local('DIN Pro'),
-       url('font/DINPro-Bold.woff2') format('woff2'),
-       url('font/DINPro-Bold.woff') format('woff'); 
+       url('font/DINPro.woff2') format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'DIN Pro';
+  src: local('DIN Pro'),
+       url('font/DINPro-Medium.woff2') format('woff2');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'DIN Pro';
+  src: local('DIN Pro'),
+       url('font/DINPro-Bold.woff2') format('woff2'); 
   font-weight: 700;
 }
+
+@font-face {
+  font-family: 'DIN Pro';
+  src: local('DIN Pro'),
+       url('font/DINPro-Black.woff2') format('woff2'); 
+  font-weight: 900;
+}
+
+
+
 
 * { margin: 0;
     padding: 0;}
@@ -142,48 +158,45 @@ font-weight: 300;}
   border-bottom: 3px solid #DDDDDD;
   display: flex; 
   flex-direction: row; 
-  justify-content: space-between;}
+  justify-content: space-between;
+  align-items: center;}
+  
 
 
 .fourth-heading .price{
 font-size: 20px;
 line-height: 20px;
-width: 150px;
 margin-left: 1vw;
-white-space: nowrap; 
-margin-bottom: 3vh;}
-
-.fourth-heading .learn{
-font-size: 14px;
-white-space: nowrap; 
-line-height: 14px;
-letter-spacing: -0.03em; 
-align-self: center;
-text-decoration: none;
-position: absolute;
-transform: translateY(1vh);}
+margin-top: 2vh;
+white-space: nowrap; }
 
 
-.fourth-heading svg{
-align-self: flex-end;
+
+
+.fourth-heading a{
+  display: block;
 margin-right: 1vw;
 margin-top: 1vh;
-transform: translateY(1vh);}
+width: 9.270833333vw;
+height: 2.5vw;
+position: relative;}
 
-.fourth-heading svg::before {
-  padding-right: 7px;
-  font-size: 14px; color: #c1172c;
+.fourth-heading a::before {
+  font-size: 14px;
+  white-space: nowrap; 
+  line-height: 14px;
+  letter-spacing: -0.03em; 
+  text-decoration: none;
+  position: absolute;
+  left: -40px;
   content: "learn more";}
 
+  .fourth-heading svg {
+    width: 100%;
+    height: 100%;
+  }
 
-/*.fourth-heading .learn::after {
-  display: block;
-  position: absolute;
-  top: 0px;
-  left: 25px;
-  content:url("data:image/svg+xml;utf8,<svg width='178' height='48' xmlns='http://www.w3.org/2000/svg'> <path fill='white' d='M156.18 6.18018L153.36 9.00018L166.34 22.0002L0 22.0002V26.0002H166.34L153.36 38.9801L156.18 41.8201L174 24.0002L156.18 6.18018Z'/></svg>");
-  height: 48px;
-  width: 178px;}*/
+
 
 .sidebar-left-top {
   display: flex;
@@ -194,8 +207,11 @@ transform: translateY(1vh);}
   align-items: center;}
 
 .sidebar-left-top .logo {
-  margin-top: 3vh;
-  width: 2vw; }
+  margin-top: 3.5vh;
+  width: 2.1vw; }
+
+
+
 
 .sidebar-left-bottom {
   display: flex;
@@ -207,17 +223,53 @@ transform: translateY(1vh);}
   align-items: center;}
 
   .sidebar-left-bottom .logo {
-  width: 0.8vw; 
-  margin-bottom: 3vh;
+  width: 0.85vw; 
+  margin-bottom: 3.5vh;
   }
 
 
 
 
 
+  .menu-top {
+    display: flex;
+    flex-direction: column;  
+    flex-wrap: wrap;
+    grid-column: 2/3;
+    grid-row: 1/4; 
+    padding: 2.4vh 1vw;
+    border-bottom: 1px solid #DDDDDD;
+  } 
+
+    .menu-top a {  
+      display: block;
+      text-decoration: none;}
+
+      .menu-top__menu1 {  
+        margin-left: auto;
+        list-style: none; 
+        text-align: right;}
 
 
-  .menu_top {
+        .menu-top__menu1 li:first-child { 
+          text-decoration: underline;  
+          text-underline-offset: 3px;}
+
+
+    .menu-bottom {
+      grid-column: 2/3;
+      grid-row: 4/-1; 
+      display: flex;
+      flex-direction: row;  
+      flex-wrap: wrap;  
+      padding: 1vw;}
+
+
+
+/* 
+
+
+  .menu-top {
   width: 13.54vw; 
   display: flex;
   flex-direction: row;  
@@ -226,13 +278,13 @@ transform: translateY(1vh);}
   grid-row: 1/4; 
   border-bottom: 1px solid #DDDDDD;} 
 
- .menu_top a {  
+ .menu-top a {  
   display: block;
   width: 12vw; 
   text-decoration: none;}
 
 
-  .first_menu {  
+  .menu-top__menu1 {  
   margin-top: 2.4vh;
   margin-right: 1vw;
   margin-left: auto;
@@ -254,10 +306,10 @@ transform: translateY(1vh);}
   letter-spacing: -0.06em;
   font-weight: 400;}
 
-.menu_top ul {
+.menu-top ul {
   list-style: none;}
 
-  .second_menu {  
+  .menu-top__menu2 {  
   align-self: flex-end;
   margin-left: 1.04vw;
   margin-right: auto;
@@ -274,7 +326,7 @@ transform: translateY(1vh);}
 
 
 
-  .menu_bottom {
+  .menu-bottom {
   grid-column: 2/3;
   grid-row: 4/-1; 
   display: flex;
@@ -286,12 +338,12 @@ transform: translateY(1vh);}
   position: relative;}
 
 
-.menu_bottom li {
+.menu-bottom li {
   width: 11.45vw;}
-.menu_bottom a {
+.menu-bottom a {
   display: block;
  text-decoration: none;}
-.menu_bottom ul {
+.menu-bottom ul {
   list-style: none;}
 
 
@@ -299,7 +351,7 @@ transform: translateY(1vh);}
  .help_menu  .open {
   font-size: 14px;}
 
-/*Чтобы подчеркивание былао только у Help*/
+Чтобы подчеркивание былао только у Help
 .help_menu .podcherkivanie{
   line-height: 180%;
   border-bottom: 2px solid #DDDDDD;
@@ -329,17 +381,17 @@ transform: translateY(1vh);}
 
 
 
-/* Cелектор для подменю, если навести курсор на родительский элемент верхнего меню */
+ Cелектор для подменю, если навести курсор на родительский элемент верхнего меню 
 .help_menu > li:hover .sub-menu {display: block;}
 
 
 
-  .other_menu {
+.menu-bottom__menu4 {
   height: 110px;
   margin-top: 2vw;
   list-style: none;}
 
-/*Чтобы полоса была только у родителя*/
+Чтобы полоса была только у родителя
 .other_menu > li{  
   line-height: 180%;
   border-bottom: 2px solid #DDDDDD;
@@ -376,14 +428,14 @@ transform: translateY(1vh);}
   padding-top: 7px;
 }
 
-/* Cелектор для подменю, если навести курсор на родительский элемент верхнего меню */
+Cелектор для подменю, если навести курсор на родительский элемент верхнего меню 
 .other_menu  li:hover .sub-menu {display: block;  color: #111111;}
 
+*/
 
-
-.menu_bottom .copyright { 
+.copyright { 
   writing-mode: vertical-lr;
-  margin-bottom: 3vh;
+  margin-bottom: 3.5vh;
   transform: scale(-1, -1);
   position: absolute;
   bottom: 0px;}
@@ -399,7 +451,7 @@ transform: translateY(1vh);}
   display: flex;
   align-items: flex-start;}
 
-  .polosa svg{
+  .line svg{
   margin-top: 2.7vh;
   margin-left: -0.6vw;}
 
