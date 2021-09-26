@@ -271,20 +271,23 @@ position: relative;}
   .nav-bottom__menu3 {
     margin: 1.8vh 1vw 0px 1vw;  
     list-style: none;}
+
   .nav-bottom__menu3 a{ 
     display: block; 
     text-decoration: none;
     font-size: 1.111111111vh;
     line-height: 1.851851851vh; /* 20px */
-    font-weight: 300;letter-spacing: -0.03em; 
+    font-weight: 300;
+    letter-spacing: -0.03em; 
     color: var(--grey);}
+
     .nav-bottom .nav-bottom__menu3_header {  
     font-size: 1.388888888vh;
     line-height: 1.388888888vh;
     font-weight: 500;
     color: var(--black);
     padding-bottom: 5px;
-    border-bottom: 2px solid var(--border);
+    border-bottom: 1px solid var(--border);
     margin-bottom: 5px;
     position: relative;}
 
@@ -292,6 +295,7 @@ position: relative;}
     .nav-bottom__menu3_header:after{
       position: absolute;
       content: url(img/Arrow5mini.svg); 
+      top: -2px;
       right: 0px;}
 
     .nav-bottom__menu3 .nav-bottom__menu3_contact{
@@ -304,37 +308,48 @@ position: relative;}
 
 
 .nav-bottom__menu4 { 
-  margin-top: 50px; 
+  margin: 2.3vh 1vw 0px 1vw;
   list-style: none;}
+
 .nav-bottom__menu4 a{
-  display: none;
-  text-decoration: none;}
+  display: none; 
+  text-decoration: none;
+  font-size: 1.111111111vh;
+  line-height: 1.851851851vh; /* 20px */
+  font-weight: 300;
+  letter-spacing: -0.03em; 
+  color: var(--grey);}
+
 .nav-bottom .nav-bottom__menu4 .nav-bottom__menu4_header { 
-  display: block;
-  font-size: 15px;
-  color: var(--black);
-  border-bottom: 2px solid var(--border);
+  display: block; 
+  font-size: 1.388888888vh;
+  line-height: 1.388888888vh;
+  font-weight: 300;
+  color: var(--grey);
+  padding-bottom: 7px;
+  border-bottom: 1px solid var(--border);
   margin-bottom: 5px;
-  position: relative;}
+  position: relative;
+  transition: color 0.2s;
+  animation-timing-function: ease-in-out;}
 
 .nav-bottom__menu4:hover .nav-bottom__menu4_sub-menu {
   display: block;}
 
 .nav-bottom__menu4_header:after{
   position: absolute;
-  content: "";
-  z-index: 1;
-  background-image: url("img/Arrow5.svg");
-  background-repeat: no-repeat;
-  height: 24px;
-  width: 24px;
+  content: url(img/Arrow5mini.svg); 
   right: 0px;
-  top: 1px;
-  transition: transform 0.2s;} 
+  opacity: 0.3;
+  transition: transform 0.2s;
+  transform: rotate(180deg);} 
 
 .nav-bottom__menu4:hover .nav-bottom__menu4_header:after {
-  transform: rotate(180deg);}
-
+  transform: rotate(0deg);
+  opacity: 1;}
+  .nav-bottom__menu4:hover .nav-bottom__menu4_header {
+  color: var(--black);
+  font-weight: 500;}
 
 
 
@@ -342,10 +357,11 @@ position: relative;}
 .copyright { 
   writing-mode: vertical-lr;
   transform: scale(-1, -1);
-  position: absolute;
+  margin: 0px 0px calc(3.5vh - 5px) 1vw;
   font-size: 14px;
   line-height: 14px;
-  bottom: calc(3.5vh - 5px);}
+  margin-top: auto;
+  align-self: flex-start;}
 
 
   .line {box-sizing: border-box;
