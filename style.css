@@ -139,7 +139,7 @@ letter-spacing: -0.1em;
 color: var(--grey);
 position: relative;}
 
-.header3 p:before{
+.header3 p::before{
   position: absolute;
   content: "";
   background-image: url("img/color-icon.svg");
@@ -250,11 +250,16 @@ position: relative;}
   font-weight: 500;
   position: relative;}
 
-  .nav-top__menu1_header:after{
+  .nav-top__menu1_header::after{
     position: absolute;
-    content: url(img/Arrow2.svg); 
-    right: -1.5625vw;} 
-
+    content: "";
+    width:1.944444444vh; /*21px*/
+    height:1.481481481vh; /*16px*/
+    top: 0.37037037vh; /*4px*/
+    right: -2.592592592vh; /*-28px*/
+    background-size: 1.944444444vh 1.481481481vh; /*21px 16px*/
+    background-image: url(img/Arrow2.svg);
+    background-repeat: no-repeat;} 
 
 
 
@@ -308,11 +313,16 @@ position: relative;}
     position: relative;}
 
 
-    .nav-bottom__menu3_header:after{
+    .nav-bottom__menu3_header::after{
       position: absolute;
-      content: url(img/Arrow5mini.svg); 
-      top: -2px;
-      right: 0px;}
+      content: "";
+      width: 0.925925925vh; /*10px*/
+      height: 0.648148148vh; /*7px*/
+      top: 0.37037037vh; /*4px*/
+      right: 0px; 
+      background-size: 0.925925925vh 0.648148148vh; /*10px 7px*/
+      background-image: url(img/Arrow5mini.svg);
+      background-repeat: no-repeat;}
 
     .nav-bottom__menu3 .nav-bottom__menu3_contact{
      text-decoration: underline;
@@ -362,16 +372,22 @@ position: relative;}
 .nav-bottom__menu4:hover .nav-bottom__menu4_sub-menu {
   display: block;}
 
-.nav-bottom__menu4_header:after{
+.nav-bottom__menu4_header::after{
   position: absolute;
-  content: url(img/Arrow5mini.svg); 
-  right: 0px;
+  content: "";
+  width: 0.925925925vh; /*10px*/
+  height: 0.648148148vh; /*7px*/
+  top: 0.37037037vh; /*4px*/
+  right: 0px; 
+  background-size: 0.925925925vh 0.648148148vh; /*10px 7px*/
+  background-image: url(img/Arrow5mini.svg);
+  background-repeat: no-repeat;
   opacity: 0.3;
   transition: transform 0.2s;
-  transform: rotate(180deg);} 
+  transform: rotate(180deg)} 
 
-.nav-bottom__menu4:hover .nav-bottom__menu4_header:after {
-  transform: rotate(0deg) translateY(-2px);
+.nav-bottom__menu4:hover .nav-bottom__menu4_header::after {
+  transform: rotate(0deg);
   opacity: 1;}
   .nav-bottom__menu4:hover .nav-bottom__menu4_header {
   color: var(--black);
