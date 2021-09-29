@@ -436,11 +436,11 @@ body {
 	color: var(--grey);
 	writing-mode: vertical-lr;
 	transform: scale(-1, -1);
-	margin: 0px 0px calc(3.5vh - 0.462962962vh) 1vw;
-	font-size: 1.296296296vh;
-	line-height: 1.296296296vh;
+	margin: 0px 0px calc(3.5vh - 0.462962962vh) 0.8vw;
+	font-size: 1.111111111vh;
+	line-height: 1.111111111vh;
 	margin-top: auto;
-	align-self: flex-start;
+	align-self: flex-start; font-weight: 300;
 }
 
 .line {
@@ -471,9 +471,9 @@ body {
 	display: flex;
 	left: 0;
 	top: 0;
-	width: 330px;
-	font-size: 15px;
-	line-height: 20px;
+	width: 17.1875vw; /*330px*/
+	font-size: 1.388888888vh; /*15px*/
+	line-height: 1.851851851vh; /*20px*/
 	letter-spacing: -0.03em;
 	font-weight: 300;
 	color: var(--grey);
@@ -482,12 +482,10 @@ body {
 .center__top-left-angle::before {
 	position: absolute;
 	content: "";
-	width: 16px;
-	/*16px*/
-	height: 41px;
-	/*41px*/
-	top: -56px;
-	background-size: 16px 41px;
+	width: 1.481481481vh; /*16px*/
+	height: 3.796296296vh;/*41px*/
+	top:  -5.185185185vh; /*-56px*/
+	background-size: 1.481481481vh 3.796296296vh;
 	/*16px 41px*/
 	background-image: url(img/arrowdown.svg);
 	background-repeat: no-repeat;
@@ -505,25 +503,33 @@ body {
 }
 
 .center__top-right-angle--buy {
-	font-size: 14px;
+	font-size: 1.296296296vh; /*14px*/
 	line-height: 140%;
 	letter-spacing: -0.03em;
 	font-weight: 400;
 	text-decoration: underline;
 	text-underline-offset: 1px;
-	margin-right: 30px;
+	margin-right: 1.5625vw; /*30px*/
 	position: relative;
 	border: none;
   color: var(--grey);
 }
 
 .center__top-right-angle--buy::after {
-	display: block;
+	
 	position: absolute;
 	top: 0px;
-	right: -30px;
-	content: url("data:image/svg+xml;utf8,<svg width='21' height='21' xmlns='http://www.w3.org/2000/svg'><circle cx='10.5' cy='10.5' r='10.5'/><path fill='white' d='M14 11h-3v3h-1v-3H7v-1h3V7h1v3h3v1z'/></svg>");
-}
+	right: -1.5625vw; /*-30px*/
+	content: "";
+	width: 1.09375vw; /*21px*/
+	height: 1.09375vw;/*21px*/ background-size: cover;  background-position: center center;
+	/*16px 41px*/
+	background-image: url(img/small_circle.svg); border-radius: 50%;}
+
+
+
+
+
 
 .center__top-right-angle--compare {
 	margin-top: 4vh;
