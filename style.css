@@ -461,7 +461,14 @@ body {
 	align-items: center;
 	justify-content: center;
 }
+.center__picture{
+	display: flex;
+	align-items: center;
+	justify-content: center; width: 30.416666666vw; height:41.481481482vh; 
+}
 
+.center img { max-width:100%; height:auto; 
+}
 
 
 .center__top-left-angle {
@@ -512,19 +519,21 @@ body {
 	margin-right: 1.5625vw; /*30px*/
 	position: relative;
 	border: none;
-  color: var(--grey);
+  	color: var(--grey);
+	background-color: transparent;  
 }
 
 .center__top-right-angle--buy::after {
-	
 	position: absolute;
 	top: 0px;
 	right: -1.5625vw; /*-30px*/
 	content: "";
 	width: 1.09375vw; /*21px*/
-	height: 1.09375vw;/*21px*/ background-size: cover;  background-position: center center;
-	/*16px 41px*/
-	background-image: url(img/small_circle.svg); border-radius: 50%;}
+	height: 1.09375vw;/*21px*/ 
+	background-size: cover;  
+	background-position: center center;
+	background-image: url(img/small_circle.svg); 
+	border-radius: 50%;}
 
 
 
@@ -532,18 +541,23 @@ body {
 
 
 .center__top-right-angle--compare {
-	margin-top: 4vh;
-	width: 130px;
-	height: 40px;
-  padding-bottom: 5px;
-	background: none;
+	margin-top: 3.8vh;
+	width: 12.037037037vh; /*130px*/
+	height: 3.703703703vh; /*40px*/
+  	padding-bottom: 0.462962962vh; /*5px*/
 	border: 1px solid var(--border);
-  font-family: inherit;
-	font-size: 16px;
+  	font-family: 'DIN Pro';
+	font-size: 1.481481481vh; /*16px*/
 	line-height: 100%;
 	letter-spacing: -0.03em;
 	font-weight: 400;
+	background-color: transparent;  
 }
+
+
+
+
+
 
 .center__quiz {
 	display: flex;
@@ -551,27 +565,25 @@ body {
 	flex-direction: column;
 	right: 0;
 	bottom: 0;
-	margin-bottom: 16vh;
-  margin-right: 1vw;
-  align-items: flex-end;
+	margin-bottom: 14.5vh;
+  	margin-right: 1vw;
 }
 
 .center__quiz--header {
-	font-size: 12px;
+	font-size: 1.296296296vh;  /*14px*/
 	line-height: 140%;
-	letter-spacing: -0.02em;
-	font-weight: 500;
-  text-align: right;
+	letter-spacing: -0.03em;
+	font-weight: 400;
+  	text-align: right;
 }
 
 .center__quiz--text {
-	margin-top: 1vh;
-	width: 230px;
-	font-size: 12px;
-	line-height: 150%;
-	font-weight: 400;
-  text-align: right;
-  color: var(--grey);
+	margin-top: 2vh;
+	font-size: 1.296296296vh; /*14px*/
+	line-height: 140%;
+	font-weight: 300;
+  	text-align: right;letter-spacing: -0.03em;
+  	color: var(--grey);
 }
 
 
