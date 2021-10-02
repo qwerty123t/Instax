@@ -522,7 +522,7 @@ body {
   	color: var(--grey);
 	background-color: transparent;  
 }
-
+ 
 .center__top-right-angle--buy::after {
 	position: absolute;
 	top: 0px;
@@ -534,8 +534,6 @@ body {
 	background-position: center center;
 	background-image: url(img/small_circle.svg); 
 	border-radius: 50%;}
-
-
 
 
 
@@ -677,7 +675,7 @@ body {
 	left: 100px;
 	background-repeat: no-repeat;
 	background-image: url(img/Line.svg);}
-}
+
 .description__bottom--line {
 	margin-left: 6.25vw;
 	margin-right: 6.25vw;
