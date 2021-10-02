@@ -349,7 +349,7 @@ body {
 	right: 0px;
 	background-size: 0.925925925vh 0.648148148vh;
 	/*10px 7px*/
-	background-image: url(img/Arrow5mini.svg);
+	background-image: url(img/arrowmini.svg);
 	background-repeat: no-repeat;
 }
 
@@ -415,7 +415,7 @@ body {
 	right: 0px;
 	background-size: 0.925925925vh 0.648148148vh;
 	/*10px 7px*/
-	background-image: url(img/Arrow5mini.svg);
+	background-image: url(img/arrowmini.svg);
 	background-repeat: no-repeat;
 	opacity: 0.3;
 	transition: transform 0.2s;
@@ -467,7 +467,7 @@ body {
 	justify-content: center; width: 30.416666666vw; height:41.481481482vh; 
 }
 
-.center img { max-width:100%; height:auto; 
+.center img { max-width:100%; height:auto;
 }
 
 
@@ -526,7 +526,7 @@ body {
 .center__top-right-angle--buy::after {
 	position: absolute;
 	top: 0px;
-	right: -1.5625vw; /*-30px*/
+	right: -1.614583333vw; /*-31px*/
 	content: "";
 	width: 1.09375vw; /*21px*/
 	height: 1.09375vw;/*21px*/ 
@@ -578,11 +578,12 @@ body {
 }
 
 .center__quiz--text {
-	margin-top: 2vh;
+	margin-top: 2.1vh;
 	font-size: 1.296296296vh; /*14px*/
-	line-height: 140%;
+	line-height: 145%;
 	font-weight: 300;
-  	text-align: right;letter-spacing: -0.03em;
+  	text-align: right;
+	letter-spacing: -0.03em;
   	color: var(--grey);
 }
 
@@ -592,88 +593,114 @@ body {
 	box-sizing: border-box;
 	grid-column: 5/6;
 	grid-row: 3/5;
-	border-bottom: 1px solid #DDDDDD;
-	border-right: 1px solid #DDDDDD;
+	border-bottom: 1px solid var(--border);
+	border-right: 1px solid var(--border);
 	display: flex;
-	flex-direction: row;
 	flex-wrap: wrap;
 	align-content: space-between;
 	padding: 1vw;
 }
 
-.description .top .beware {
-	font-size: 2vh;
-	line-height: 120%;
-	letter-spacing: -0.06em;
-	font-weight: 400;
-	text-decoration: underline;
-	text-underline-offset: 3px;
-	width: 220px;
+.description__top {
+	width: 100%;
 }
 
-.description .top .video {
+.description__top--text {
+	font-size: 20px;
+	line-height: 100%;
+	letter-spacing: -0.03em;
+	font-weight: 400;
+	text-decoration: underline;
+	text-underline-offset: 1px;
+	text-decoration-thickness: 2px;
+	width: 11.458333333vw;
+}
+
+.description__top--video{
 	display: flex;
-	margin-top: 3vh;
-	width: 14.66vw;
-	height: 8.38vw;
+	margin-top: 5.7vh;
+	width: 100%;
+	height: 8.38vw; /*160px*/
 	background-color: #eaeaea;
 	position: relative;
 }
 
-.description .top .photo-in-video {
-	width: 12vw;
+.description__top--preview {
+	width: 79%;
+	height: 77%;
 	align-self: flex-end;
+	object-fit: cover;
 }
 
-.description .top .triangle {
+.description__top--triangle {
 	position: absolute;
 	z-index: 2;
-	top: 1vh;
-	left: 10vw;
+	top: 3%;
+	left: 64%;
+	width: 20.357142857%; /*57px*/
+	height: 40.625%; /*65px*/
 }
 
-.description .bottom {
+.description__bottom {
 	display: flex;
 	flex-wrap: wrap;
 }
 
-.description .previous {
-	width: 14vw;
-	padding-left: 0vw;
-	font-size: 14px;
+.description__bottom--previous {
+	width: 100%;
+	margin-left: 8%; 
+	font-size: 15px;
 	line-height: 100%;
 	letter-spacing: -0.06em;
 	font-weight: 400;
-	margin-bottom: 0.5vh;
+	margin-bottom: 0.7vh;
+	color: var(--grey);
 }
 
-.description .number-first {
-	width: 14.66vw;
+.description__bottom--number-first {
+	width: 100%;
+	margin-left: -2%;
 	font-size: 9.25vh;
 	line-height: 7vh;
 	letter-spacing: -0.10em;
 	font-weight: 300;
+	color: var(--black);
+	position: relative;
 }
 
-.description svg {
+.description__bottom--number-first::after {
+	position: absolute;
+	content: "";
+	width: 17px; 
+	height: 12px;
+	bottom: -10px;
+	left: 100px;
+	background-repeat: no-repeat;
+	background-image: url(img/Line.svg);}
+}
+.description__bottom--line {
 	margin-left: 6.25vw;
 	margin-right: 6.25vw;
 }
 
-.description .next {
+.description__bottom--next {
 	align-self: end;
-	color: white;
-	width: 2.5vw;
-	margin-left: auto;
+	color: var(--full-white);
+	font-size: 14px;
+	margin-bottom: 0.5vh;
+	margin-right: 0.9vw;
+	margin-left: auto; 
 }
 
-.description .number-second {
+.description__bottom--number-second {
 	display: flex;
-	margin-left: 0.5vw;
+	margin-right: -2vh;
+	margin-bottom: 0.5vh;
 	font-size: 18.50vh;
 	line-height: 14vh;
 	letter-spacing: -0.10em;
 	font-weight: 300;
+	color: var(--full-white);
 }
 
 .penultimate {
@@ -705,6 +732,7 @@ body {
 }
 
 .sidebar-right {
+	background: var(--full-white);
 	box-sizing: border-box;
 	grid-column: 6/-1;
 	grid-row: 3/-1;
