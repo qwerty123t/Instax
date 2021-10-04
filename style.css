@@ -1,3 +1,20 @@
+/* 
+to do list
+
+1. Установить минимальный шрифт
+2. Перевести vh в vw
+3. Добавить кнопки переключения ракурсов фото 
+4. Добавить 3д?
+5. Добавить кнопки переключения цветов
+6. Добавить пункты в 4 меню
+7. Добавить остальные страницы
+8. Отрисовать другие страницы
+9. Добавить АВИФ и ВЕБП через picture
+
+
+*/
+
+
 @font-face {
 	font-family: 'DIN Pro';
 	src: url('font/DINPro-Light.woff2') format('woff2');
@@ -461,6 +478,24 @@ body {
 	align-items: center;
 	justify-content: center;
 }
+
+.center__arrow--left{
+	position: absolute;
+	top: 33.5vh;
+	left: 1vw;
+	transform: rotate(-90deg);width: 0.925925925vh;
+	/*10px*/
+}
+
+.center__arrow--right{
+	position: absolute;
+	top: 33.5vh;
+	right: 1vw;
+	transform: rotate(90deg);width: 0.925925925vh;
+	/*10px*/
+}
+
+
 .center__picture{
 	display: flex;
 	align-items: center;
@@ -597,6 +632,7 @@ body {
 	flex-wrap: wrap;
 	align-content: space-between;
 	padding: 1vw;
+	padding-top: 0.95vw;
 }
 
 .description__top {
@@ -618,14 +654,14 @@ body {
 	display: flex;
 	margin-top: 5.7vh;
 	width: 100%;
-	height: 8.38vw; /*160px*/
+	height: 8.50vw; /*160px*/
 	background-color: #eaeaea;
 	position: relative;
 }
 
 .description__top--preview {
 	width: 79%;
-	height: 77%;
+	height: 76%;
 	align-self: flex-end;
 	object-fit: cover;
 }
@@ -633,7 +669,7 @@ body {
 .description__top--triangle {
 	position: absolute;
 	z-index: 2;
-	top: 3%;
+	top: 4%;
 	left: 64%;
 	width: 20.357142857%; /*57px*/
 	height: 40.625%; /*65px*/
@@ -642,22 +678,24 @@ body {
 .description__bottom {
 	display: flex;
 	flex-wrap: wrap;
+	bottom: 0;
 }
 
 .description__bottom--previous {
 	width: 100%;
-	margin-left: 8%; 
+	margin-left: 7%; 
 	font-size: 15px;
 	line-height: 100%;
 	letter-spacing: -0.06em;
 	font-weight: 400;
-	margin-bottom: 0.7vh;
+	margin-bottom: 0.4vh;
 	color: var(--grey);
 }
 
 .description__bottom--number-first {
 	width: 100%;
 	margin-left: -2%;
+	margin-bottom: 0.9vh;
 	font-size: 9.25vh;
 	line-height: 7vh;
 	letter-spacing: -0.10em;
@@ -671,15 +709,12 @@ body {
 	content: "";
 	width: 17px; 
 	height: 12px;
-	bottom: -10px;
-	left: 100px;
+	bottom: -15px;
+	left: 105px;
 	background-repeat: no-repeat;
 	background-image: url(img/Line.svg);}
 
-.description__bottom--line {
-	margin-left: 6.25vw;
-	margin-right: 6.25vw;
-}
+
 
 .description__bottom--next {
 	align-self: end;
@@ -693,7 +728,7 @@ body {
 .description__bottom--number-second {
 	display: flex;
 	margin-right: -2vh;
-	margin-bottom: 0.5vh;
+	margin-bottom: 0.6vh;
 	font-size: 18.50vh;
 	line-height: 14vh;
 	letter-spacing: -0.10em;
@@ -708,24 +743,26 @@ body {
 	border-right: 1px solid var(--border);
 	display: flex;
 	justify-content: flex-end;
+	padding: 1vw;
+	padding-top: 2.8vh;
 }
 
 .penultimate__text {
-	margin: 3vh 1vw 0px 1vw;
 	position: relative;
 	font-size: 14px;
 	line-height: 140%;
 	letter-spacing: -0.03em;
 	font-weight: 400;
 	text-decoration: none;
-	right: 25px;
+	right: 30px;
+	color: var(--grey);
 }
 
 .penultimate__text::after {
 	display: block;
 	position: absolute;
 	top: 0px;
-	right: -25px;
+	right: -30px;
 	content: url("data:image/svg+xml;utf8,<svg width='21' height='21' xmlns='http://www.w3.org/2000/svg'><circle cx='10.5' cy='10.5' r='10.5'/><path fill='white' d='M14 11h-3v3h-1v-3H7v-1h3V7h1v3h3v1z'/></svg>");
 }
 
@@ -740,23 +777,32 @@ body {
 	align-items: center;
 }
 
-.sidebar-right .top2 {
+.sidebar-right__top {
 	margin-top: 1vw;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 2.34vw;
 }
 
-.sidebar-right .arrow3 {
-	margin-top: 6vh;
+.sidebar-right__top--3dots {
+	width: 2.395833333vw; /*46px*/
 }
 
-.sidebar-right .smm {
-	width: 2.34vw;
-	margin-bottom: 4.63vh;
+
+
+.sidebar-right__top--arrow {
+	margin-top: 7.9vh;
+	width: 1.944444444vh;
 }
 
-.sidebar-right .smm img {
-	margin-top: 4px;
+
+.sidebar-right__bottom {
+	margin-bottom: 3.1vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.sidebar-right__bottom svg{
+	width: 2.395833333vw; /*46px*/
+	margin-top: 0.4vh;
 }
