@@ -2,6 +2,14 @@
 to do list
 
 1. Установить минимальный шрифт
+https://habr.com/ru/company/ruvds/blog/501634/
+использовать clamp
+clamp(12px, 5vw, 5vh)
+(минимальный, нужный, максимальный чтобы за края не выходил 
+при разрешении 1900*400px)
+
+
+
 2. Перевести vh в vw
 3. Добавить кнопки переключения ракурсов фото 
 4. Добавить 3д?
@@ -76,10 +84,10 @@ body {
 	box-sizing: border-box;
 }
 
-.header1 p {
-	margin: 3.5vh 0px 0px 1vw;
-	font-size: 1.12vh;
-	line-height: 1.12vh;
+.header1__warning {
+	margin: 3.5vh 0px 0px 1vw; /*38px */
+	font-size: clamp(12px, 0.625vw, 2vh); /*12px*/
+	line-height: clamp(12px, 0.625vw, 2vh);
 	letter-spacing: -0.03em;
 	color: var(--grey);
 	font-weight: 300;
@@ -96,13 +104,14 @@ body {
 }
 
 .header2__button_personal {
+	margin-top: -0.2vh;
 	margin-left: 1vw;
 	color: var(--black);
 	border: none;
 	background: none;
 	font-family: 'DIN Pro', 'Helvetica Neue', 'Helvetica', sans-serif;
-	font-size: 1.3vh;
-	line-height: 1.3vh;
+	font-size: clamp(14px, 0.729166666vw, 2vh); /*14px = 1.3vh*/
+	line-height: clamp(14px, 0.729166666vw, 2vh);
 	font-weight: 500;
 	letter-spacing: -0.03em;
 	text-decoration: underline;
@@ -111,11 +120,13 @@ body {
 
 .header2__button_shopping-cart {
 	color: var(--black);
+	background: none;
 	border: none;
+	margin-top: -0.2vh;
 	margin-right: 1vw;
 	font-family: 'DIN Pro', 'Helvetica Neue', 'Helvetica', sans-serif;
-	font-size: 1.3vh;
-	line-height: 1.3vh;
+	font-size: clamp(14px, 0.729166666vw, 2vh); /*14px = 1.3vh*/
+	line-height: clamp(14px, 0.729166666vw, 2vh);
 	font-weight: 300;
 	letter-spacing: -0.03em;
 }
@@ -132,7 +143,7 @@ body {
 	box-sizing: border-box;
 }
 
-.header3 h1 {
+.header3__brand {
 	margin: 0.6vh 0px 0px 0.6vw;
 	font-weight: 300;
 	font-size: 7.4vh;
@@ -141,7 +152,7 @@ body {
 	color: var(--black);
 }
 
-.header3 span {
+.header3__model {
 	font-weight: 700;
 	font-size: 7.4vh;
 	line-height: 7.4vh;
@@ -149,9 +160,9 @@ body {
 	color: var(--black);
 }
 
-.header3 p {
-	font-size: 1.85vh;
-	line-height: 1.85vh;
+.header3__color {
+	font-size: clamp(16px, 1.041666666vw, 2vh);/* 1.85vh 20px */
+	line-height: clamp(16px, 1.041666666vw, 2vh);
 	margin-top: 2vh;
 	margin-left: 2.4vw;
 	font-weight: 300;
@@ -160,15 +171,17 @@ body {
 	position: relative;
 }
 
-.header3 p::before {
+.header3__color::before {
 	position: absolute;
 	content: "";
 	background-image: url("img/color-icon.svg");
 	background-repeat: no-repeat;
-	height: 2.2vh;
-	width: 2.2vh;
+	background-size: cover;  
+	background-position: center center;
+	height: clamp(16px, 1.25vw, 3vh);/* 2.2vh 24px */
+	width: clamp(16px, 1.25vw, 3vh);/* 2.2vh 24px */
 	top: -0.3vh;
-	left: -3vh;
+	left: -1.8vw;
 }
 
 .header4 {
@@ -182,8 +195,8 @@ body {
 }
 
 .header4__price {
-	font-size: 1.852vh;
-	line-height: 1.852vh;
+	font-size: clamp(16px, 1.041666666vw, 2vh); /* 1.852vh; 20px */
+	line-height: clamp(16px, 1.041666666vw, 2vh);
 	margin-left: 1vw;
 	margin-top: 5.8vh;
 	white-space: nowrap;
@@ -193,21 +206,21 @@ body {
 .header4__arrow {
 	display: block;
 	margin-right: 1vw;
-	margin-top: 3.1vh;
+	margin-top: 3.2vh;
 	width: 9.270833333vw;
 	height: 2.5vw;
 	position: relative;
 }
 
 .header4__arrow::before {
-	font-size: 1.3vh;
-	line-height: 1.3vh;
+	font-size: clamp(14px, 0.729166666vw, 2vh); /*14px = 1.3vh*/
+	line-height: clamp(14px, 0.729166666vw, 2vh); /*14px = 1.3vh*/
 	letter-spacing: -0.03em;
 	white-space: nowrap;
 	text-decoration: none;
 	position: absolute;
 	left: -2.29vw;
-	top: 0.46vh;
+	bottom: 1.6vw; /*5px = 0.46vh = 0.26041666666vw*/
 	content: "learn more";
 	color: var(--grey)
 }
@@ -560,11 +573,10 @@ body {
  
 .center__top-right-angle--buy::after {
 	position: absolute;
-	top: 0px;
 	right: -1.614583333vw; /*-31px*/
 	content: "";
 	width: 1.09375vw; /*21px*/
-	height: 1.09375vw;/*21px*/ 
+	height: 1.09375vw; /*21px*/ 
 	background-size: cover;  
 	background-position: center center;
 	background-image: url(img/small_circle.svg); 
