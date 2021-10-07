@@ -3,11 +3,13 @@ to do list
 
 1. Установить минимальный шрифт
 https://habr.com/ru/company/ruvds/blog/501634/
-использовать clamp
+использовать clamp или max
 clamp(12px, 5vw, 5vh)
 (минимальный, нужный, максимальный чтобы за края не выходил 
 при разрешении 1900*400px)
 
+установка минимального шрифта помогает мастштабировать текст
+при помощи ctrl + для людей с плохим зрением
 
 
 2. Перевести vh в vw
@@ -18,6 +20,7 @@ clamp(12px, 5vw, 5vh)
 7. Добавить остальные страницы
 8. Отрисовать другие страницы
 9. Добавить АВИФ и ВЕБП через picture
+10 Добавить 3 кнопки на левом сайдбаре
 
 
 */
@@ -215,14 +218,15 @@ body {
 .header4__arrow::before {
 	font-size: clamp(14px, 0.729166666vw, 2vh); /*14px = 1.3vh*/
 	line-height: clamp(14px, 0.729166666vw, 2vh); /*14px = 1.3vh*/
+	font-weight: 300;
 	letter-spacing: -0.03em;
 	white-space: nowrap;
 	text-decoration: none;
 	position: absolute;
 	left: -2.29vw;
-	bottom: 1.6vw; /*5px = 0.46vh = 0.26041666666vw*/
+	bottom: 1.6vw; 
 	content: "learn more";
-	color: var(--grey)
+	color: var(--grey);
 }
 
 .header4 svg {
@@ -235,7 +239,7 @@ body {
 	display: flex;
 	grid-column: 1/2;
 	grid-row: 1/-1;
-	border-right: 1px solid #DDDDDD;
+	border-right: 1px solid var(--border);
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
@@ -279,19 +283,18 @@ body {
 	list-style: none;
 	text-align: right;
 	margin: 3.2vh 1vw 0px 0px;
-	font-size: 1.296296296vh;
-	line-height: 1.851851851vh;
+	font-size: max(14px, 0.72916666666vw); /*14px 1.296296296vh*/
+	line-height: max(20px, 1.04166666667vw); /*20px 1.851851851vh*/
 	letter-spacing: -0.03em;
 	font-weight: 300;
 }
 
 .nav-top .nav-top__menu1_header {
 	text-decoration: underline;
-	text-underline-offset: 0px;
 	color: var(--black);
-	margin-bottom: 0.8vh;
-	font-size: 1.852vh;
-	line-height: 1.852vh;
+	margin-bottom: 0.41666666666vw; /*8px 0.8vh*/
+	font-size: max(1.04166666667vw, 20px); /*20px 1.852vh*/
+	line-height: max(1.04166666667vw, 20px); /*20px 1.852vh*/
 	font-weight: 500;
 	position: relative;
 }
@@ -299,16 +302,11 @@ body {
 .nav-top__menu1_header::after {
 	position: absolute;
 	content: "";
-	width: 1.944444444vh;
-	/*21px*/
-	height: 1.481481481vh;
-	/*16px*/
-	top: 0.37037037vh;
-	/*4px*/
-	right: -2.592592592vh;
-	/*-28px*/
-	background-size: 1.944444444vh 1.481481481vh;
-	/*21px 16px*/
+	width: max(15.75px, 1.09375vw);	/*21px 1.944444444vh*/
+	height: max(12px, 0.83333333333vw);	/*16px 1.481481481vh*/
+	top: max(7px, 0.20833333333vw);	/*4px = 0.37037037vh = 0.20833333333vw*/
+	right: min(-25px, -1.45833333333vw);	/*-25px, -28px = -1.45833333333vw*/
+	background-size: max(15.75px, 1.09375vw) max(12px, 0.83333333333vw);	/*21px 16px*/
 	background-image: url(img/Arrow2.svg);
 	background-repeat: no-repeat;
 }
@@ -316,11 +314,13 @@ body {
 .nav-top__menu2 {
 	list-style: none;
 	margin: 0px 0px 3.1vh 1vw;
-	font-size: 1.111111111vh;
-	line-height: 1.944444444vh;
+	font-size: max(12px, 0.625vw); /*12px 1.111111111vh*/
+	line-height: max(20px, 1.04166666667vw); /*20px 1.851851851vh*/
 	font-weight: 300;
 	color: var(--grey);
 }
+
+
 
 .nav-bottom {
 	box-sizing: border-box;
@@ -340,9 +340,8 @@ body {
 .nav-bottom__menu3 a {
 	display: block;
 	text-decoration: none;
-	font-size: 1.111111111vh;
-	line-height: 1.851851851vh;
-	/* 20px */
+	font-size: max(12px, 0.625vw); /*12px 1.111111111vh*/
+	line-height: max(20px, 1.04166666667vw); /* 20px 1.851851851vh */
 	font-weight: 300;
 	letter-spacing: -0.03em;
 	color: var(--grey);
@@ -357,33 +356,32 @@ body {
 }
 
 .nav-bottom .nav-bottom__menu3_header {
-	font-size: 1.388888888vh;
-	line-height: 1.388888888vh;
+	font-size: max(15px, 0.78125vw); /*15px 1.388888888vh*/
+	line-height: max(15px, 0.78125vw); /*15px 1.388888888vh*/
 	font-weight: 500;
 	color: var(--black);
-	padding-bottom: 0.462962962vh;
 	border-bottom: 1px solid var(--border);
-	margin-bottom: 0.462962962vh;
+	padding-bottom: 0.462962962vh; 	
 	position: relative;
 }
+
+/* остановился тут. нужно перевести в vw и установить max()*/
+
 
 .nav-bottom__menu3_header::after {
 	position: absolute;
 	content: "";
-	width: 0.925925925vh;
-	/*10px*/
-	height: 0.648148148vh;
-	/*7px*/
-	top: 0.37037037vh;
-	/*4px*/
+	width: 0.925925925vh;	/*10px*/
+	height: 0.648148148vh;	/*7px*/
+	top: 0.37037037vh;	/*4px*/
 	right: 0px;
-	background-size: 0.925925925vh 0.648148148vh;
-	/*10px 7px*/
+	background-size: 0.925925925vh 0.648148148vh;	/*10px 7px*/
 	background-image: url(img/arrowmini.svg);
 	background-repeat: no-repeat;
 }
 
 .nav-bottom__menu3 .nav-bottom__menu3_contact {
+	margin-top: 0.462962962vh; 
 	text-decoration: underline;
 	font-size: 1.111111111vh;
 	line-height: 1.944444444vh;
