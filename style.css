@@ -551,28 +551,9 @@ body {
 	align-items: flex-end;
 }
 
-
-.center__top-right-angle--buy {
-	font-size: max(14px, 0.72916666666vw); /*14px 1.296296296vh*/
-	letter-spacing: -0.03em;
-	font-weight: 400;
-	text-decoration: underline;
-	text-underline-offset: 1px;
-	margin-right: 1.5625vw; /*30px*/
-	position: relative;
-  	color: var(--grey);
-  	border: none;
-	background-color: transparent;
-  	padding: 16px 30px;
-  	background: transparent url(https://ronokiri2.github.io/Instax/img/small_circle.svg) 100% 55% no-repeat;
-	background-size: min(21px, 2vw);
-}
-
-
 /*
 .center__top-right-angle--buy {
 	font-size: max(14px, 0.72916666666vw); 
-	line-height: 140%;
 	letter-spacing: -0.03em;
 	font-weight: 400;
 	text-decoration: underline;
@@ -580,12 +561,45 @@ body {
 	margin-right: 1.5625vw; 
 	position: relative;
   	color: var(--grey);
+  	border: none;
+	background-color: transparent;
+  	padding: 16px 30px;
+  	background: transparent url(img/small_circle.svg) 100% 55% no-repeat;
+	background-size: min(21px, 2vw);
+}
+*/
+
+
+.center__top-right-angle--buy {
+	font-size: max(14px, 0.72916666666vw); 
+	line-height: 140%;
+	letter-spacing: -0.03em;
+	font-weight: 400;
+	text-decoration: underline;
+	text-underline-offset: 1px;
+	margin-right: max(26px, 1.35416666667vw); 
+	border: none;
+	position: relative;
+  	color: var(--grey);
 	background-color: transparent;  
 }
  
 .center__top-right-angle--buy::after {
 	position: absolute;
-	right: -1.614583333vw;
+	right: min(-26px, -1.35416666667vw);
+	content: "";
+	width: max(21px, 1.09375vw); 
+	height: max(21px, 1.09375vw);  
+	background-size: cover;  
+	background-position: center center;
+	background-image: url(img/small_circle.svg); 
+	border-radius: 50%;}
+
+
+/*
+.center__top-right-angle--buy::after {
+	position: absolute;
+	right: max(-31px, -2vw); 
 	content: "";
 	width: max(17px, 1.09375vw); 
 	height: max(17px, 1.09375vw);  
@@ -593,29 +607,19 @@ body {
 	background-position: center center;
 	background-image: url(img/small_circle.svg); 
 	border-radius: 50%;}
+
 */
 
-/*
-	position: absolute;
-	content: "";
-	width: max(10px, 0.52083333333vw);		
-	height: max(7px, 0.36458333333vw);	
-	top: max(4px, 0.37037037vh);	
-	right: 0px;
-	background-size: max(10px, 0.52083333333vw) max(7px, 0.36458333333vw);
-	background-image: url(img/arrowmini.svg);
-	background-repeat: no-repeat;
-*/
 
 
 .center__top-right-angle--compare {
-	margin-top: 3.8vh;
-	width: 12.037037037vh; /*130px*/
-	height: 3.703703703vh; /*40px*/
+	margin-top: 3.7vh;
+	width: max(130px, 6.77083333333vw); /*130px 12.037037037vh*/
+	height: max(40px, 2.08333333333vw); /*40px 3.703703703vh*/
   	padding-bottom: 0.462962962vh; /*5px*/
 	border: 1px solid var(--border);
   	font-family: 'DIN Pro';
-	font-size: 1.481481481vh; /*16px*/
+	font-size: max(16px, 0.83333333333vw); /*16px*/
 	line-height: 100%;
 	letter-spacing: -0.03em;
 	font-weight: 400;
@@ -623,22 +627,16 @@ body {
 }
 
 
-
-
-
-
 .center__quiz {
 	display: flex;
 	position: absolute;
 	flex-direction: column;
-	right: 0;
-	bottom: 0;
-	margin-bottom: 14.5vh;
-  	margin-right: 1vw;
+	bottom: 14.5vh;
+  	right: 1vw;
 }
 
 .center__quiz--header {
-	font-size: 1.296296296vh;  /*14px*/
+	font-size: max(14px, 1.296296296vh);  /*14px*/
 	line-height: 140%;
 	letter-spacing: -0.03em;
 	font-weight: 400;
@@ -647,7 +645,7 @@ body {
 
 .center__quiz--text {
 	margin-top: 2.1vh;
-	font-size: 1.296296296vh; /*14px*/
+	font-size: max(14px, 1.296296296vh); /*14px*/
 	line-height: 145%;
 	font-weight: 300;
   	text-align: right;
@@ -655,7 +653,7 @@ body {
   	color: var(--grey);
 }
 
-
+/* остановился тут*/
 
 .description {
 	box-sizing: border-box;
