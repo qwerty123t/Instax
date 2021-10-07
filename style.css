@@ -20,7 +20,8 @@ clamp(12px, 5vw, 5vh)
 7. Добавить остальные страницы
 8. Отрисовать другие страницы
 9. Добавить АВИФ и ВЕБП через picture
-10 Добавить 3 кнопки на левом сайдбаре
+10 Картинка png в picture почему-то не загружается
+11 Добавить 3 кнопки на левом сайдбаре
 
 
 */
@@ -361,30 +362,33 @@ body {
 	font-weight: 500;
 	color: var(--black);
 	border-bottom: 1px solid var(--border);
-	padding-bottom: 0.462962962vh; 	
+	padding-bottom: 0.462962962vh; 	/*5px*/
 	position: relative;
 }
-
-/* остановился тут. нужно перевести в vw и установить max()*/
 
 
 .nav-bottom__menu3_header::after {
 	position: absolute;
 	content: "";
-	width: 0.925925925vh;	/*10px*/
-	height: 0.648148148vh;	/*7px*/
-	top: 0.37037037vh;	/*4px*/
+	width: max(10px, 0.52083333333vw);		/*10px = 0.925925925vh*/
+	height: max(7px, 0.36458333333vw);	/*7px = 0.648148148vh*/
+	top: max(4px, 0.37037037vh);	/*4px = 0.37037037vh*/
 	right: 0px;
-	background-size: 0.925925925vh 0.648148148vh;	/*10px 7px*/
+	background-size: max(10px, 0.52083333333vw) max(7px, 0.36458333333vw);	/*10px 7px*/
 	background-image: url(img/arrowmini.svg);
 	background-repeat: no-repeat;
 }
 
+
+
+
+
+
 .nav-bottom__menu3 .nav-bottom__menu3_contact {
-	margin-top: 0.462962962vh; 
+	margin-top: 0.462962962vh; /*5px*/
 	text-decoration: underline;
-	font-size: 1.111111111vh;
-	line-height: 1.944444444vh;
+	font-size: max(12px, 0.625vw); /*12px = 1.111111111vh*/
+	line-height: max(20px, 1.04166666667vw); /*20px*/
 	font-weight: 500;
 	color: var(--black);
 }
@@ -397,9 +401,8 @@ body {
 .nav-bottom__menu4 a {
 	display: none;
 	text-decoration: none;
-	font-size: 1.111111111vh;
-	line-height: 1.851851851vh;
-	/* 20px */
+	font-size: max(12px, 0.625vw); /*12px = 1.111111111vh*/
+	line-height: max(20px, 1.04166666667vw); /*20px*/
 	font-weight: 300;
 	letter-spacing: -0.03em;
 	color: var(--grey);
@@ -415,13 +418,12 @@ body {
 
 .nav-bottom .nav-bottom__menu4 .nav-bottom__menu4_header {
 	display: block;
-	font-size: 1.388888888vh;
-	line-height: 1.388888888vh;
+	font-size: max(15px, 0.78125vw); /*15px*/
+	line-height: max(15px, 0.78125vw); /*15px*/
 	font-weight: 300;
 	color: var(--grey);
-	padding-bottom: 0.648148148vh;
-	border-bottom: 1px solid var(--border);
-	margin-bottom: 0.462962962vh;
+	padding-bottom: 0.648148148vh; /*7px*/
+	border-bottom: 1px solid var(--border);	
 	position: relative;
 	transition: color 0.2s;
 	animation-timing-function: ease-in-out;
@@ -434,15 +436,11 @@ body {
 .nav-bottom__menu4_header::after {
 	position: absolute;
 	content: "";
-	width: 0.925925925vh;
-	/*10px*/
-	height: 0.648148148vh;
-	/*7px*/
-	top: 0.37037037vh;
-	/*4px*/
+	width: max(10px, 0.52083333333vw);		/*10px = 0.925925925vh*/
+	height: max(7px, 0.36458333333vw);	/*7px = 0.648148148vh*/
+	top: max(4px, 0.37037037vh);	/*4px = 0.37037037vh*/
 	right: 0px;
-	background-size: 0.925925925vh 0.648148148vh;
-	/*10px 7px*/
+	background-size: max(10px, 0.52083333333vw) max(7px, 0.36458333333vw);	/*10px 7px*/
 	background-image: url(img/arrowmini.svg);
 	background-repeat: no-repeat;
 	opacity: 0.3;
@@ -465,10 +463,11 @@ body {
 	writing-mode: vertical-lr;
 	transform: scale(-1, -1);
 	margin: 0px 0px calc(3.5vh - 0.462962962vh) 0.8vw;
-	font-size: 1.111111111vh;
-	line-height: 1.111111111vh;
+	font-size: max(12px, 0.625vw); /*12px 1.111111111vh*/
+	line-height: max(12px, 0.625vw); /*12px 1.111111111vh*/
 	margin-top: auto;
-	align-self: flex-start; font-weight: 300;
+	align-self: flex-start; 
+	font-weight: 300;
 }
 
 .line {
@@ -494,39 +493,39 @@ body {
 	position: absolute;
 	top: 33.5vh;
 	left: 1vw;
-	transform: rotate(-90deg);width: 0.925925925vh;
-	/*10px*/
+	transform: rotate(-90deg);
+	width: max(10px, 0.52083333333vw);	/*10px*/
 }
+
 
 .center__arrow--right{
 	position: absolute;
 	top: 33.5vh;
 	right: 1vw;
-	transform: rotate(90deg);width: 0.925925925vh;
-	/*10px*/
+	transform: rotate(90deg);
+	width: max(10px, 0.52083333333vw);	/*10px*/
 }
 
 
 .center__picture{
 	display: flex;
 	align-items: center;
-	justify-content: center; width: 30.416666666vw; height:41.481481482vh; 
+	justify-content: center; 
 }
 
-.center img { max-width:100%; height:auto;
+.center__picture img { 
+	width: 30.416666666vw; /*584px*/
 }
 
 
 .center__top-left-angle {
 	position: absolute;
-	margin-left: 1vw;
-	margin-top: 6.9vh;
+	left: 1vw;
+	top: 6.9vh;
 	display: flex;
-	left: 0;
-	top: 0;
 	width: 17.1875vw; /*330px*/
-	font-size: 1.388888888vh; /*15px*/
-	line-height: 1.851851851vh; /*20px*/
+	font-size: max(15px, 0.78125vw); /*15px = 1.388888888vh*/
+	line-height: max(20px, 1.04166666667vw); /*20px = 1.851851851vh*/
 	letter-spacing: -0.03em;
 	font-weight: 300;
 	color: var(--grey);
@@ -538,49 +537,75 @@ body {
 	width: 1.481481481vh; /*16px*/
 	height: 3.796296296vh;/*41px*/
 	top:  -5.185185185vh; /*-56px*/
-	background-size: 1.481481481vh 3.796296296vh;
-	/*16px 41px*/
+	background-size: 1.481481481vh 3.796296296vh;	/*16px 41px*/
 	background-image: url(img/arrowdown.svg);
 	background-repeat: no-repeat;
 }
 
 .center__top-right-angle {
 	position: absolute;
-	right: 0;
-	top: 0;
-	margin-top: 1vw;
-	margin-right: 1vw;
+	top: 1.7vh;
+	right: 1vw;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
 }
 
+
 .center__top-right-angle--buy {
-	font-size: 1.296296296vh; /*14px*/
-	line-height: 140%;
+	font-size: max(14px, 0.72916666666vw); /*14px 1.296296296vh*/
 	letter-spacing: -0.03em;
 	font-weight: 400;
 	text-decoration: underline;
 	text-underline-offset: 1px;
 	margin-right: 1.5625vw; /*30px*/
 	position: relative;
-	border: none;
+  	color: var(--grey);
+  	border: none;
+	background-color: transparent;
+  	padding: 16px 30px;
+  	background: transparent url(https://ronokiri2.github.io/Instax/img/small_circle.svg) 100% 55% no-repeat;
+	background-size: min(21px, 2vw);
+}
+
+
+/*
+.center__top-right-angle--buy {
+	font-size: max(14px, 0.72916666666vw); 
+	line-height: 140%;
+	letter-spacing: -0.03em;
+	font-weight: 400;
+	text-decoration: underline;
+	text-underline-offset: 1px;
+	margin-right: 1.5625vw; 
+	position: relative;
   	color: var(--grey);
 	background-color: transparent;  
 }
  
 .center__top-right-angle--buy::after {
 	position: absolute;
-	right: -1.614583333vw; /*-31px*/
+	right: -1.614583333vw;
 	content: "";
-	width: 1.09375vw; /*21px*/
-	height: 1.09375vw; /*21px*/ 
+	width: max(17px, 1.09375vw); 
+	height: max(17px, 1.09375vw);  
 	background-size: cover;  
 	background-position: center center;
 	background-image: url(img/small_circle.svg); 
 	border-radius: 50%;}
+*/
 
-
+/*
+	position: absolute;
+	content: "";
+	width: max(10px, 0.52083333333vw);		
+	height: max(7px, 0.36458333333vw);	
+	top: max(4px, 0.37037037vh);	
+	right: 0px;
+	background-size: max(10px, 0.52083333333vw) max(7px, 0.36458333333vw);
+	background-image: url(img/arrowmini.svg);
+	background-repeat: no-repeat;
+*/
 
 
 .center__top-right-angle--compare {
