@@ -150,7 +150,7 @@ body {
 
 .header3__brand {
 	align-self: center;
-	margin: 0vh 0px 1vw 0.6vw);
+	margin: 0vh 0px 1vw 0.6vw;
 	font-weight: 300;
 	font-size: clamp(20px, 7.4vh, 7vw); /*80px 7.4vh 4.16666666667vw*/
 	line-height: clamp(20px, 7.4vh, 7vw); /*80px 7.4vh*/
