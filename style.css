@@ -21,9 +21,10 @@ clamp(12px, 5vw, 5vh)
 8. Отрисовать другие страницы
 9. Добавить АВИФ и ВЕБП через picture
 10 Картинка png в picture почему-то не загружается
-11 Добавить 3 кнопки на левом сайдбаре
-12 добавить маржин топ для второго меню при высоте браузера 700рх
-13 добавить кавычки в квиз
+11 Сделать picture для видео
+12 Добавить 3 кнопки на левом сайдбаре
+13 добавить маржин топ для второго меню при высоте браузера 700рх
+14 добавить кавычки в квиз
 
 */
 
@@ -307,7 +308,7 @@ body {
 	content: "";
 	width: max(15.75px, 1.09375vw);	/*21px 1.944444444vh*/
 	height: max(12px, 0.83333333333vw);	/*16px 1.481481481vh*/
-	top: max(7px, 0.20833333333vw);	/*4px = 0.37037037vh = 0.20833333333vw*/
+	top: max(7px, 0.20833333333vw);	/*4px = 0.37037037vh*/
 	right: min(-25px, -1.45833333333vw);	/*-25px, -28px = -1.45833333333vw*/
 	background-size: max(15.75px, 1.09375vw) max(12px, 0.83333333333vw);	/*21px 16px*/
 	background-image: url(img/Arrow2.svg);
@@ -553,24 +554,6 @@ body {
 	align-items: flex-end;
 }
 
-/*
-.center__top-right-angle--buy {
-	font-size: max(14px, 0.72916666666vw); 
-	letter-spacing: -0.03em;
-	font-weight: 400;
-	text-decoration: underline;
-	text-underline-offset: 1px;
-	margin-right: 1.5625vw; 
-	position: relative;
-  	color: var(--grey);
-  	border: none;
-	background-color: transparent;
-  	padding: 16px 30px;
-  	background: transparent url(img/small_circle.svg) 100% 55% no-repeat;
-	background-size: min(21px, 2vw);
-}
-*/
-
 
 .center__top-right-angle--buy {
 	font-size: max(14px, 0.72916666666vw); 
@@ -579,7 +562,7 @@ body {
 	font-weight: 400;
 	text-decoration: underline;
 	text-underline-offset: 1px;
-	margin-right: max(26px, 1.35416666667vw); 
+	margin-right: max(30px, 1.5625vw); 
 	border: none;
 	position: relative;
   	color: var(--grey);
@@ -588,7 +571,7 @@ body {
  
 .center__top-right-angle--buy::after {
 	position: absolute;
-	right: min(-26px, -1.35416666667vw);
+	right: min(-30px, -1.5625vw);
 	content: "";
 	width: max(21px, 1.09375vw); 
 	height: max(21px, 1.09375vw);  
@@ -598,24 +581,9 @@ body {
 	border-radius: 50%;}
 
 
-/*
-.center__top-right-angle--buy::after {
-	position: absolute;
-	right: max(-31px, -2vw); 
-	content: "";
-	width: max(17px, 1.09375vw); 
-	height: max(17px, 1.09375vw);  
-	background-size: cover;  
-	background-position: center center;
-	background-image: url(img/small_circle.svg); 
-	border-radius: 50%;}
-
-*/
-
-
 
 .center__top-right-angle--compare {
-	margin-top: 3.7vh;
+	margin-top: 3.9vh;
 	width: max(130px, 6.77083333333vw); /*130px 12.037037037vh*/
 	height: max(40px, 2.08333333333vw); /*40px 3.703703703vh*/
   	padding-bottom: 0.462962962vh; /*5px*/
@@ -638,7 +606,7 @@ body {
 }
 
 .center__quiz--header {
-	font-size: max(14px, 1.296296296vh);  /*14px*/
+	font-size: max(14px, 0.72916666666vw);  /*14px 1.296296296vh*/
 	line-height: 140%;
 	letter-spacing: -0.03em;
 	font-weight: 400;
@@ -647,7 +615,7 @@ body {
 
 .center__quiz--text {
 	margin-top: 2.1vh;
-	font-size: max(14px, 1.296296296vh); /*14px*/
+	font-size: max(14px, 0.72916666666vw); /*14px 1.296296296vh*/
 	line-height: 145%;
 	font-weight: 300;
   	text-align: right;
@@ -655,7 +623,6 @@ body {
   	color: var(--grey);
 }
 
-/* остановился тут*/
 
 .description {
 	box-sizing: border-box;
@@ -675,30 +642,27 @@ body {
 }
 
 .description__top--text {
-	font-size: 20px;
+	font-size: max(14px, 1.04166666667vw); /*20px 1.85185185185vh*/
 	line-height: 100%;
 	letter-spacing: -0.03em;
 	font-weight: 400;
 	text-decoration: underline;
 	text-underline-offset: 1px;
-	text-decoration-thickness: 2px;
-	width: 11.458333333vw;
+	text-decoration-thickness: 0.10416666666vw; /*2px*/
+	width: 11.458333333vw; /*220px*/
 }
 
 .description__top--video{
 	display: flex;
-	margin-top: 5.7vh;
+	margin-top: min(3.22916666667vw, 5.7vh); /*62px 3.22916666667vw*/
 	width: 100%;
 	height: 8.50vw; /*160px*/
 	background-color: #eaeaea;
-	position: relative;
-}
-
-.description__top--preview {
-	width: 79%;
-	height: 76%;
-	align-self: flex-end;
-	object-fit: cover;
+	background-image: url("img/video@2x.png");
+	position: relative; 
+	background-repeat:no-repeat;
+    background-size:contain; 
+	background-position: bottom left;
 }
 
 .description__top--triangle {
@@ -710,6 +674,7 @@ body {
 	height: 40.625%; /*65px*/
 }
 
+
 .description__bottom {
 	display: flex;
 	flex-wrap: wrap;
@@ -718,8 +683,8 @@ body {
 
 .description__bottom--previous {
 	width: 100%;
-	margin-left: 7%; 
-	font-size: 15px;
+	margin-left: 8%; 
+	font-size: max(14px, 0.78125vw); /*15px*/
 	line-height: 100%;
 	letter-spacing: -0.06em;
 	font-weight: 400;
@@ -731,7 +696,7 @@ body {
 	width: 100%;
 	margin-left: -2%;
 	margin-bottom: 0.9vh;
-	font-size: 9.25vh;
+	font-size: clamp(20px, 5.20833333333vw, 11vh); /*100px 9.25vh*/
 	line-height: 7vh;
 	letter-spacing: -0.10em;
 	font-weight: 300;
@@ -742,10 +707,11 @@ body {
 .description__bottom--number-first::after {
 	position: absolute;
 	content: "";
-	width: 17px; 
-	height: 12px;
-	bottom: -15px;
-	left: 105px;
+	width: 0.88541666666vw; /*17px*/
+	height: 0.625vw; /*12px*/
+	bottom: -1.38888888889vh; /*30px*/
+	left: 38%; /*105px*/
+	background-size: 0.88541666666vw 0.625vw; /*17px 12px*/
 	background-repeat: no-repeat;
 	background-image: url(img/Line.svg);}
 
@@ -754,17 +720,20 @@ body {
 .description__bottom--next {
 	align-self: end;
 	color: var(--full-white);
-	font-size: 14px;
+	font-size: max(14px, 0.78125vw); /*15px*/
+	line-height: 100%;
+	letter-spacing: -0.06em;
+	font-weight: 400;
 	margin-bottom: 0.5vh;
-	margin-right: 0.9vw;
+	margin-right: 1vw;
 	margin-left: auto; 
 }
 
 .description__bottom--number-second {
 	display: flex;
-	margin-right: -2vh;
+	margin-right: -1vw;
 	margin-bottom: 0.6vh;
-	font-size: 18.50vh;
+	font-size: clamp(20px, 10.4166666667vw, 20vh); /* 200px 18.50vh*/
 	line-height: 14vh;
 	letter-spacing: -0.10em;
 	font-weight: 300;
@@ -784,22 +753,29 @@ body {
 
 .penultimate__text {
 	position: relative;
-	font-size: 14px;
+	font-size: max(14px, 0.72916666666vw); 
 	line-height: 140%;
 	letter-spacing: -0.03em;
 	font-weight: 400;
 	text-decoration: none;
-	right: 30px;
+	margin-right: max(30px, 1.5625vw); 
 	color: var(--grey);
+	text-align: right;
 }
 
 .penultimate__text::after {
-	display: block;
 	position: absolute;
+	content: "";
 	top: 0px;
-	right: -30px;
-	content: url("data:image/svg+xml;utf8,<svg width='21' height='21' xmlns='http://www.w3.org/2000/svg'><circle cx='10.5' cy='10.5' r='10.5'/><path fill='white' d='M14 11h-3v3h-1v-3H7v-1h3V7h1v3h3v1z'/></svg>");
+	right: min(-30px, -1.5625vw);
+	width: max(21px, 1.09375vw); 
+	height: max(21px, 1.09375vw);  
+	background-size: cover;  
+	background-position: center center;
+	background-image: url(img/small_circle.svg); 
+	border-radius: 50%;
 }
+
 
 .sidebar-right {
 	background: var(--full-white);
