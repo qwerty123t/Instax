@@ -11,6 +11,11 @@ clamp(12px, 5vw, 5vh)
 установка минимального шрифта помогает мастштабировать текст
 при помощи ctrl + для людей с плохим зрением
 
+добавить медиа выражение чтобы при высоте экрана <710рх уменьшалась высота строки в меню 1 и 2
+
+добавить медиа выражение чтобы при ширине экрана <х увеличивался отступ слева у бренда
+
+
 
 2. Перевести vh в vw
 3. Добавить кнопки переключения ракурсов фото 
@@ -24,8 +29,7 @@ clamp(12px, 5vw, 5vh)
 11 Сделать picture для видео
 12 Добавить 3 кнопки на левом сайдбаре
 13 добавить маржин топ для второго меню при высоте браузера 700рх
-14 добавить кавычки в квиз
-
+15 добавить content-visibility: auto; для страниц learn more чтобы увеличить скорость рендера (как lazy load)
 */
 
 
@@ -291,24 +295,42 @@ body {
 	line-height: max(20px, 1.04166666667vw); /*20px 1.851851851vh*/
 	letter-spacing: -0.03em;
 	font-weight: 300;
+	transition: font-size 0.2s, line-height 0.2s;
 }
+
+
+
+@media screen and (max-height: 720px) {
+	.nav-top__menu1 {
+		line-height: max(18px, 1.04166666667vw); /*16px 20px*/
+	}
+  }
+
+  @media screen and (max-height: 640px) {
+	.nav-top__menu1 {
+		font-size: max(12px, 0.72916666666vw);
+		line-height: max(16px, 1.04166666667vw); /*16px 20px*/
+	}
+  }
 
 .nav-top .nav-top__menu1_header {
 	text-decoration: underline;
 	color: var(--black);
 	margin-bottom: 0.41666666666vw; /*8px 0.8vh*/
-	font-size: max(1.04166666667vw, 20px); /*20px 1.852vh*/
-	line-height: max(1.04166666667vw, 20px); /*20px 1.852vh*/
+	font-size: max(18px, 1.04166666667vw); /*20px 1.852vh*/
+	line-height: max(18px, 1.04166666667vw); /*20px 1.852vh*/
 	font-weight: 500;
 	position: relative;
 }
+
+
 
 .nav-top__menu1_header::after {
 	position: absolute;
 	content: "";
 	width: max(15.75px, 1.09375vw);	/*21px 1.944444444vh*/
 	height: max(12px, 0.83333333333vw);	/*16px 1.481481481vh*/
-	top: max(7px, 0.20833333333vw);	/*4px = 0.37037037vh*/
+	top: max(4px, 0.1vw);	/*4px = 0.37037037vh*/
 	right: min(-25px, -1.45833333333vw);	/*-25px, -28px = -1.45833333333vw*/
 	background-size: max(15.75px, 1.09375vw) max(12px, 0.83333333333vw);	/*21px 16px*/
 	background-image: url(img/Arrow2.svg);
@@ -319,13 +341,33 @@ body {
 	list-style: none;
 	margin: 0px 0px 3.1vh 1vw;
 	font-size: max(12px, 0.625vw); /*12px 1.111111111vh*/
-	line-height: max(20px, 1.04166666667vw); /*20px 1.851851851vh*/
+	line-height: max(21px, 1.04166666667vw); /*20px 1.851851851vh*/
+	letter-spacing: -0.03em;
 	font-weight: 300;
 	color: var(--grey);
+	transition: line-height 0.2s;
 }
 
 
 
+@media screen and (max-height: 720px) {
+	.nav-top__menu2 {
+		line-height: max(18px, 1.04166666667vw); /*16px 20px*/
+	}
+  }
+
+@media screen and (max-height: 640px) {
+	.nav-top__menu2 {
+		line-height: max(16px, 1.04166666667vw); /*16px 20px*/
+	}
+  }
+  
+ @media screen and (max-height: 570px) {
+	.nav-top__menu2 {
+		margin-top: calc(3.2vh + max(18px, 1.04166666667vw) + 0.41666666666vw);
+		margin-left: 0vw;
+	}
+  }
 .nav-bottom {
 	box-sizing: border-box;
 	grid-column: 2/3;
@@ -808,12 +850,61 @@ body {
 
 
 .sidebar-right__bottom {
-	margin-bottom: 3.1vh;
+	margin-bottom: 3.3vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
-.sidebar-right__bottom svg{
-	width: 2.395833333vw; /*46px*/
-	margin-top: 0.4vh;
+
+.sidebar-right__bottom--facebook{
+	width: 2.27272727273vw; /*46px*/
+}
+.sidebar-right__bottom--instagram{
+	width: 2.27272727273vw; /*46px*/
+}
+.sidebar-right__bottom--twitter{
+	width: 2.27272727273vw; /*46px*/
+}
+
+/* Обертка для svg, чтобы при наведении border не окрашивался*/
+
+.sidebar-right__bottom--link-fb{
+	margin-top: 1vh;
+	width: 2.27272727273vw; /*46px*/
+	height: 2.27272727273vw; /*46px*/
+	border: 1px solid var(--grey);
+	border-radius: 50%;
+}
+.sidebar-right__bottom--link-fb:hover .sidebar-right__bottom--facebook{
+	filter: grayscale(100%) brightness(0%);
+	-webkit-filter: grayscale(100%) brightness(0%);
+	-moz-filter: grayscale(100%) brightness(0%);
+}
+
+
+.sidebar-right__bottom--link-inst{
+	margin-top: 1vh;
+	width: 2.27272727273vw; /*46px*/
+	height: 2.27272727273vw; /*46px*/
+	border: 1px solid var(--grey);
+	border-radius: 50%;
+}
+.sidebar-right__bottom--link-inst:hover .sidebar-right__bottom--instagram{
+	filter: grayscale(100%) brightness(0%);
+	-webkit-filter: grayscale(100%) brightness(0%);
+	-moz-filter: grayscale(100%) brightness(0%);
+}
+
+
+.sidebar-right__bottom--link-twit{
+	margin-top: 1vh;
+	width: 2.27272727273vw; /*46px*/
+	height: 2.27272727273vw; /*46px*/
+	border: 1px solid var(--grey);
+	border-radius: 50%;
+}
+.sidebar-right__bottom--link-twit:hover .sidebar-right__bottom--twitter{
+	filter: grayscale(100%) brightness(0%);
+	-webkit-filter: grayscale(100%) brightness(0%);
+	-moz-filter: grayscale(100%) brightness(0%);
 }
