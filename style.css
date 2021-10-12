@@ -257,6 +257,60 @@ body {
 .sidebar-left__instax-logo {
 	width: 2.1vw;
 }
+.sidebar-left__center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: -2.1vh;
+}
+.sidebar-left__center--menu{
+	width: 2.27272727273vw; /*45px*/
+}
+.sidebar-left__center--link-menu{
+	width: 2.27272727273vw; /*45px*/
+	height: 2.27272727273vw; /*45px*/
+	background-color: var(--full-white);
+	border: 1px solid var(--full-white);
+	border-radius: 50%;
+}
+.sidebar-left__center--link-menu:hover .sidebar-left__center--menu{
+	filter: grayscale(100%) brightness(0%);
+	-webkit-filter: grayscale(100%) brightness(0%);
+	-moz-filter: grayscale(100%) brightness(0%);
+}
+
+.sidebar-left__center--magnifier{
+	width: 2.27272727273vw; /*45px*/
+}
+.sidebar-left__center--link-magnifier{
+	margin-top: 1vh;
+	width: 2.27272727273vw; /*45px*/
+	height: 2.27272727273vw; /*45px*/
+	border: 1px solid var(--grey);
+	border-radius: 50%;
+}
+.sidebar-left__center--link-magnifier:hover .sidebar-left__center--magnifier{
+	filter: grayscale(100%) brightness(0%);
+	-webkit-filter: grayscale(100%) brightness(0%);
+	-moz-filter: grayscale(100%) brightness(0%);
+}
+
+.sidebar-left__center--copy{
+	width: 2.27272727273vw; /*45px*/
+}
+.sidebar-left__center--link-copy{
+	margin-top: 1vh;
+	width: 2.27272727273vw; /*45px*/
+	height: 2.27272727273vw; /*45px*/
+	border: 1px solid var(--grey);
+	border-radius: 50%;
+}
+.sidebar-left__center--link-copy:hover .sidebar-left__center--copy{
+	filter: grayscale(100%) brightness(0%);
+	-webkit-filter: grayscale(100%) brightness(0%);
+	-moz-filter: grayscale(100%) brightness(0%);
+}
+
 
 .sidebar-left__fujifilm-logo {
 	width: 0.85vw;
@@ -856,22 +910,23 @@ body {
 	align-items: center;
 }
 
+
+
 .sidebar-right__bottom--facebook{
-	width: 2.27272727273vw; /*46px*/
+	width: 2.27272727273vw; /*45px*/
 }
 .sidebar-right__bottom--instagram{
-	width: 2.27272727273vw; /*46px*/
+	width: 2.27272727273vw; /*45px*/
 }
 .sidebar-right__bottom--twitter{
-	width: 2.27272727273vw; /*46px*/
+	width: 2.27272727273vw; /*45px*/
 }
 
 /* Обертка для svg, чтобы при наведении border не окрашивался*/
 
 .sidebar-right__bottom--link-fb{
-	margin-top: 1vh;
-	width: 2.27272727273vw; /*46px*/
-	height: 2.27272727273vw; /*46px*/
+	width: 2.27272727273vw; /*45px*/
+	height: 2.27272727273vw; /*45px*/
 	border: 1px solid var(--grey);
 	border-radius: 50%;
 }
@@ -884,8 +939,8 @@ body {
 
 .sidebar-right__bottom--link-inst{
 	margin-top: 1vh;
-	width: 2.27272727273vw; /*46px*/
-	height: 2.27272727273vw; /*46px*/
+	width: 2.27272727273vw; /*45px*/
+	height: 2.27272727273vw; /*45px*/
 	border: 1px solid var(--grey);
 	border-radius: 50%;
 }
@@ -898,8 +953,8 @@ body {
 
 .sidebar-right__bottom--link-twit{
 	margin-top: 1vh;
-	width: 2.27272727273vw; /*46px*/
-	height: 2.27272727273vw; /*46px*/
+	width: 2.27272727273vw; /*45px*/
+	height: 2.27272727273vw; /*45px*/
 	border: 1px solid var(--grey);
 	border-radius: 50%;
 }
