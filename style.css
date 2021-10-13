@@ -777,8 +777,8 @@ body {
 
 
 .center__quiz {
-	display: flex;
 	position: absolute;
+	display: flex;
 	flex-direction: column;
 	bottom: 14.5vh;
   	right: 1vw;
