@@ -14,6 +14,8 @@ to do list
 12 Добавить 3 кнопки на левом сайдбаре
 13 добавить маржин топ для второго меню при высоте браузера 700рх
 15 добавить content-visibility: auto; для страниц learn more чтобы увеличить скорость рендера (как lazy load)
+16 улучшить UX увеличив область кнопок как тут
+https://web.dev/learn/css/logical-properties/
 */
 
 
@@ -832,16 +834,16 @@ body {
 }
 
 .description__top--video{
-	display: flex;
-	margin-top: min(3.22916666667vw, 5.7vh); /*62px 3.22916666667vw*/
+	margin-top: min(3.22916666667vw, 5.7vh); /*62px*/
 	width: 100%;
 	height: 8.50vw; /*160px*/
 	background-color: #eaeaea;
-	background-image: url("img/video@2x.png");
 	position: relative; 
-	background-repeat:no-repeat;
-    background-size:contain; 
-	background-position: bottom left;
+}
+
+.description__top--picture img{
+	width: 100%;
+	height: 100%;
 }
 
 .description__top--triangle {
@@ -1046,3 +1048,4 @@ body {
 	-webkit-filter: grayscale(100%) brightness(0%);
 	-moz-filter: grayscale(100%) brightness(0%);
 }
+
