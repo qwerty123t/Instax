@@ -114,8 +114,8 @@
 
     <ul class="nav-bottom__menu4">
       <li><a class="nav-bottom__menu4_header" href="#">Other</a></li>
-      <li><a class="nav-bottom__menu4_sub-menu" href="#" target="_blank">123123</a></li>
-      <li><a class="nav-bottom__menu4_sub-menu" href="#" target="_blank">123123123</a></li>
+      <li><a class="nav-bottom__menu4_sub-menu" href="#" target="_blank">Blog</a></li>
+      <li><a class="nav-bottom__menu4_sub-menu" href="#" target="_blank">Designed by Jcookie ✪</a></li>
     </ul>
 
     <p class="copyright">©2021 Fujifilm uk</p>
@@ -133,11 +133,15 @@
       <button class="center__top-right-angle--compare" type="button">Compare</button>
     </div>
 
-    <img class="center__arrow--left" src="img/arrowmini.svg" alt="arrow left">
-   
-    
 
-    <picture class="center__picture">
+    <button class="center__arrow--left" onclick="minusSlide()">
+      <img class="center__arrow--left-svg" src="img/arrowmini.svg" alt="arrow left">
+    </button>
+    
+   
+
+    <div class="slider">
+    <picture class="item">
       <source srcset="img/mini11/111@1.avif 1x,
                       img/mini11/111@2.avif 2x"
                       type="image/avif">
@@ -146,12 +150,49 @@
                       type="image/webp">
       <img  src="img/mini11/111@1.png" 
             srcset="img/mini11/111@2.png 2x" 
-            alt="instax mini 11 white">
+            alt="instax mini 11 white 1">
+    </picture>   
+
+
+    <picture class="item">
+      <source srcset="img/mini11/112@1.avif 1x,
+                      img/mini11/112@2.avif 2x"
+                      type="image/avif">
+      <source srcset="img/mini11/112@1.webp 1x,
+                      img/mini11/112@2.webp 2x"
+                      type="image/webp">
+      <img  src="img/mini11/112@1.png" 
+            srcset="img/mini11/112@2.png 2x" 
+            alt="instax mini 11 white 2">
     </picture>
 
+    <picture class="item">
+      <source srcset="img/mini11/113@1.avif 1x,
+                      img/mini11/113@2.avif 2x"
+                      type="image/avif">
+      <source srcset="img/mini11/113@1.webp 1x,
+                      img/mini11/113@2.webp 2x"
+                      type="image/webp">
+      <img  src="img/mini11/113@1.png" 
+            srcset="img/mini11/113@2.png 2x" 
+            alt="instax mini 11 white 3">
+    </picture>
+  </div>
     
+  <button class="center__arrow--right" onclick="plusSlide()">
+    <img class="center__arrow--right-svg" src="img/arrowmini.svg" alt="arrow right">
+  </button>
 
-    <img class="center__arrow--right" src="img/arrowmini.svg" alt="arrow right">
+
+
+
+
+
+
+
+
+
+  
 
     <div class="center__quiz">
       <p class="center__quiz--header">Which instax is right for you?</p>
@@ -217,6 +258,8 @@
     </div>
   </div>
 
+
+  <script src="script.js"></script>
 </body>
 
 </html>

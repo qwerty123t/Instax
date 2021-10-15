@@ -675,31 +675,60 @@ body {
 
 .center__arrow--left{
 	position: absolute;
-	top: 33.5vh;
-	left: 1vw;
+	top: calc(33.5vh - 1vw);
+	left: 0px;
+	width: calc(1vw + max(10px, 0.52083333333vw) + 1vw);
+	height: calc(1vw + max(10px, 0.52083333333vw) + 1vw);
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	background-color: transparent;
+}
+
+.center__arrow--left-svg{
 	transform: rotate(-90deg);
 	width: max(10px, 0.52083333333vw);	/*10px*/
 }
 
 
+
 .center__arrow--right{
 	position: absolute;
-	top: 33.5vh;
-	right: 1vw;
+	top: calc(33.5vh - 1vw);
+	right: 0px;
+	width: calc(1vw + max(10px, 0.52083333333vw) + 1vw);
+	height: calc(1vw + max(10px, 0.52083333333vw) + 1vw);
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	background-color: transparent;
+}
+
+.center__arrow--right-svg{
 	transform: rotate(90deg);
 	width: max(10px, 0.52083333333vw);	/*10px*/
 }
 
 
-.center__picture{
+
+
+/* Собственно сам слайдер */
+.slider{
 	display: flex;
 	align-items: center;
 	justify-content: center; 
+	position: relative;
 }
-
-.center__picture img { 
+/* Картинка мастабируется по отношению к родительскому элементу */
+.slider .item img {
 	width: 30.416666666vw; /*584px*/
 }
+
+
 
 
 .center__top-left-angle {

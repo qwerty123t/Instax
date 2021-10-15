@@ -1,18 +1,36 @@
-var popup = document.querySelectorAll('.sub-menu');
-var openPopupButton = document.querySelector('.nav-bottom__menu3_header');
-var closePopupButton = popup.querySelector('.button-close');
+/* Индекс слайда по умолчанию */
+var slideIndex = 1;
+showSlides(slideIndex);
 
-openPopupButton.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  popup.classList.add('modal--show');
-});
+/* Функция увеличивает индекс на 1, показывает следующий слайд*/
+function plusSlide() {
+    showSlides(slideIndex += 1);
+}
 
-closePopupButton.addEventListener('click', function () {
-  popup.classList.remove('modal--show');
-});
+/* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/
+function minusSlide() {
+    showSlides(slideIndex -= 1);  
+}
 
-document.addEventListener('keydown', function (evt) {
-  if (evt.keyCode === 27) {
-    popup.classList.remove('modal--show');
-  }
-});
+/* Устанавливает текущий слайд */
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+/* Основная функция слайдера */
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("item");
+      if (n > slides.length) {
+      slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    
+    slides[slideIndex - 1].style.display = "block";
+}
+
