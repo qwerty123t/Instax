@@ -96,3 +96,46 @@ function isElementHidden2 (element) {
   return window.getComputedStyle(element, null).getPropertyValue('display') === 'none';
 }
 }
+
+
+
+
+
+/* Код необходимый в случае если посетитель выбрал цвет товара не по умолчанию. И хочет отправить другу ссылку на товар определенного цвета. И чтобы друг увидел товар именно того цвета который выбрал посетитель, будет происходить замена содержимого страницы. 
+
+Когда происходит смена цвета, сайт добавляет в URL метку цвета. И код ниже проверяет ссылку на наличие метки. */
+var url = window.location.href;
+if(url.indexOf('color=blue') != -1) {
+
+/* Если метка есть то происходит замена контента. */
+x = document.getElementsByTagName('h1');
+x[0].innerHTML = 'сработало'; }
+
+
+
+/* Надо зарефакторить код так чтобы не переписывать изменяемые стили */
+
+/* Надо заменить в коде добавление метки на ее смену чтобы при переключении нескольких цветов ссылка не становилась очень длинной */
+
+
+
+/* по клику на кнопку с onclick addUrl() */
+function addUrl() {
+
+  /* в url вставляется цвет */ 
+  var url = window.location.href;
+  window.location.hash = 'color=blue';
+
+  /* изменится вторая цифра */
+  x = document.querySelectorAll('.description__bottom--number-second');
+  x[0].textContent = '02'; 
+  x[0].style = 'margin-right: 1.40625vw'; /*27px*/ 
+
+  /* изменится NEXT рядом со второй цифрой */
+  y = document.querySelectorAll('.description__bottom--next');
+  y[0].style = 'margin-right: -0.4vw';
+
+
+};
+
+
