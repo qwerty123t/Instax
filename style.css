@@ -713,6 +713,19 @@ body {
 	z-index: 2;
 }
 
+.center__top-right-angle--exit {
+	display: none;
+	width: max(130px, 6.77083333333vw); /*130px 12.037037037vh*/
+	height: max(40px, 2.08333333333vw); /*40px 3.703703703vh*/
+  	padding-bottom: 0.462962962vh; /*5px*/
+	border: 1px solid var(--border);
+  	font-family: 'DIN Pro';
+	font-size: max(16px, 0.83333333333vw); /*16px*/
+	line-height: 100%;
+	letter-spacing: -0.03em;
+	font-weight: 400;
+	background-color: transparent;  
+}
 
 .center__top-right-angle--buy {
 	font-size: max(14px, 0.72916666666vw); 
@@ -725,7 +738,7 @@ body {
 	border: none;
 	position: relative;
   	color: var(--grey);
-	background-color: transparent;  
+	background-color: transparent; 
 }
  
 .center__top-right-angle--buy::after {
