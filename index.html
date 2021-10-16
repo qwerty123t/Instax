@@ -126,22 +126,20 @@
 
   <main class="center">
 
-    <p class="center__top-left-angle">The bubbly, super social and delightfully small mini 11 loves nothing more than bringing friends and family together.</p>
+    <p class="center__top-left-angle target">The bubbly, super social and delightfully small mini 11 loves nothing more than bringing friends and family together.</p>
 
-    <div class="center__top-right-angle">
+    <div class="center__top-right-angle target">
       <button class="center__top-right-angle--buy" type="button">Buy now</button>
       <button class="center__top-right-angle--compare" type="button">Compare</button>
     </div>
 
 
-    <button class="center__arrow--left" onclick="minusSlide()">
+    <button class="js-center__arrow--left target" onclick="minusSlide()">
       <img class="center__arrow--left-svg" src="img/arrowmini.svg" alt="arrow left">
     </button>
     
-   
-
-    <div class="slider">
-    <picture class="item">
+    <div class="center__slider target">
+    <picture class="js-center__slider--item ">
       <source srcset="img/mini11/111@1.avif 1x,
                       img/mini11/111@2.avif 2x"
                       type="image/avif">
@@ -154,7 +152,7 @@
     </picture>   
 
 
-    <picture class="item">
+    <picture style="display: none;" class="js-center__slider--item">
       <source srcset="img/mini11/112@1.avif 1x,
                       img/mini11/112@2.avif 2x"
                       type="image/avif">
@@ -166,7 +164,7 @@
             alt="instax mini 11 white 2">
     </picture>
 
-    <picture class="item">
+    <picture style="display: none;" class="js-center__slider--item">
       <source srcset="img/mini11/113@1.avif 1x,
                       img/mini11/113@2.avif 2x"
                       type="image/avif">
@@ -179,7 +177,7 @@
     </picture>
   </div>
     
-  <button class="center__arrow--right" onclick="plusSlide()">
+  <button class="js-center__arrow--right target" onclick="plusSlide()">
     <img class="center__arrow--right-svg" src="img/arrowmini.svg" alt="arrow right">
   </button>
 
@@ -187,17 +185,20 @@
 
 
 
-
-
-
-
-
-  
-
-    <div class="center__quiz">
+    <div class="center__quiz target">
       <p class="center__quiz--header">Which instax is right for you?</p>
       <p class="center__quiz--text">Take our quiz and find your new favourite!<br>'Opens in Facebook Messenger'</p>
     </div>
+
+
+
+    <video controls muted autoplay class="center__video target">
+      <source src="img/mini11/11.mp4"
+              type="video/mp4">
+      Sorry, your browser doesn't support embedded videos.
+     </video>
+
+
 
   </main>
 
@@ -206,7 +207,7 @@
     <div class="description__top">
       <p class="description__top--text">Beware of fraudulent websites.</p>
 
-      <div class="description__top--video">
+      <div id="toggle-button" class="description__top--video">
         <picture class="description__top--picture">
           <source srcset="img/mini11/video@1.avif 1x,
                         img/mini11/video@2.avif 2x"

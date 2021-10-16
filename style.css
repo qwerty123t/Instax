@@ -16,6 +16,7 @@ to do list
 15 добавить content-visibility: auto; для страниц learn more чтобы увеличить скорость рендера (как lazy load)
 16 улучшить UX увеличив область кнопок как тут
 https://web.dev/learn/css/logical-properties/
+17 Кастомизировать видеоплеер 
 */
 
 
@@ -673,60 +674,6 @@ body {
 	justify-content: center;
 }
 
-.center__arrow--left{
-	position: absolute;
-	top: calc(33.5vh - 1vw);
-	left: 0px;
-	width: calc(1vw + max(10px, 0.52083333333vw) + 1vw);
-	height: calc(1vw + max(10px, 0.52083333333vw) + 1vw);
-	cursor: pointer;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border: none;
-	background-color: transparent;
-}
-
-.center__arrow--left-svg{
-	transform: rotate(-90deg);
-	width: max(10px, 0.52083333333vw);	/*10px*/
-}
-
-
-
-.center__arrow--right{
-	position: absolute;
-	top: calc(33.5vh - 1vw);
-	right: 0px;
-	width: calc(1vw + max(10px, 0.52083333333vw) + 1vw);
-	height: calc(1vw + max(10px, 0.52083333333vw) + 1vw);
-	cursor: pointer;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border: none;
-	background-color: transparent;
-}
-
-.center__arrow--right-svg{
-	transform: rotate(90deg);
-	width: max(10px, 0.52083333333vw);	/*10px*/
-}
-
-
-
-
-/* Собственно сам слайдер */
-.slider{
-	display: flex;
-	align-items: center;
-	justify-content: center; 
-	position: relative;
-}
-/* Картинка мастабируется по отношению к родительскому элементу */
-.slider .item img {
-	width: 30.416666666vw; /*584px*/
-}
 
 
 
@@ -742,6 +689,7 @@ body {
 	letter-spacing: -0.03em;
 	font-weight: 300;
 	color: var(--grey);
+	z-index: 2;
 }
 
 .center__top-left-angle::before {
@@ -762,6 +710,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
+	z-index: 2;
 }
 
 
@@ -807,12 +756,78 @@ body {
 }
 
 
+.js-center__arrow--left{
+	position: absolute;
+	top: calc(33.5vh - 1vw);
+	left: 0px;
+	width: calc(1vw + max(10px, 0.52083333333vw) + 1vw);
+	height: calc(1vw + max(10px, 0.52083333333vw) + 1vw);
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	background-color: transparent;
+}
+
+.center__arrow--left-svg{
+	transform: rotate(-90deg);
+	width: max(10px, 0.52083333333vw);	/*10px*/
+	user-select: none;
+}
+
+
+
+
+.center__slider{
+	display: flex;
+	align-items: center;
+	justify-content: center; 
+	position: relative;
+	margin-top: -7vh;
+}
+
+.js-center__slider--item {
+	width: 29.1666666667vw; 
+	max-width: 100%;
+	max-height: 100%; 
+}
+
+
+.js-center__slider--item img {
+	width: 29.1666666667vw; /*560px*/
+	user-select: none; 
+}
+
+
+.js-center__arrow--right{
+	position: absolute;
+	top: calc(33.5vh - 1vw);
+	right: 0px;
+	width: calc(1vw + max(10px, 0.52083333333vw) + 1vw);
+	height: calc(1vw + max(10px, 0.52083333333vw) + 1vw);
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	background-color: transparent;
+}
+
+.center__arrow--right-svg{
+	transform: rotate(90deg);
+	width: max(10px, 0.52083333333vw);	/*10px*/
+	user-select: none;
+}
+
+
 .center__quiz {
 	position: absolute;
 	display: flex;
 	flex-direction: column;
 	bottom: 14.5vh;
   	right: 1vw;
+	z-index: 2;
 }
 
 .center__quiz--header {
@@ -831,6 +846,14 @@ body {
   	text-align: right;
 	letter-spacing: -0.03em;
   	color: var(--grey);
+}
+
+
+.center__video {
+	display: none;
+	margin-left: 1vw;
+	margin-right: 1vw;
+	width: calc(100% - 2vw);
 }
 
 

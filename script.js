@@ -1,5 +1,7 @@
+/* Слайдер */
+
 /* Индекс слайда по умолчанию */
-var slideIndex = 1;
+let slideIndex = 1;
 showSlides(slideIndex);
 
 /* Функция увеличивает индекс на 1, показывает следующий слайд*/
@@ -19,8 +21,8 @@ function currentSlide(n) {
 
 /* Основная функция слайдера */
 function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("item");
+    let i;
+    let slides = document.getElementsByClassName("js-center__slider--item");
       if (n > slides.length) {
       slideIndex = 1
     }
@@ -33,4 +35,37 @@ function showSlides(n) {
     
     slides[slideIndex - 1].style.display = "block";
 }
+
+
+/* Выкл/Вкл div по кнопке */
+
+document.getElementById('toggle-button').addEventListener('click', function () {
+  toggle(document.querySelectorAll('.target'));
+});
+
+function toggle (elements, specifiedDisplay) {
+let element, index;
+
+elements = elements.length ? elements : [elements];
+for (index = 0; index < elements.length; index++) {
+  element = elements[index];
+
+  if (isElementHidden(element)) {
+    element.style.display = '';
+
+    // If the element is still hidden after removing the inline display
+    if (isElementHidden(element)) {
+      element.style.display = specifiedDisplay || 'block';
+    }
+  } else {
+    element.style.display = 'none';
+  }
+}
+function isElementHidden (element) {
+  return window.getComputedStyle(element, null).getPropertyValue('display') === 'none';
+}
+}
+
+
+
 
