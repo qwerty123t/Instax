@@ -146,26 +146,33 @@ body {
 	flex-direction: row;
 	flex-wrap: wrap;
 }
-.sidebar-left__center--menu{
+.sidebar-left__center--button-menu{
 	display: flex;
-	order: 2;
+	align-items: center;
+	justify-content: center;
+	order: 1;
+	background-color: transparent;
+	border: none;
 }
-.sidebar-left__center--link-menu{
-	background-color: var(--full-white);
-	border: 1px solid var(--full-white);
-	border-radius: 50%;
-}
-.sidebar-left__center--magnifier{
-	display: flex;
-	order: -2;
-}
-.sidebar-left__center--link-magnifier{
-	border: 1px solid var(--grey);
-	border-radius: 50%;
+.sidebar-left__center--button-menu--svg-path {
+	stroke: var(--black);
 }
 
 
-.sidebar-left__center--copy{
+.sidebar-left__center--button-magnifier{
+	display: flex;
+	order: -1;
+	align-items: center;
+	justify-content: center;
+	background-color: transparent;
+	border: none;
+}
+.sidebar-left__center--button-magnifier--svg-path{
+	stroke: var(--black);
+}
+
+
+.sidebar-left__center--button-copy{
 	display: none;
 }
 
@@ -173,13 +180,32 @@ body {
 	display: none;
 }
 
+.nav-top {
+	display: none;
+}
+
+.nav-bottom {
+	display: none;
+}
+.line {
+	display: none;
+}
+.description {
+	display: none;
+}
+.penultimate {
+	display: none;
+}
+.sidebar-right {
+	display: none;
 }
 
 
-@media screen and (min-width: 801px) { 
+
+}
 
 body {
-	font-family: 'DIN Pro', 'Helvetica Neue', 'Helvetica', sans-serif;
+	font-family: 'DIN Pro', sans-serif;
 	display: grid;
 	gap: 0px;
 	grid-template-columns: 4.166666666vw 13.541666666vw 1.041666666vw 60.416666666vw 16.666666666vw 4.166666670vw;
@@ -732,7 +758,7 @@ body {
 	font-weight: 500;
 }
 
-.copyright {
+.nav-bottom__copyright {
 	color: var(--grey);
 	writing-mode: vertical-lr;
 	transform: scale(-1, -1);
@@ -745,14 +771,14 @@ body {
 }
 
 @media screen and (max-height: 720px) {
-	.copyright {
+	.nav-bottom__copyright {
 		font-size: max(10px, 0.52083333333vw); 
 		line-height: max(10px, 0.52083333333vw);
 	}
   }
 
 @media screen and (max-height: 640px) {
-	.copyright {
+	.nav-bottom__copyright {
 		font-size: max(8px, 0.41666666666vw);
 		line-height: max(8px, 0.41666666666vw); 
 	}
@@ -1232,8 +1258,4 @@ body {
 	-webkit-filter: grayscale(100%) brightness(0%);
 	-moz-filter: grayscale(100%) brightness(0%);
 }
-
-
-}
-
 
