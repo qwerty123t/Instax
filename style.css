@@ -64,6 +64,120 @@ https://web.dev/learn/css/logical-properties/
 	padding: 0;
 }
 
+
+/*мобильная версия*/
+@media screen and (max-width: 800px) { 
+body {
+	font-family: 'DIN Pro', 'Helvetica Neue', 'Helvetica', sans-serif;
+	background-color: var(--background);
+	max-width: 80%;
+	margin: 0 auto;
+	display:flex;
+    flex-flow: column;
+	}
+
+
+
+.header1 {
+	display: none;
+}
+.header2 {
+	display: none;
+}
+.header3 {
+	border-bottom: 3px solid var(--grey);
+}
+
+.header3__brand {
+	
+	font-weight: 300;
+	font-size: 50px; 
+	line-height: 50px; 
+	letter-spacing: -0.09em;
+	color: var(--black);
+	margin: 0;
+}
+
+.header3__model {
+	font-weight: 700;
+	font-size: 50px;
+	line-height: 50px;
+	letter-spacing: -0.1em;
+	color: var(--black);
+	margin: 0;
+}
+
+.header3__color {
+	font-size: 16px;
+	line-height: 16px;
+	font-weight: 300;
+	letter-spacing: -0.1em;
+	color: var(--grey);
+	position: relative;
+	margin-left: 20px;
+}
+
+.header3__color::before {
+	position: absolute;
+	content: "";
+	background-image: url("img/color-icon.svg");
+	background-repeat: no-repeat;
+	background-size: cover;  
+	background-position: center center;
+	height: clamp(16px, 1.25vw, 3vh);/* 2.2vh 24px */
+	width: clamp(16px, 1.25vw, 3vh);/* 2.2vh 24px */
+	top: -0.3vh;
+	left: -1.8vw;
+}
+
+
+.sidebar-left {
+	order: -1;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.sidebar-left__instax-logo {
+	transform: rotate(90deg) translateY(-30%);
+}
+.sidebar-left__center {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.sidebar-left__center--menu{
+	display: flex;
+	order: 2;
+}
+.sidebar-left__center--link-menu{
+	background-color: var(--full-white);
+	border: 1px solid var(--full-white);
+	border-radius: 50%;
+}
+.sidebar-left__center--magnifier{
+	display: flex;
+	order: -2;
+}
+.sidebar-left__center--link-magnifier{
+	border: 1px solid var(--grey);
+	border-radius: 50%;
+}
+
+
+.sidebar-left__center--copy{
+	display: none;
+}
+
+.sidebar-left__fujifilm-logo {
+	display: none;
+}
+
+}
+
+
+@media screen and (min-width: 801px) { 
+
 body {
 	font-family: 'DIN Pro', 'Helvetica Neue', 'Helvetica', sans-serif;
 	display: grid;
@@ -72,6 +186,7 @@ body {
 	grid-template-rows: 7.407407407vh 11.111111111vh 31.481481481vh 27.777777777vh 22.222222224vh;
 	background-color: var(--background);
 }
+
 
 .header1 {
 	grid-column: 4/5;
@@ -250,53 +365,53 @@ body {
 	align-items: center;
 	margin-top: -2.1vh;
 }
-.sidebar-left__center--menu{
+.sidebar-left__center--button-menu{
 	width: 2.27272727273vw; /*45px*/
-}
-.sidebar-left__center--link-menu{
-	width: 2.27272727273vw; /*45px*/
-	height: 2.27272727273vw; /*45px*/
-	background-color: var(--full-white);
 	border: 1px solid var(--full-white);
 	border-radius: 50%;
+	background-color: var(--full-white);
+	aspect-ratio: 1/1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-.sidebar-left__center--link-menu:hover .sidebar-left__center--menu{
-	filter: grayscale(100%) brightness(0%);
-	-webkit-filter: grayscale(100%) brightness(0%);
-	-moz-filter: grayscale(100%) brightness(0%);
-}
-
-.sidebar-left__center--magnifier{
-	width: 2.27272727273vw; /*45px*/
-}
-.sidebar-left__center--link-magnifier{
-	margin-top: 1vh;
+.sidebar-left__center--button-menu--svg{
 	width: 2.27272727273vw; /*45px*/
 	height: 2.27272727273vw; /*45px*/
-	border: 1px solid var(--grey);
-	border-radius: 50%;
 }
-.sidebar-left__center--link-magnifier:hover .sidebar-left__center--magnifier{
-	filter: grayscale(100%) brightness(0%);
-	-webkit-filter: grayscale(100%) brightness(0%);
-	-moz-filter: grayscale(100%) brightness(0%);
-}
-
-.sidebar-left__center--copy{
-	width: 2.27272727273vw; /*45px*/
-}
-.sidebar-left__center--link-copy{
+.sidebar-left__center--button-magnifier{
 	margin-top: 1vh;
 	width: 2.27272727273vw; /*45px*/
-	height: 2.27272727273vw; /*45px*/
 	border: 1px solid var(--grey);
 	border-radius: 50%;
+	background-color: transparent;
+	aspect-ratio: 1/1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-.sidebar-left__center--link-copy:hover .sidebar-left__center--copy{
-	filter: grayscale(100%) brightness(0%);
-	-webkit-filter: grayscale(100%) brightness(0%);
-	-moz-filter: grayscale(100%) brightness(0%);
+.sidebar-left__center--button-magnifier--svg{
+	width: 2.27272727273vw; /*45px*/
+	height: 2.27272727273vw; /*45px*/
+	
 }
+.sidebar-left__center--button-copy{
+	margin-top: 1vh;
+	width: 2.27272727273vw; /*45px*/
+	border: 1px solid var(--grey);
+	border-radius: 50%;
+	background-color: transparent;
+	aspect-ratio: 1/1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.sidebar-left__center--button-copy--svg{
+	width: 2.27272727273vw; /*45px*/
+	height: 2.27272727273vw; /*45px*/
+	
+}
+
 
 
 .sidebar-left__fujifilm-logo {
@@ -1031,12 +1146,26 @@ body {
 	align-items: center;
 }
 
-.sidebar-right__top--3dots {
-	width: 2.395833333vw; /*46px*/
+
+.sidebar-right__top--3dots{
+	width: 2.27272727273vw; /*45px*/
+	border: 1px solid var(--full-black);
+	border-radius: 50%;
+	background-color: var(--full-black);
+	aspect-ratio: 1/1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-
-
-
+.sidebar-right__top--3dots--svg{
+	width: 2.27272727273vw; /*45px*/
+	height: 2.27272727273vw; /*45px*/
+	aspect-ratio: 1/1;
+}
+.sidebar-right__top--3dots--svg rect{
+	align-self: center;
+	justify-self: center;
+}
 .sidebar-right__top--arrow {
 	margin-top: 7.9vh;
 	width: 1.944444444vh;
@@ -1103,4 +1232,8 @@ body {
 	-webkit-filter: grayscale(100%) brightness(0%);
 	-moz-filter: grayscale(100%) brightness(0%);
 }
+
+
+}
+
 

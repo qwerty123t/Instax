@@ -104,13 +104,14 @@ function isElementHidden2 (element) {
 /* Код необходимый в случае если посетитель выбрал цвет товара не по умолчанию. И хочет отправить другу ссылку на товар определенного цвета. И чтобы друг увидел товар именно того цвета который выбрал посетитель, будет происходить замена содержимого страницы. 
 
 Когда происходит смена цвета, сайт добавляет в URL метку цвета. И код ниже проверяет ссылку на наличие метки. */
+/*
 var url = window.location.href;
 if(url.indexOf('color=blue') != -1) {
-
+*/
 /* Если метка есть то происходит замена контента. */
-x = document.getElementsByTagName('h1');
+/*x = document.getElementsByTagName('h1');
 x[0].innerHTML = 'сработало'; }
-
+*/
 
 
 /* Надо зарефакторить код так чтобы не переписывать изменяемые стили */
@@ -119,23 +120,31 @@ x[0].innerHTML = 'сработало'; }
 
 
 
-/* по клику на кнопку с onclick addUrl() */
-function addUrl() {
+/* по клику на кнопку с onclick next() 
 
+ Чтобы код заработал нужно добавить в html в элемент рядом с классом: onclick="next();" 
+*/
+/*function next() {
+*/
   /* в url вставляется цвет */ 
-  var url = window.location.href;
-  window.location.hash = 'color=blue';
+ // var url = window.location.href;
+ // window.location.hash = 'color=blue';
 
   /* изменится вторая цифра */
-  x = document.querySelectorAll('.description__bottom--number-second');
-  x[0].textContent = '02'; 
-  x[0].style = 'margin-right: 1.40625vw'; /*27px*/ 
+ // x = document.querySelectorAll('.description__bottom--number-second');
+ // x[0].textContent = '02'; 
+ // x[0].style = 'margin-right: 1.40625vw'; /*27px*/ 
 
   /* изменится NEXT рядом со второй цифрой */
-  y = document.querySelectorAll('.description__bottom--next');
-  y[0].style = 'margin-right: -0.4vw';
+ // y = document.querySelectorAll('.description__bottom--next');
+  //y[0].style = 'margin-right: -0.4vw';
 
 
-};
+  /* изменятся картинки в центре*/
+  //z = document.querySelectorAll('.center__slider');
+ // z[0].innerHTML = '<picture class="js-center__slider--item"> <source srcset="img/mini11/113@1.avif 1x, img/mini11/113@2.avif 2x" type="image/avif"> <source srcset="img/mini11/113@1.webp 1x, img/mini11/113@2.webp 2x" type="image/webp"> <img  src="img/mini11/113@1.png" srcset="img/mini11/113@2.png 2x" alt="instax mini 11 white 3"> </picture>'; 
+
+
+//};
 
 
