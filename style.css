@@ -1,18 +1,13 @@
 /* 
 to do list
 
-2. Перевести vh в vw
-3. Добавить кнопки переключения ракурсов фото 
-4. Добавить 3д?
 5. Добавить кнопки переключения цветов
 6. Добавить пункты в 4 меню
 7. Добавить остальные страницы
 8. Отрисовать другие страницы
-9. Добавить АВИФ и ВЕБП через picture
+
 10 Картинка png в picture почему-то не загружается
-11 Сделать picture для видео
-12 Добавить 3 кнопки на левом сайдбаре
-13 добавить маржин топ для второго меню при высоте браузера 700рх
+
 15 добавить content-visibility: auto; для страниц learn more чтобы увеличить скорость рендера (как lazy load)
 16 улучшить UX увеличив область кнопок как тут
 https://web.dev/learn/css/logical-properties/
@@ -66,13 +61,13 @@ https://web.dev/learn/css/logical-properties/
 
 
 /*мобильная версия*/
-@media screen and (max-width: 800px) { 
+@media screen and (max-width: 699px) { 
 body {
 	font-family: 'DIN Pro', 'Helvetica Neue', 'Helvetica', sans-serif;
 	background-color: var(--background);
 	max-width: 80%;
 	margin: 0 auto;
-	display:flex;
+	display: flex;
     flex-flow: column;
 	}
 
@@ -139,7 +134,7 @@ body {
 }
 
 .sidebar-left__instax-logo {
-	transform: rotate(90deg) translateY(-30%);
+	transform: rotate(90deg) translateY(-35%);
 }
 .sidebar-left__center {
 	display: flex;
@@ -190,6 +185,20 @@ body {
 .line {
 	display: none;
 }
+
+.center__slider {
+	max-width: 100%; 
+}
+.js-center__slider--item {
+	max-width: 100%; 
+}
+.js-center__slider--item img {
+	max-width: 100%; object-fit: contain; 
+}
+.center__video {
+	display: none;
+}
+
 .description {
 	display: none;
 }
@@ -200,9 +209,12 @@ body {
 	display: none;
 }
 
-
-
 }
+
+
+
+@media screen and (min-width: 700px) { 
+
 
 body {
 	font-family: 'DIN Pro', sans-serif;
@@ -997,7 +1009,8 @@ body {
 	display: none;
 	margin-left: 1vw;
 	margin-right: 1vw;
-	width: calc(100% - 2vw);
+	max-width: calc(100% - 2vw);
+	max-height: calc(100% - 2vw);
 }
 
 
@@ -1259,3 +1272,4 @@ body {
 	-moz-filter: grayscale(100%) brightness(0%);
 }
 
+}
