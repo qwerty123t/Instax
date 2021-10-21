@@ -63,7 +63,7 @@
     <img class="sidebar-left__instax-logo" src="img/instaxlogo.svg" alt="Instax Logo">
 
     <div class="sidebar-left__center">
-      <button class="sidebar-left__center--button-menu">
+      <button id="btn" class="sidebar-left__center--button-menu">
       <svg class="sidebar-left__center--button-menu--svg" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path class="sidebar-left__center--button-menu--svg-path" d="M7 37H41H7ZM7 11H41H7ZM7 24H41H7Z" stroke="#A3A3A3" stroke-width="6"/>
           </svg>
@@ -88,15 +88,28 @@
   <nav class="nav-top">
 
     <ul class="nav-top__menu1">
-      <li><a class="nav-top__menu1_header" href="#">Cameras</a></li>
-      <li><a href="#">mini 11</a></li>
-      <li><a href="#">mini 70</a></li>
-      <li><a href="#">mini 90</a></li>
-      <li><a href="#">mini LiPlay</a></li>
-      <li><a href="#">SQUARE SQ1</a></li>
-      <li><a href="#">SQUARE SQ6</a></li>
-      <li><a href="#">SQUARE SQ20</a></li>
-      <li><a href="#">WIDE 300</a></li>
+      <li><a class="nav-top__menu1_header" href="">Cameras</a></li>
+
+      <li class="nav-top__hidden_subheader1">mini film</li>
+      <ul class="nav-top__minifilm">
+        <li class="nav-top__minifilm--item"><a href="">mini 11</a></li>
+        <li class="nav-top__minifilm--item"><a href="">mini 70</a></li>
+        <li class="nav-top__minifilm--item"><a href="">mini 90</a></li>
+        <li class="nav-top__minifilm--item"><a href="">mini LiPlay</a></li>
+      </ul>
+
+      <li class="nav-top__hidden_subheader2">SQUARE film</li>
+      <ul class="nav-top__squarefilm">
+        <li class="nav-top__squarefilm--item"><a href="">SQUARE SQ1</a></li>
+        <li class="nav-top__squarefilm--item"><a href="">SQUARE SQ6</a></li>
+        <li class="nav-top__squarefilm--item"><a href="">SQUARE SQ20</a></li>
+      </ul>
+
+      <li class="nav-top__hidden_subheader3">WIDE film</li>
+      <ul class="nav-top__widefilm">
+        <li class="nav-top__widefilm--item"><a href="">WIDE 300</a></li>
+      </ul>
+
     </ul>
 
     <ul class="nav-top__menu2">

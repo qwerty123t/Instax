@@ -228,9 +228,17 @@ body {
 .nav-top {
 	display: none;
 }
+
 .nav-bottom {
 	display: none;
 }
+
+
+
+
+
+
+
 .line {
 	display: none;
 }
@@ -269,7 +277,7 @@ body {
 
 .center__top-right-angle--buy {
 	width: max(130px, 6.77083333333vw); 
-	height: max(40px, 2.08333333333vw); /
+	height: max(40px, 2.08333333333vw); 
   	padding-bottom: 0.462962962vh; /*5px*/
 	border: 1px solid var(--border);
   	font-family: 'DIN Pro';
@@ -583,12 +591,13 @@ body {
 	height: 2.27272727273vw; /*45px*/
 	
 }
-
-
-
 .sidebar-left__fujifilm-logo {
 	width: 0.85vw;
 }
+
+
+
+
 
 .nav-top {
 	box-sizing: border-box;
@@ -597,8 +606,15 @@ body {
 	justify-content: space-between;
 	flex-wrap: wrap;
 	grid-column: 2/3;
-	grid-row: 1/4;
+	grid-row: 1/4; 
 	border-bottom: 1px solid var(--border);
+}
+
+.nav-top__alternative {
+	grid-column: 2/-1;
+	grid-row: 1/-1;
+	background-color: lightblue;
+	z-index: 10;
 }
 
 .nav-top a {
@@ -606,11 +622,19 @@ body {
 	text-decoration: none;
 	color: var(--grey);
 }
+.nav-top__alternative a {
+	color: var(--full-white);
+	display: flex;
+}
+
+
 
 .nav-top a:hover {
 	color: var(--black);
 }
-
+.nav-top__alternative a:hover {
+	color: var(--grey);
+}
 .nav-top a:active {
 	color: var(--full-black);
 }
@@ -625,7 +649,9 @@ body {
 	font-weight: 300;
 }
 
-
+.nav-top__menu1__alternative {
+	text-align: left;
+}
 
 @media screen and (max-height: 720px) {
 	.nav-top__menu1 {
@@ -650,6 +676,14 @@ body {
 	position: relative;
 }
 
+.nav-top .nav-top__menu1_header__alternative {
+	color: var(--full-white);
+	text-decoration: none;
+	font-size: max(120px, 6.25vw); /*120px*/
+	line-height: 100%; 
+	font-weight: 300;
+	position: relative;
+}
 
 
 .nav-top__menu1_header::after {
@@ -663,6 +697,40 @@ body {
 	background-image: url(img/Arrow2.svg);
 	background-repeat: no-repeat;
 }
+
+.nav-top__menu1_header__alternative::after {
+	display: none;
+}
+
+.nav-top__hidden_subheader1, 
+.nav-top__hidden_subheader2,
+.nav-top__hidden_subheader3 {
+	display: none;
+}
+.nav-top__hidden_subheader1__alternative, 
+.nav-top__hidden_subheader2__alternative,
+.nav-top__hidden_subheader3__alternative  {
+	display: block;
+	color: var(--full-white);
+}
+
+
+.nav-top__minifilm, .nav-top__squarefilm, .nav-top__widefilm  {
+	list-style: none;
+}
+
+.nav-top__minifilm__alternative, .nav-top__squarefilm__alternative, .nav-top__widefilm__alternative  {
+	display: flex;
+	flex-direction: row;
+}
+
+
+.nav-top__minifilm--item__alternative, .nav-top__squarefilm--item__alternative, .nav-top__widefilm--item__alternative  {
+	display: flex;
+	width: 210px;
+	height: 40px;
+}
+
 
 .nav-top__menu2 {
 	list-style: none;

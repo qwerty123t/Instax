@@ -24,10 +24,10 @@ function showSlides(n) {
     let i;
     let slides = document.getElementsByClassName("js-center__slider--item");
       if (n > slides.length) {
-      slideIndex = 1
+      slideIndex = 1;
     }
     if (n < 1) {
-        slideIndex = slides.length
+        slideIndex = slides.length;
     }
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
@@ -68,7 +68,7 @@ function isElementHidden (element) {
 
 
 
-/* Скрыть видео при клике на крестик + отобразить все элементы в центре*/
+/* Скрыть видео при клике на кнопку закрыть видео + отобразить все элементы в центре*/
 
 document.querySelector('.exit-button').addEventListener('click', function () {
   toggle(document.querySelectorAll('.target'));
@@ -99,6 +99,43 @@ function isElementHidden2 (element) {
 
 
 
+
+/* Изменить css навигации при клике на кнопку меню путем добавления/удаления класса */
+
+let btn = document.getElementById('btn');
+let navTop = document.querySelector('.nav-top');
+let navTopMenu1 = document.querySelector('.nav-top__menu1');
+let navTopMenu1Header = document.querySelector('.nav-top__menu1_header');
+
+let navTopHiddenSubheader1 = document.querySelector('.nav-top__hidden_subheader1');
+let navTopHiddenSubheader2 = document.querySelector('.nav-top__hidden_subheader2');
+let navTopHiddenSubheader3 = document.querySelector('.nav-top__hidden_subheader3');
+
+let navTopMinifilm = document.querySelector('.nav-top__minifilm');
+let navTopSquarefilm = document.querySelector('.nav-top__squarefilm');
+let navTopWidefilm = document.querySelector('.nav-top__widefilm');
+
+let navTopMinifilmItem = document.querySelector('.nav-top__minifilm--item');
+let navTopSquarefilmItem = document.querySelector('.nav-top__squarefilm--item');
+let navTopWidefilmItem = document.querySelector('.nav-top__widefilm--item');
+
+
+
+btn.onclick = function() {
+  navTop.classList.toggle('nav-top__alternative');
+  navTopMenu1.classList.toggle('nav-top__menu1__alternative');  navTopMenu1Header.classList.toggle('nav-top__menu1_header__alternative');
+  navTopHiddenSubheader1.classList.toggle('nav-top__hidden_subheader1__alternative');
+  navTopHiddenSubheader2.classList.toggle('nav-top__hidden_subheader2__alternative');  
+  navTopHiddenSubheader3.classList.toggle('nav-top__hidden_subheader3__alternative');
+
+  navTopMinifilm.classList.toggle('nav-top__minifilm__alternative');
+  navTopSquarefilm.classList.toggle('nav-top__squarefilm__alternative');  
+  navTopWidefilm.classList.toggle('nav-top__widefilm__alternative');
+
+  navTopMinifilmItem.classList.toggle('nav-top__minifilm--item__alternative');
+/* проблема в том что он добавляет класс только в первый элемент.
+  может воспользоваться циклом?*/
+};
 
 
 /* Код необходимый в случае если посетитель выбрал цвет товара не по умолчанию. И хочет отправить другу ссылку на товар определенного цвета. И чтобы друг увидел товар именно того цвета который выбрал посетитель, будет происходить замена содержимого страницы. 
