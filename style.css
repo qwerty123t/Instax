@@ -712,6 +712,7 @@ body {
 	color: var(--grey);
 	border-bottom: 1px solid var(--grey);
 	position: relative;
+	margin-top: 20px;
 	margin-left: 50px;
 }
 .nav-top__hidden-subheader--alternative::after  {
@@ -757,6 +758,18 @@ body {
 	background-color: var(--full-white);
 	color: var(--black);
 }
+
+
+
+.nav-top__list--alternative:nth-of-type(2) {
+	
+}
+
+
+
+
+
+
 
 .nav-top__menu2 {
 	list-style: none;

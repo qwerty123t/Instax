@@ -144,9 +144,57 @@ btn.onclick = function() {
 
 
 
-/* проблема в том что он добавляет класс только в первый элемент.
-  может воспользоваться циклом?*/
-};
+
+    /* меню модал скрыть айтемы при клике на субхеадер */
+    var miniFilmHeader =   document.querySelector('.nav-top__hidden-subheader--alternative');
+    let squareFilmHeader = document.querySelector('.nav-top__hidden-subheader--alternative:nth-of-type(3)');
+    let wideFilmHeader =   document.querySelector('.nav-top__hidden-subheader--alternative:nth-of-type(4)');
+    let miniFilmList =     document.querySelector('.nav-top__list--alternative:nth-of-type(1)');
+    let squareFilmList =   document.querySelector('.nav-top__list--alternative:nth-of-type(2)');
+    let wideFilmList =     document.querySelector('.nav-top__list--alternative:nth-of-type(3)');
+    console.log(miniFilmHeader);
+    console.log(squareFilmHeader);
+    console.log(wideFilmHeader);
+    console.log(miniFilmList);
+    console.log(squareFilmList);
+    console.log(wideFilmList);
+
+     
+    miniFilmHeader.onclick = function() {
+        if (miniFilmList.style.display === "none") {
+          miniFilmList.style.display = "flex";
+        } else {
+          miniFilmList.style.display = "none";
+        }
+      }
+   
+      squareFilmHeader.onclick = function() {
+        if (squareFilmList.style.display === "none") {
+          squareFilmList.style.display = "flex";
+        } else {
+          squareFilmList.style.display = "none";
+        }
+      }
+    
+      wideFilmHeader.onclick = function() {
+        if (wideFilmList.style.display === "none") {
+          wideFilmList.style.display = "flex";
+        } else {
+          wideFilmList.style.display = "none";
+        }
+      }
+
+
+
+  };
+
+
+
+
+/* код заработал. только как возвращать при повторном клике? */
+
+
+
 
 
 /* Код необходимый в случае если посетитель выбрал цвет товара не по умолчанию. И хочет отправить другу ссылку на товар определенного цвета. И чтобы друг увидел товар именно того цвета который выбрал посетитель, будет происходить замена содержимого страницы. 
