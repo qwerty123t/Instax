@@ -106,33 +106,44 @@ let btn = document.getElementById('btn');
 let navTop = document.querySelector('.nav-top');
 let navTopMenu1 = document.querySelector('.nav-top__menu1');
 let navTopMenu1Header = document.querySelector('.nav-top__menu1_header');
+ 
+/* скрытые заголовки */
+let navTopHiddenSubheaders = document.querySelectorAll('.nav-top__hidden-subheader');
 
-let navTopHiddenSubheader1 = document.querySelector('.nav-top__hidden_subheader1');
-let navTopHiddenSubheader2 = document.querySelector('.nav-top__hidden_subheader2');
-let navTopHiddenSubheader3 = document.querySelector('.nav-top__hidden_subheader3');
+/* список элементов */
+let navTopLists = document.querySelectorAll('.nav-top__list');
 
-let navTopMinifilm = document.querySelector('.nav-top__minifilm');
-let navTopSquarefilm = document.querySelector('.nav-top__squarefilm');
-let navTopWidefilm = document.querySelector('.nav-top__widefilm');
-
-let navTopMinifilmItem = document.querySelector('.nav-top__minifilm--item');
-let navTopSquarefilmItem = document.querySelector('.nav-top__squarefilm--item');
-let navTopWidefilmItem = document.querySelector('.nav-top__widefilm--item');
-
+/* элементы */
+let navTopItems = document.querySelectorAll('.nav-top__item');
 
 
 btn.onclick = function() {
   navTop.classList.toggle('nav-top__alternative');
-  navTopMenu1.classList.toggle('nav-top__menu1__alternative');  navTopMenu1Header.classList.toggle('nav-top__menu1_header__alternative');
-  navTopHiddenSubheader1.classList.toggle('nav-top__hidden_subheader1__alternative');
-  navTopHiddenSubheader2.classList.toggle('nav-top__hidden_subheader2__alternative');  
-  navTopHiddenSubheader3.classList.toggle('nav-top__hidden_subheader3__alternative');
+  navTopMenu1.classList.toggle('nav-top__menu1__alternative');  
+  navTopMenu1Header.classList.toggle('nav-top__menu1_header__alternative');
 
-  navTopMinifilm.classList.toggle('nav-top__minifilm__alternative');
-  navTopSquarefilm.classList.toggle('nav-top__squarefilm__alternative');  
-  navTopWidefilm.classList.toggle('nav-top__widefilm__alternative');
+ 
+  /* скрытые заголовки */
+  for (var g = 0; g < navTopHiddenSubheaders.length; g++) {
+    var navTopHiddenSubheader = navTopHiddenSubheaders[g];
+    navTopHiddenSubheader.classList.toggle('nav-top__hidden-subheader--alternative');    
+  } 
 
-  navTopMinifilmItem.classList.toggle('nav-top__minifilm--item__alternative');
+
+  /* список элементов */
+  for (var h = 0; h < navTopLists.length; h++) {
+    var navTopList = navTopLists[h];
+    navTopList.classList.toggle('nav-top__list--alternative');    
+  }
+
+  /* элементы */
+  for (var g = 0; g < navTopItems.length; g++) {
+    var navTopItem = navTopItems[g];
+    navTopItem.classList.toggle('nav-top__item--alternative');    
+  }
+
+
+
 /* проблема в том что он добавляет класс только в первый элемент.
   может воспользоваться циклом?*/
 };

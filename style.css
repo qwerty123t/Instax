@@ -702,30 +702,26 @@ body {
 	display: none;
 }
 
-.nav-top__hidden_subheader1, 
-.nav-top__hidden_subheader2,
-.nav-top__hidden_subheader3 {
+.nav-top__hidden-subheader {
 	display: none;
 }
-.nav-top__hidden_subheader1__alternative, 
-.nav-top__hidden_subheader2__alternative,
-.nav-top__hidden_subheader3__alternative  {
+.nav-top__hidden-subheader--alternative  {
 	display: block;
-	color: var(--full-white);
+	color: var(--grey);
 }
 
 
-.nav-top__minifilm, .nav-top__squarefilm, .nav-top__widefilm  {
+.nav-top__list  {
 	list-style: none;
 }
 
-.nav-top__minifilm__alternative, .nav-top__squarefilm__alternative, .nav-top__widefilm__alternative  {
+.nav-top__list--alternative {
 	display: flex;
 	flex-direction: row;
 }
 
 
-.nav-top__minifilm--item__alternative, .nav-top__squarefilm--item__alternative, .nav-top__widefilm--item__alternative  {
+.nav-top__item--alternative {
 	display: flex;
 	width: 210px;
 	height: 40px;
