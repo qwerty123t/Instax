@@ -105,11 +105,10 @@ function isElementHidden2 (element) {
 let btn = document.getElementById('btn');
 btn.onclick = function() {
 
-  /* левый сайдбар */
-  let sidebarLeft = document.querySelector('.sidebar-left');
-  sidebarLeft.classList.toggle('sidebar-left--alternative');
-
-
+ /* левый сайдбар */
+ let sidebarLeft = document.querySelector('.sidebar-left');
+ sidebarLeft.classList.toggle('sidebar-left--alternative');
+ 
  let sidebarLeftInstaxLogo = document.querySelector('.sidebar-left__instax-logo');
  sidebarLeftInstaxLogo.classList.toggle('sidebar-left__instax-logo--alternative');
 
@@ -166,21 +165,44 @@ btn.onclick = function() {
     let miniFilmList =     document.querySelector('.nav-top__list--alternative:nth-of-type(1)');
     let squareFilmList =   document.querySelector('.nav-top__list--alternative:nth-of-type(2)');
     let wideFilmList =     document.querySelector('.nav-top__list--alternative:nth-of-type(3)');
-    console.log(miniFilmHeader);
-    console.log(squareFilmHeader);
-    console.log(wideFilmHeader);
-    console.log(miniFilmList);
-    console.log(squareFilmList);
-    console.log(wideFilmList);
+   
+    /* при клике на открытый хеадер:
+        если есть альтернативный класс 
+        то удали html
+        иначе (например только основной класс)
+        то добавь
+         */
+ /* при клике на открытый хеадер:
+        если есть альтернативный класс 
+        то удали альтернативный класс и поставь display none
+        иначе (например только основной класс)
+        то добавь альтернативный класс и поставь display flex
+         */
 
-     
+
+ /* что если при клике на кнопку меню
+ над кнопкой меню будет появляться вторая кнопка
+ и уже при клике на вторую кнопку
+ будут убираться альтернативные классы
+
+ нужно чтобы в коде изменялся не style.display а добавлялся альтернативный класс
+         */
+
+/* сначала нужно проверить
+может другая функция которая изменяет css 
+не добавляется через html
+
+https://learn.javascript.ru/styles-and-classes
+сброс стилей попробоывть
+         */
+
     miniFilmHeader.onclick = function() {
-        if (miniFilmList.style.display === "none") {
-          miniFilmList.style.display = "flex";
-        } else {
-          miniFilmList.style.display = "none";
-        }
+      if (miniFilmList.style.display === "none") {
+        miniFilmList.style.display = "flex";
+      } else {
+        miniFilmList.style.display = "none";
       }
+    }
    
       squareFilmHeader.onclick = function() {
         if (squareFilmList.style.display === "none") {
