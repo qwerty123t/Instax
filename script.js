@@ -100,43 +100,57 @@ function isElementHidden2 (element) {
 
 
 
-/* Изменить css навигации при клике на кнопку меню путем добавления/удаления класса */
+/* Изменить класс css навигации при клике на кнопку меню путем добавления/удаления класса */
 
 let btn = document.getElementById('btn');
-let navTop = document.querySelector('.nav-top');
-let navTopMenu1 = document.querySelector('.nav-top__menu1');
-let navTopMenu1Header = document.querySelector('.nav-top__menu1_header');
- 
-/* скрытые заголовки */
-let navTopHiddenSubheaders = document.querySelectorAll('.nav-top__hidden-subheader');
-
-/* список элементов */
-let navTopLists = document.querySelectorAll('.nav-top__list');
-
-/* элементы */
-let navTopItems = document.querySelectorAll('.nav-top__item');
-
-
 btn.onclick = function() {
+
+  /* левый сайдбар */
+  let sidebarLeft = document.querySelector('.sidebar-left');
+  sidebarLeft.classList.toggle('sidebar-left--alternative');
+
+
+ let sidebarLeftInstaxLogo = document.querySelector('.sidebar-left__instax-logo');
+ sidebarLeftInstaxLogo.classList.toggle('sidebar-left__instax-logo--alternative');
+
+ let sidebarLeftFujifilmLogo = document.querySelector('.sidebar-left__fujifilm-logo');
+ sidebarLeftFujifilmLogo.classList.toggle('sidebar-left__fujifilm-logo--alternative');
+
+
+ /* изменение структуры верхнего меню */
+  let navTop = document.querySelector('.nav-top');
+  let navTopMenu1 = document.querySelector('.nav-top__menu1');
+  let navTopMenu1Header = document.querySelector('.nav-top__menu1_header');
+
   navTop.classList.toggle('nav-top__alternative');
   navTopMenu1.classList.toggle('nav-top__menu1__alternative');  
   navTopMenu1Header.classList.toggle('nav-top__menu1_header__alternative');
 
- 
+
+  
+  
+  
+
   /* скрытые заголовки */
+   let navTopHiddenSubheaders = document.querySelectorAll('.nav-top__hidden-subheader');
+
   for (var g = 0; g < navTopHiddenSubheaders.length; g++) {
     var navTopHiddenSubheader = navTopHiddenSubheaders[g];
     navTopHiddenSubheader.classList.toggle('nav-top__hidden-subheader--alternative');    
   } 
 
-
   /* список элементов */
+  let navTopLists = document.querySelectorAll('.nav-top__list');
+ 
   for (var h = 0; h < navTopLists.length; h++) {
     var navTopList = navTopLists[h];
     navTopList.classList.toggle('nav-top__list--alternative');    
   }
 
+
   /* элементы */
+  let navTopItems = document.querySelectorAll('.nav-top__item');
+  
   for (var g = 0; g < navTopItems.length; g++) {
     var navTopItem = navTopItems[g];
     navTopItem.classList.toggle('nav-top__item--alternative');    
@@ -145,7 +159,7 @@ btn.onclick = function() {
 
 
 
-    /* меню модал скрыть айтемы при клике на субхеадер */
+    /* в модальном меню скрывает айтемы при клике на субхеадер */
     var miniFilmHeader =   document.querySelector('.nav-top__hidden-subheader--alternative');
     let squareFilmHeader = document.querySelector('.nav-top__hidden-subheader--alternative:nth-of-type(3)');
     let wideFilmHeader =   document.querySelector('.nav-top__hidden-subheader--alternative:nth-of-type(4)');
@@ -188,10 +202,6 @@ btn.onclick = function() {
 
   };
 
-
-
-
-/* код заработал. только как возвращать при повторном клике? */
 
 
 

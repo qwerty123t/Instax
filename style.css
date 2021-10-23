@@ -11,6 +11,7 @@ to do list
 https://web.dev/learn/css/logical-properties/
 17 Кастомизировать видеоплеер 
 добавить звуки
+добавить префиксы https://autoprefixer.github.io/
 */
 
 
@@ -38,17 +39,13 @@ https://web.dev/learn/css/logical-properties/
 	font-weight: 700;
 }
 
-@font-face {
-	font-family: 'DIN Pro';
-	src: url('font/DINPro-Black.woff2') format('woff2');
-	font-weight: 900;
-}
 
 :root {
 	--black: #111111;
 	--full-black: #000000;
+	--border-alternative: #333333;
 	--grey: #A3A3A3;
-	--border: #D2D2D2;
+	--border: #D2D2D2; 
 	--background: #F3F3F3;
 	--full-white: #FFFFFF;
 }
@@ -534,9 +531,18 @@ body {
 	padding: 3.5vh 0;
 }
 
-.sidebar-left__instax-logo {
-	width: 2.1vw;
+.sidebar-left--alternative {
+	background-color: var(--full-black);
+	border-right: 1px solid var(--border-alternative);
 }
+
+.sidebar-left__instax-logo {
+	width: 2.1vw; }
+
+.sidebar-left__instax-logo--alternative {
+	filter: invert(100%)}
+
+
 .sidebar-left__center {
 	display: flex;
 	flex-direction: column;
@@ -596,7 +602,10 @@ body {
 	width: 0.85vw;
 }
 
+.sidebar-left__fujifilm-logo--alternative {
+	filter: invert(100%);
 
+}
 
 
 
@@ -616,6 +625,7 @@ body {
 	grid-row: 1/-1;
 	background-color: var(--full-black);
 	z-index: 10;
+	border-bottom: none;
 }
 
 .nav-top a {
@@ -681,10 +691,12 @@ body {
 	color: var(--full-white);
 	text-decoration: none;
 	font-size: max(120px, 6.25vw); /*120px*/
-	line-height: 100%; 
+	line-height: 80%; 
+	letter-spacing: -0.05em;
 	font-weight: 300;
 	position: relative;
-	margin-left: 40px;
+	margin-left: 30px;
+	margin-bottom: 5px;
 }
 
 
@@ -709,11 +721,14 @@ body {
 }
 .nav-top__hidden-subheader--alternative  {
 	display: flex;
-	color: var(--grey);
-	border-bottom: 1px solid var(--grey);
+	font-size: 20px;
+	font-weight: 300;
+	letter-spacing: -0.05em;
+	color: var(--full-white);
+	border-bottom: 1px solid var(--border-alternative);
 	position: relative;
 	margin-top: 20px;
-	margin-left: 50px;
+	margin-left: 40px;
 }
 .nav-top__hidden-subheader--alternative::after  {
 	position: absolute;
@@ -726,6 +741,12 @@ body {
 	background-image: url(img/arrowmini.svg);
 	background-repeat: no-repeat;
 	filter: invert(100%);	
+}
+
+.nav-top__hidden-subheader--alternative:nth-of-type(2)  {
+	border-top: 1px solid var(--border-alternative);
+	margin-top: 0px;
+	padding-top: 20px;	
 }
 
 .nav-top__list  {
@@ -741,7 +762,7 @@ body {
 .nav-top__item--alternative {
 	width: 210px;
 	height: 40px;
-	border: 1px solid var(--grey);
+	border: 1px solid var(--border-alternative);
 	border-radius: 36px;
 	margin-right: 10px;
 }
@@ -752,18 +773,19 @@ body {
 	width: 100%;
 	height: 100%;
 	border-radius: 36px;
+	font-weight: 15px;
+	font-weight: 400;
+	letter-spacing: -0.05em;
 }
 
 .nav-top__item--alternative .active{
 	background-color: var(--full-white);
 	color: var(--black);
+	border: none;
 }
 
 
 
-.nav-top__list--alternative:nth-of-type(2) {
-	
-}
 
 
 
