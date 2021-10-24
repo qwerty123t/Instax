@@ -165,67 +165,36 @@ btn.onclick = function() {
     let miniFilmList =     document.querySelector('.nav-top__list--alternative:nth-of-type(1)');
     let squareFilmList =   document.querySelector('.nav-top__list--alternative:nth-of-type(2)');
     let wideFilmList =     document.querySelector('.nav-top__list--alternative:nth-of-type(3)');
+    
+    
    
-    /* при клике на открытый хеадер:
-        если есть альтернативный класс 
-        то удали html
-        иначе (например только основной класс)
-        то добавь
-         */
- /* при клике на открытый хеадер:
-        если есть альтернативный класс 
-        то удали альтернативный класс и поставь display none
-        иначе (например только основной класс)
-        то добавь альтернативный класс и поставь display flex
-         */
+/* а что если js не будет изменять дизайн меню на альтернатив
+а будет добавлять новый html 
+  }*/
 
+    miniFilmHeader.onclick = function() {
+      miniFilmList.classList.toggle('hidden');   
+    }
+    squareFilmHeader.onclick = function() {
+      squareFilmList.classList.toggle('hidden'); 
+    }
+    wideFilmHeader.onclick = function() {
+      wideFilmList.classList.toggle('hidden'); 
+    }
+
+
+    squareFilmList.classList.remove('hidden'); 
+
+  };
+
+
+   
 
  /* что если при клике на кнопку меню
  над кнопкой меню будет появляться вторая кнопка
  и уже при клике на вторую кнопку
  будут убираться альтернативные классы
-
- нужно чтобы в коде изменялся не style.display а добавлялся альтернативный класс
-         */
-
-/* сначала нужно проверить
-может другая функция которая изменяет css 
-не добавляется через html
-
-https://learn.javascript.ru/styles-and-classes
-сброс стилей попробоывть
-         */
-
-    miniFilmHeader.onclick = function() {
-      if (miniFilmList.style.display === "none") {
-        miniFilmList.style.display = "flex";
-      } else {
-        miniFilmList.style.display = "none";
-      }
-    }
-   
-      squareFilmHeader.onclick = function() {
-        if (squareFilmList.style.display === "none") {
-          squareFilmList.style.display = "flex";
-        } else {
-          squareFilmList.style.display = "none";
-        }
-      }
-    
-      wideFilmHeader.onclick = function() {
-        if (wideFilmList.style.display === "none") {
-          wideFilmList.style.display = "flex";
-        } else {
-          wideFilmList.style.display = "none";
-        }
-      }
-
-
-
-  };
-
-
-
+      */
 
 
 
@@ -274,5 +243,3 @@ x[0].innerHTML = 'сработало'; }
 
 
 //};
-
-

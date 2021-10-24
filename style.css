@@ -736,7 +736,7 @@ body {
 	width: 9.270833333vw;
 	height: 2.5vw;
 	top: 45%;
-	left: 25.5vw;
+	left: 453px;
 	background-size: 9.270833333vw 2.5vw;
 	background-image: url(img/Arrow1.svg);
 	background-repeat: no-repeat;
@@ -770,8 +770,8 @@ body {
 	filter: invert(100%);	
 }
 
-.hidden{
-	display: none;}
+.hidden	{
+	display: none !important;}
 
 
 .nav-top__hidden-subheader--alternative:nth-of-type(2)  {
