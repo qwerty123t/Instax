@@ -1,6 +1,7 @@
 /* 
 to do list
 
+проаерить на валидаторе
 5. Добавить кнопки переключения цветов
 6. Добавить пункты в 4 меню
 7. Добавить остальные страницы
@@ -226,7 +227,9 @@ body {
 .nav-top {
 	display: none;
 }
-
+.nav-top__alternative {
+	display: none;
+}
 .nav-bottom {
 	display: none;
 }
@@ -713,7 +716,7 @@ body {
 	display: flex;
   }
 
-  
+
 .nav-top__alternative a:hover {
 	color: var(--grey);
 }
@@ -762,7 +765,7 @@ body {
 	width: 1.7vw;
 	height: 1.7vw;
 	top: -5%;
-	left: 23vw;
+	left: 453px;
 	border: 2px solid var(--border-alternative);
 	border-radius: 50%;	
 }
@@ -782,6 +785,7 @@ body {
 
 .nav-top__hidden-subheader--alternative  {
 	display: flex;
+	justify-content: space-between;
 	font-size: 20px;
 	font-weight: 300;
 	letter-spacing: -0.05em;
@@ -792,19 +796,20 @@ body {
 	margin-left: 40px;
 	margin-right: 20px;
 }
-.nav-top__hidden-subheader--alternative::after  {
-	position: absolute;
-	content: "";
+.nav-top__hidden-subheader--alternative__svg  {
 	width: 18px;	
 	height: 18px;	
-	bottom: 1px;	
-	right: 20px;
-	background-size: 18px 18px;	
-	background-image: url(img/arrowmini.svg);
-	background-repeat: no-repeat;
+	margin-right: 20px;
 	filter: invert(100%);	
 }
 
+.rotate  {
+	transform: rotate(180deg) !important;
+}
+
+
+
+/* это border для Cameras*/
 .nav-top__hidden-subheader--alternative:nth-of-type(2)  {
 	border-top: 1px solid var(--border-alternative);
 	margin-top: 0px;
