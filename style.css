@@ -881,14 +881,20 @@ body {
 
 
 .nav-top__menu2--alternative__printers {
-	margin-left: 4.6875vw; /*90px*/
+	padding-left: 4.6875vw; /*90px*/
 	font-size: clamp(60px, 6.25vw, 7vw); /*120px*/
 	font-weight: 300;
 	line-height: 90%; 
 	color: var(--border-alternative);
 	letter-spacing: -0.05em;
 }
-
+.nav-top__menu2--alternative__printers:hover {
+	color: var(--full-white);
+}
+.nav-top__menu2--alternative__printers:hover:after{
+	color: var(--full-white);
+	border: 2px solid var(--full-white);
+}
 .nav-top__menu2--alternative__printers::after {
 	display: flex;
 	justify-content: center;
@@ -906,14 +912,22 @@ body {
 	border-radius: 50%;	
 }
 
+
 .nav-top__menu2--alternative__film {
 	margin-top: 11px; 
-	margin-left: 9.63541666667vw; /*185px*/
+	padding-left: 9.63541666667vw; /*185px*/
 	font-size: clamp(60px, 6.25vw, 7vw); /*120px*/
 	font-weight: 300;
 	line-height: 90%; 
 	letter-spacing: -0.05em;
 	color: var(--border-alternative);
+}
+.nav-top__menu2--alternative__film:hover {
+	color: var(--full-white);
+}
+.nav-top__menu2--alternative__film:hover:after{
+	color: var(--full-white);
+	border: 2px solid var(--full-white);
 }
 .nav-top__menu2--alternative__film::after {
 	display: flex;
@@ -936,12 +950,19 @@ body {
 
 .nav-top__menu2--alternative__lowdown {
 	margin-top: 11px; 
-	margin-left: 14.84375vw; /*285px*/
+	padding-left: 14.84375vw; /*285px*/
 	font-size: clamp(60px, 6.25vw, 7vw); /*120px*/
 	font-weight: 300;
 	line-height: 90%; 
 	color: var(--border-alternative);
 	letter-spacing: -0.05em;
+}
+.nav-top__menu2--alternative__lowdown:hover {
+	color: var(--full-white);
+}
+.nav-top__menu2--alternative__lowdown:hover:after{
+	color: var(--full-white);
+	border: 2px solid var(--full-white);
 }
 .nav-top__menu2--alternative__lowdown::after {
 	display: flex;
@@ -962,12 +983,19 @@ body {
 
 .nav-top__menu2--alternative__joinus {
 	margin-top: 11px; 
-	margin-left: -0.52083333333vw; /*-10px*/
+	padding-left: -0.52083333333vw; /*-10px*/
 	font-size: clamp(60px, 6.25vw, 7vw); /*120px*/
 	font-weight: 300;
 	line-height: 90%; 
 	color: var(--border-alternative);
 	letter-spacing: -0.05em;
+}
+.nav-top__menu2--alternative__joinus:hover {
+	color: var(--full-white);
+}
+.nav-top__menu2--alternative__joinus:hover:after{
+	color: var(--full-white);
+	border: 2px solid var(--full-white);
 }
 .nav-top__menu2--alternative__joinus::after {
 	display: flex;
