@@ -942,6 +942,7 @@ body {
 	font-size: max(15px, 0.78125vw); /*15px 1.388888888vh*/
 	line-height: max(15px, 0.78125vw); /*15px 1.388888888vh*/
 	font-weight: 500;
+	letter-spacing: -0.03em;
 	color: var(--black);
 	border-bottom: 1px solid var(--border);
 	padding-bottom: 0.462962962vh; 	/*5px*/
@@ -956,17 +957,13 @@ body {
 	}
   }
 
-
-.nav-bottom__menu3_header::after {
+  .nav-bottom__menu3_header--svg {
 	position: absolute;
-	content: "";
 	width: max(10px, 0.52083333333vw);	/*10px = 0.925925925vh*/
 	height: max(7px, 0.36458333333vw);	/*7px = 0.648148148vh*/
 	top: max(4px, 0.37037037vh);	/*4px = 0.37037037vh*/
 	right: 0px;
-	background-size: max(10px, 0.52083333333vw) max(7px, 0.36458333333vw);	/*10px 7px*/
-	background-image: url(img/arrowmini.svg);
-	background-repeat: no-repeat;
+	
 }
 
 
