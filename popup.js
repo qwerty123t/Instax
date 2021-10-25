@@ -3,19 +3,24 @@ let openPopupButton = document.querySelector('.sidebar-left__center--button-menu
 
 
 openPopupButton.addEventListener('click', function () { 
-
-
  /*отображает попап*/ 
 popup.classList.toggle('nav-top__alternative--show');
-
-
 /*изменяет дизайн левого сайдбара*/ 
   let sidebarLeft = document.querySelector('.sidebar-left');
   sidebarLeft.classList.toggle('sidebar-left--alternative');
   let sidebarLeftInstaxLogo = document.querySelector('.sidebar-left__instax-logo');
   sidebarLeftInstaxLogo.classList.toggle('sidebar-left__instax-logo--alternative');
   let sidebarLeftFujifilmLogo = document.querySelector('.sidebar-left__fujifilm-logo');
-  sidebarLeftFujifilmLogo.classList.toggle('sidebar-left__fujifilm-logo--alternative'); });
+  sidebarLeftFujifilmLogo.classList.toggle('sidebar-left__fujifilm-logo--alternative'); 
+
+  let sidebarLeftSvg = document.querySelector('.sidebar-left__center--button-menu--svg-path');
+  sidebarLeftSvg.classList.toggle('sidebar-left__center--button-menu--svg-path__alternative'); 
+
+  let sidebarLeftMagnifier = document.querySelector('.sidebar-left__center--button-magnifier');
+  sidebarLeftMagnifier.classList.toggle('opacity');
+  let sidebarLeftCopy = document.querySelector('.sidebar-left__center--button-copy');
+  sidebarLeftCopy.classList.toggle('opacity');
+});
 
 
 /*закрывает попап если нажать на клавишу ESCAPE*/ 

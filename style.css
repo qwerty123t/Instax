@@ -567,6 +567,12 @@ body {
 	width: 2.27272727273vw; /*45px*/
 	height: 2.27272727273vw; /*45px*/
 }
+
+.sidebar-left__center--button-menu--svg-path__alternative{
+    d: path('M39 12.0214L35.9786 9L24 20.9786L12.0214 9L9 12.0214L20.9786 24L9 35.9786L12.0214 39L24 27.0214L35.9786 39L39 35.9786L27.0214 24L39 12.0214Z');
+	stroke: #000000;
+}
+
 .sidebar-left__center--button-magnifier{
 	margin-top: 1vh;
 	width: 2.27272727273vw; /*45px*/
