@@ -1205,6 +1205,7 @@ body {
 	display: block;
 	font-size: max(15px, 0.78125vw); /*15px*/
 	line-height: max(15px, 0.78125vw); /*15px*/
+	letter-spacing: -0.03em;
 	font-weight: 300;
 	color: var(--grey);
 	padding-bottom: 0.648148148vh; /*7px*/
