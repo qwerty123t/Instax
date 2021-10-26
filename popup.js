@@ -26,7 +26,24 @@ popup.classList.toggle('nav-top__alternative--show');
 /*закрывает попап если нажать на клавишу ESCAPE*/ 
 document.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {
-    popup.classList.remove('nav-top__alternative--show'); } });
+    popup.classList.remove('nav-top__alternative--show'); 
+    
+    let sidebarLeft = document.querySelector('.sidebar-left');
+    sidebarLeft.classList.remove('sidebar-left--alternative');
+    let sidebarLeftInstaxLogo = document.querySelector('.sidebar-left__instax-logo');
+    sidebarLeftInstaxLogo.classList.remove('sidebar-left__instax-logo--alternative');
+    let sidebarLeftFujifilmLogo = document.querySelector('.sidebar-left__fujifilm-logo');
+    sidebarLeftFujifilmLogo.classList.remove('sidebar-left__fujifilm-logo--alternative'); 
+
+    let sidebarLeftSvg = document.querySelector('.sidebar-left__center--button-menu--svg-path');
+    sidebarLeftSvg.classList.remove('sidebar-left__center--button-menu--svg-path__alternative'); 
+
+    let sidebarLeftMagnifier = document.querySelector('.sidebar-left__center--button-magnifier');
+    sidebarLeftMagnifier.classList.remove('opacity');
+    let sidebarLeftCopy = document.querySelector('.sidebar-left__center--button-copy');
+    sidebarLeftCopy.classList.remove('opacity');
+  
+  } });
 
  
 /* в попап меню позволяет скрыть/показать списки товаров при клике на subheader */
