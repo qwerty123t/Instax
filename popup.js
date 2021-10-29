@@ -50,9 +50,6 @@ document.addEventListener('keydown', function (evt) {
   let miniFilmHeader =   document.querySelector('.nav-top__hidden-subheader--alternative');
   let squareFilmHeader = document.querySelector('.nav-top__hidden-subheader--alternative:nth-of-type(3)');
   let wideFilmHeader =   document.querySelector('.nav-top__hidden-subheader--alternative:nth-of-type(4)');
-console.log(miniFilmHeader)
-console.log(squareFilmHeader)
-console.log(wideFilmHeader)
 
 
   let miniFilmHeaderSvg =   document.querySelector('.nav-top__hidden-subheader--alternative__svg');
@@ -61,13 +58,7 @@ console.log(wideFilmHeader)
   let miniFilmList =     document.querySelector('.nav-top__list--alternative:nth-of-type(1)');
   let squareFilmList =   document.querySelector('.nav-top__list--alternative:nth-of-type(2)');
   let wideFilmList =     document.querySelector('.nav-top__list--alternative:nth-of-type(3)');
-console.log(miniFilmHeaderSvg)
-console.log(squareFilmHeaderSvg)
-console.log(wideFilmHeaderSvg)
 
-console.log(miniFilmList)
-console.log(squareFilmList)
-console.log(wideFilmList)
 
   miniFilmHeader.onclick = function() {
   miniFilmList.classList.toggle('hidden');  

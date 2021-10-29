@@ -1874,14 +1874,14 @@ body > *:nth-child(30) {
 }
 
 .js-center__slider--item {
-	width: 29.1666666667vw; 
 	max-width: 100%;
 	max-height: 100%; 
 }
 
 
 .js-center__slider--item img {
-	width: 29.1666666667vw; /*560px*/
+	max-width: 60vw; /*560px*/
+	max-height: 31vw; 
 	-webkit-user-select: none;
 	   -moz-user-select: none;
 	    -ms-user-select: none;
