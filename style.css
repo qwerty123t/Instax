@@ -1,25 +1,16 @@
 /*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.3.6,
-* Autoprefixer: v10.3.1
-* Browsers: last 4 version
-*/
-
-/* 
 to do list
 
-проаерить на валидаторе
-5. Добавить кнопки переключения цветов
-6. Добавить пункты в 4 меню
-7. Добавить остальные страницы
-8. Отрисовать другие страницы
-10 Картинка png в picture почему-то не загружается
-15 добавить content-visibility: auto; для страниц learn more чтобы увеличить скорость рендера (как lazy load)
-16 улучшить UX увеличив область кнопок как тут
+1 проверить на валидаторе
+2 Добавить use strict в js
+3 Добавить кнопки переключения цветов
+4 добавить content-visibility: auto; для страниц learn more чтобы увеличить скорость рендера (как lazy load)
+5 улучшить UX увеличив область кнопок как тут
 https://web.dev/learn/css/logical-properties/
-17 Кастомизировать видеоплеер 
-добавить звуки
-добавить префиксы https://autoprefixer.github.io/
+6 Кастомизировать видеоплеер 
+7 добавить звуки
+8 сделать кнопку меню работоспособной в мобильной версии
+9 умкеньшить минимальый размер шрифта для цфир справа
 */
 
 
@@ -1047,15 +1038,8 @@ body > *:nth-child(30) {
 }
 
 
-.nav-top__hidden-subheader {
-	display: none;
-}
-
 .hidden	{
 	display: none !important;}
-
-.nav-top__list  {
-	list-style: none;}
 
 
 
@@ -2145,7 +2129,10 @@ body > *:nth-child(30) {
 	background-image: url(img/small_circle.svg); 
 	border-radius: 50%;
 }
-
+.penultimate__link {
+	color: var(--grey);
+	text-decoration: none;
+}
 
 .sidebar-right {
 	background: var(--full-white);
