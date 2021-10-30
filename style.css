@@ -2044,6 +2044,7 @@ body > *:nth-child(30) {
 	font-weight: 400;
 	margin-bottom: 0.5vh;
 	color: var(--grey);
+	text-decoration: none;
 }
 
 .description__bottom--number-first {
@@ -2056,6 +2057,7 @@ body > *:nth-child(30) {
 	font-weight: 300;
 	color: var(--black);
 	position: relative;
+	text-decoration: none;
 }
 
 .description__bottom--number-first::after {
@@ -2083,6 +2085,7 @@ body > *:nth-child(30) {
 	margin-bottom: 2.5vh;
 	margin-right: -0.4vw;
 	margin-left: auto; 
+	text-decoration: none;
 }
 .description__bottom--next01 {
 	margin-right: 0.9vw;
@@ -2099,6 +2102,7 @@ body > *:nth-child(30) {
 	letter-spacing: -0.10em;
 	font-weight: 300;
 	color: var(--full-white);
+	text-decoration: none;
 }
 
 .description__bottom--01 {
