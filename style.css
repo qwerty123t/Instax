@@ -1721,7 +1721,115 @@ body > *:nth-child(30) {
 	        justify-content: center;
 }
 
+.center__cameras {
+	grid-column: 4/6;
+	display: grid;
+	overflow: auto;
+	grid-template-columns: 20% 20% 20% 20% 20%;
+	grid-template-rows: 35.1851851852vh 35.1851851852vh 35.1851851852vh;
+	gap: 0px 0px;
+}
 
+.center__camera {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	border: 1px solid var(--border);
+	border-collapse: collapse;
+}
+.center__camera:nth-of-type(1) {
+	grid-column: 1 / 3;
+}
+
+.center__camera:nth-of-type(6) {
+	grid-column: 2 / 4;
+}
+
+.center__camera:nth-of-type(7) {
+	grid-column: 4 / 6;
+}
+
+.center__camera:nth-of-type(10) {
+	grid-column: 3 / 5;
+}
+.center__camera img{
+	object-fit: contain;
+	max-width: 80%;
+	max-height: 80%;
+}
+
+.center__camera--series{
+	border: 1px solid var(--border);
+	position: absolute;
+	top: 1vw; /* 20px */
+	left: 0.52083333333vw; /* 10px */
+	width: 5.20833333333vw; /*100px*/
+	height: 2.08333333333vw;/*40px*/
+	font-size: 12px;
+	background-color: transparent;
+}
+
+.center__camera--arrow{
+	position: absolute;
+	left: 0.52083333333vw; /* 10px */
+	top: 80px;
+	transform: rotate(180deg);
+}
+
+.center__camera--add{
+	position: absolute;
+	right: 0.52083333333vw; /* 10px */
+	top: 0;
+	border: none;
+	border-bottom: 2px solid var(--border);
+	width: 19.2708333333vw; /*370px*/
+	height: 2.08333333333vw; /* 40px */
+	background-color: transparent;
+}
+
+.center__camera--add::before {
+	position: absolute;
+	left: min(-30px, -1.5625vw);
+	content: "";
+	width: max(21px, 1.09375vw); 
+	height: max(21px, 1.09375vw);  
+	background-size: cover;  
+	background-position: center center;
+	background-image: url(img/small_circle.svg); 
+	border-radius: 50%;}
+
+.center__camera--add::after {
+	content: "Add to Wishlist";
+	position: absolute;
+	right: 0; 
+	top: 1vw;
+	font-size: 10px;
+	color: var(--grey);
+
+}
+
+
+.center__camera--brand{
+	position: absolute;
+	right: 0;
+	top: 50px;
+}
+.center__camera--model{
+}
+.center__camera--image{
+}
+.center__camera--price{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.center__camera--tagline{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
 
 
 
