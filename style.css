@@ -1739,7 +1739,7 @@ body > *:nth-child(30) {
 	overflow: auto;
 	overflow-x: hidden;
 	grid-template-columns: 20% 20% 20% 20% 20%;
-	grid-template-rows: 35.1851851852vh 35.1851851852vh 35.1851851852vh;
+	grid-template-rows: max(350px, 35.1851851852vh) max(350px, 35.1851851852vh) max(350px, 35.1851851852vh);
 	gap: 0px 0px; 
 }
 
@@ -1810,7 +1810,8 @@ body > *:nth-child(30) {
 .center__camera--arrow{
 	position: absolute;
 	left: 0.52083333333vw; /* 10px */
-	top: 80px;
+	top: 4.63541666667vw;
+	width: 0.9vw; 
 	transform: rotate(180deg);
 }
 
@@ -1820,21 +1821,27 @@ body > *:nth-child(30) {
 	top: 0;
 	border: none;
 	border-bottom: 2px solid var(--border);
-	width: 62.711864406%; /*370px*/
+	width: 39.057239057%; 
 	height: 2.08333333333vw; /* 40px */
 	background-color: transparent;
 }
 
+.center__camera:nth-of-type(1) .center__camera--add{
+	width: 62.711864406%;  /*370px*/
+}
 .center__camera--add::before {
 	position: absolute;
-	left: min(-30px, -1.5625vw);
+	bottom: -11px;
+	left: min(-25px, -1.30208333333vw);
 	content: "";
-	width: max(21px, 1.09375vw); 
-	height: max(21px, 1.09375vw);  
+	width: max(19px, 0.98958333333vw); 
+	height: max(19px, 0.98958333333vw);  
 	background-size: cover;  
 	background-position: center center;
-	background-image: url(img/small_circle.svg); 
-	border-radius: 50%;}
+	background-image: url(img/white_circle.svg); 
+	border-radius: 50%;
+	border: 1px solid var(--border);
+	}
 
 .center__camera--add::after {
 	content: "Add to Wishlist";
@@ -1842,23 +1849,23 @@ body > *:nth-child(30) {
 	right: 0; 
 	top: 1vw;
 	font-size: 10px;
+	letter-spacing: -0.03em;
 	color: var(--grey);
-
 }
 
 
 .center__camera--brand{
 	position: absolute;
-	right: 0.52083333333vw; /* 10px */
-	top: 50px;
-	font-size: 25px;
+	right: 0.5vw; /* 10px */
+	top: 2.86458333333vw;
+	font-size: 27px;
 	letter-spacing: -0.1em;
 	color: var(--grey);
 	font-weight: 300;
 }
 .center__camera--model{
-	font-size: 25px;
-	letter-spacing: -0.06em;
+	font-size: 27px;
+	letter-spacing: -0.1em;
 	color: var(--black);
 	font-weight: 500;
 }
@@ -1869,7 +1876,7 @@ body > *:nth-child(30) {
 	left: 0.52083333333vw; /* 10px */
 	bottom: 1vw;
 	font-size: 14px;
-	letter-spacing: -0.045em;
+	letter-spacing: -0.03em;
 	color: var(--black);
 	font-weight: 400;
 }
@@ -1878,7 +1885,7 @@ body > *:nth-child(30) {
 	right: 0.52083333333vw; /* 10px */
 	bottom: 1vw;
 	font-size: 14px;
-	letter-spacing: -0.02em;
+	letter-spacing: 0em;
 	color: var(--grey);
 	font-weight: 300;
 }
