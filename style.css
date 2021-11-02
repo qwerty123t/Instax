@@ -1790,11 +1790,7 @@ body > *:nth-child(30) {
 .center__camera:nth-of-type(11) {
 	background-color: var(--full-white);
 }
-.center__camera img{
-	object-fit: contain;
-	max-width: 80%;
-	max-height: 80%;
-}
+
 
 .center__camera--series{
 	border: 1px solid var(--border);
@@ -1802,8 +1798,9 @@ body > *:nth-child(30) {
 	top: 1vw; /* 20px */
 	left: 0.52083333333vw; /* 10px */
 	width: 5.20833333333vw; /*100px*/
-	height: 2.08333333333vw;/*40px*/
-	font-size: 12px;
+	height: 2.08333333333vw; /*40px*/
+	font-size: max(12px, 0.625vw);
+	line-height: 70%;
 	background-color: transparent;
 }
 
@@ -1848,7 +1845,7 @@ body > *:nth-child(30) {
 	position: absolute;
 	right: 0; 
 	top: 1vw;
-	font-size: 10px;
+	font-size: max(10px, 0.52083333333vw);
 	letter-spacing: -0.03em;
 	color: var(--grey);
 }
@@ -1858,24 +1855,27 @@ body > *:nth-child(30) {
 	position: absolute;
 	right: 0.5vw; /* 10px */
 	top: 2.86458333333vw;
-	font-size: 27px;
+	font-size: max(27px, 1.40625vw);
 	letter-spacing: -0.1em;
 	color: var(--grey);
 	font-weight: 300;
 }
 .center__camera--model{
-	font-size: 27px;
+	font-size: max(27px, 1.40625vw);
 	letter-spacing: -0.1em;
 	color: var(--black);
 	font-weight: 500;
 }
 .center__camera--image{
+	object-fit: contain;
+	max-width: 100%;
+	max-height: 60%;
 }
 .center__camera--price{
 	position: absolute;
 	left: 0.52083333333vw; /* 10px */
 	bottom: 1vw;
-	font-size: 14px;
+	font-size: max(14px, 0.72916666666vw);
 	letter-spacing: -0.03em;
 	color: var(--black);
 	font-weight: 400;
@@ -1884,13 +1884,12 @@ body > *:nth-child(30) {
 	position: absolute;
 	right: 0.52083333333vw; /* 10px */
 	bottom: 1vw;
-	font-size: 14px;
-	letter-spacing: 0em;
+	text-align: right;
+	font-size: max(14px, 0.72916666666vw);
 	color: var(--grey);
 	font-weight: 300;
+	max-width: 77%;
 }
-
-
 
 .center__top-left-angle {
 	position: absolute;
