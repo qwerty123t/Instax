@@ -1898,8 +1898,21 @@ body > *:nth-child(30) {
 	margin-right: 1vw;
 }
 .center__camera:nth-of-type(7) .center__camera--image{
+	max-width: 80%;
 	max-height: 67%;
 }
+.center__camera--triangle{
+	position: absolute;
+	bottom: 1.2vw;
+	left: 50%;
+}
+
+.center__camera:nth-of-type(8) .center__camera--image{
+	margin-top: 4vw;
+	max-height: 47%;
+}
+
+
 .center__camera--price{
 	position: absolute;
 	left: 0.52083333333vw; /* 10px */
