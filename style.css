@@ -17,12 +17,12 @@ https://web.dev/learn/css/logical-properties/
 }
  
 ::-webkit-scrollbar-track {
-    border-radius: 50%;
 	background-color: var(--border);
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
  
 ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
 	background-color: var(--black);
 }
 
@@ -1870,6 +1870,35 @@ body > *:nth-child(30) {
 	object-fit: contain;
 	max-width: 100%;
 	max-height: 60%;
+}
+.center__camera:nth-of-type(1) .center__camera--image{
+	max-height: 74%;
+	align-self: flex-end;
+	margin-right: 0.9vw;
+}
+.center__camera:nth-of-type(2) .center__camera--image{
+	max-height: 45%;
+	margin-top: 4vw;
+}
+.center__camera:nth-of-type(3) .center__camera--image{
+	max-height: 50%;
+	margin-top: 1vw;
+}
+.center__camera:nth-of-type(4) .center__camera--image{
+	max-height: 50%;
+	margin-top: 1vw;
+}
+.center__camera:nth-of-type(5) .center__camera--image{
+	max-height: 50%;
+	margin-top: 3vw;
+}
+.center__camera:nth-of-type(6) .center__camera--image{
+	max-height: 47%;
+	margin-top: 5vw;
+	margin-right: 1vw;
+}
+.center__camera:nth-of-type(7) .center__camera--image{
+	max-height: 67%;
 }
 .center__camera--price{
 	position: absolute;
