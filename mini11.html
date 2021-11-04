@@ -89,9 +89,9 @@
 
   <nav class="nav-top">
     <div>
-      <h2><a class="nav-top__menu1_header" href="#">Cameras</a></h2>
+      <h2><a class="nav-top__menu1_header" href="http://instax.fun">Cameras</a></h2>
       <ul class="nav-top__menu1">
-        <li class="nav-top__item"><a href="index">mini 11</a></li>
+        <li class="nav-top__item"><a href="mini11">mini 11</a></li>
         <li class="nav-top__item"><a href="mini40">mini 40</a></li>
         <li class="nav-top__item"><a href="mini90">mini 90</a></li>
         <li class="nav-top__item"><a href="miniLiPlay">mini LiPlay</a></li>
@@ -116,7 +116,7 @@
   <nav class="nav-top__alternative">
     <ul class="nav-top__menu1--alternative">
 
-      <li><a class="nav-top__menu1_header--alternative" href="#">Cameras <img class="nav-top__menu1_header--alternative__svg" src="img/Arrow1.svg" alt="arrow"> </a></li>
+      <li><a class="nav-top__menu1_header--alternative" href="http://instax.fun">Cameras <img class="nav-top__menu1_header--alternative__svg" src="img/Arrow1.svg" alt="arrow"> </a></li>
       <li class="nav-top__hidden-subheader--alternative">mini film 
         <img class="nav-top__hidden-subheader--alternative__svg" src="img/arrowmini.svg" alt="arrow"> 
       </li>
@@ -124,7 +124,7 @@
 
      
         <ul class="nav-top__list--alternative">
-          <li class="nav-top__item--alternative"><a class="active" href="index">mini 11</a></li>
+          <li class="nav-top__item--alternative"><a class="active" href="mini11">mini 11</a></li>
           <li class="nav-top__item--alternative"><a href="mini40">mini 40</a></li>
           <li class="nav-top__item--alternative"><a href="mini90">mini 90</a></li>
           <li class="nav-top__item--alternative"><a href="miniLiPlay">mini LiPlay</a></li>
@@ -194,135 +194,126 @@
 
   <div class="line"> </div>
 
+  <main class="center">
+
+    <p class="center__top-left-angle target">The bubbly, super social and delightfully small mini 11 loves nothing more than bringing friends and family together.</p>
+
+    <div class="center__top-right-angle">
+      <button class="center__top-right-angle--exit target exit-button" type="button">Close</button>
+      <button class="center__top-right-angle--buy target" type="button">Buy now</button>
+      <button class="center__top-right-angle--compare target" type="button">Compare</button>
+    </div>
 
 
 
-  <main class="center center__cameras">
 
-  
-  <a class="center__camera" href="miniLiPlay">
-    <button class="center__camera--series">mini series</button>
-    <img class="center__camera--arrow" src="img/Arrow2.svg"  
-            alt="arrow">
-    <button class="center__camera--add"></button>
-    <h3 class="center__camera--brand">instax <span class="center__camera--model">mini Li Play</span> </h3>
-    <img class="center__camera--image" src="img/miniLi/qqq.png"  
-            alt="instax mini Li Play">
-    <p class="center__camera--price">RRP £69.99</p>
-    <p class="center__camera--tagline">Now___enter____even more ways to give</p>   
-  </a>
 
-  <a class="center__camera" href="mini90">
-    <button class="center__camera--series">mini series</button>
-    <img class="center__camera--arrow" src="img/Arrow2.svg"  
-            alt="arrow">
-    <button class="center__camera--add"></button>
-    <h3 class="center__camera--brand">instax <span class="center__camera--model">mini 90</span> </h3>
-    <img class="center__camera--image" src="img/mini90/qqq.png"  
-            alt="instax mini 90">
-    <p class="center__camera--price">RRP £69.99</p>   
-  </a>
 
-  <a class="center__camera" href="mini40">
-    <button class="center__camera--series">mini series</button>
-    <img class="center__camera--arrow" src="img/Arrow2.svg"  
-            alt="arrow">
-    <button class="center__camera--add"></button>
-    <h3 class="center__camera--brand">instax <span class="center__camera--model">mini 40</span> </h3>
-    <img class="center__camera--image" src="img/mini40/qqq.png"  
-            alt="instax mini 40">
-    <p class="center__camera--price">RRP £69.99</p>  
-  </a>
 
-  <a class="center__camera" href="mini11">
-    <button class="center__camera--series">mini series</button>
-    <img class="center__camera--arrow" src="img/Arrow2.svg"  
-            alt="arrow">
-    <button class="center__camera--add"></button>
-    <h3 class="center__camera--brand">instax <span class="center__camera--model">mini 11</span> </h3>
-    <img class="center__camera--image" src="img/mini11/111@1.png"  
-            alt="instax mini 11 ">
-    <p class="center__camera--price">RRP £69.99</p>   
-  </a>
 
-  <a class="center__camera" href="SQUARESQ1">
-    <button class="center__camera--series">Square series</button>
-    <img class="center__camera--arrow" src="img/Arrow2.svg"  
-            alt="arrow">
-    <button class="center__camera--add"></button>
-    <h3 class="center__camera--brand">Square <span class="center__camera--model">SQ1</span> </h3>
-    <img class="center__camera--image" src="img/SQ1/qqq.png"  
-         alt="instax SQ1">
-    <p class="center__camera--price">RRP £69.99</p>    
-  </a>
+    <button class="js-center__arrow--left target" onclick="minusSlide()">
+      <img class="center__arrow--left-svg" src="img/arrowmini.svg" alt="arrow left">
+    </button>
+    
+    <div class="center__slider target">
+    <picture class="js-center__slider--item ">
+      <source srcset="img/mini11/111@1.avif 1x,
+                      img/mini11/111@2.avif 2x"
+                      type="image/avif">
+      <source srcset="img/mini11/111@1.webp 1x,
+                      img/mini11/111@2.webp 2x"
+                      type="image/webp">
+      <img  src="img/mini11/111@1.png" 
+            srcset="img/mini11/111@2.png 2x" 
+            alt="instax mini 11 white 1">
+    </picture>   
 
-  <a class="center__camera" href="SQUARESQ20">
-    <button class="center__camera--series">Square series</button>
-    <img class="center__camera--arrow" src="img/Arrow2.svg"  
-            alt="arrow">
-    <button class="center__camera--add"></button>
-    <h3 class="center__camera--brand">Square <span class="center__camera--model">SQ20</span> </h3>
-    <img class="center__camera--image" src="img/SQ20/qqq.png"  
-            alt="instax SQ20">
-    <p class="center__camera--price">RRP £69.99</p>  
-    <p class="center__camera--tagline">Now___enter____even more ways to give</p>  
-  </a>
 
-  <a class="center__camera">
-    <img class="center__camera--image" src="img/mini11/eee.jpeg"  
-            alt="video instax mini 11">
-      <svg class="center__camera--triangle" width="132" height="172" viewBox="0 0 132 172" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m1 2 129 84L1 170V2Z" stroke="#fff" stroke-width="2"/></svg>
-  </a>
+    <picture style="display: none;" class="js-center__slider--item">
+      <source srcset="img/mini11/112@1.avif 1x,
+                      img/mini11/112@2.avif 2x"
+                      type="image/avif">
+      <source srcset="img/mini11/112@1.webp 1x,
+                      img/mini11/112@2.webp 2x"
+                      type="image/webp">
+      <img  src="img/mini11/112@1.png" 
+            srcset="img/mini11/112@2.png 2x" 
+            alt="instax mini 11 white 2">
+    </picture>
 
-  <a class="center__camera" href="WIDE300">
-    <button class="center__camera--series">WIDE series</button>
-    <img class="center__camera--arrow" src="img/Arrow2.svg"  
-            alt="arrow">
-    <button class="center__camera--add"></button>
-    <h3 class="center__camera--brand">instax <span class="center__camera--model">WIDE 300</span> </h3>
-    <img class="center__camera--image" src="img/WIDE300/qqq.png"  
-            alt="instax WIDE 300">
-    <p class="center__camera--price">RRP £69.99</p>    
-  </a>
+    <picture style="display: none;" class="js-center__slider--item">
+      <source srcset="img/mini11/113@1.avif 1x,
+                      img/mini11/113@2.avif 2x"
+                      type="image/avif">
+      <source srcset="img/mini11/113@1.webp 1x,
+                      img/mini11/113@2.webp 2x"
+                      type="image/webp">
+      <img  src="img/mini11/113@1.png" 
+            srcset="img/mini11/113@2.png 2x" 
+            alt="instax mini 11 white 3">
+    </picture>
+  </div>
+    
+  <button class="js-center__arrow--right target" onclick="plusSlide()">
+    <img class="center__arrow--right-svg" src="img/arrowmini.svg" alt="arrow right">
+  </button>
 
-  <a class="center__camera">
-    <button class="center__camera--series">mini series</button>
-    <img class="center__camera--arrow" src="img/Arrow2.svg"  
-            alt="arrow">
-    <button class="center__camera--add"></button>
-    <h3 class="center__camera--brand">instax <span class="center__camera--model">mini 70</span> </h3>
-    <img class="center__camera--image" src="img/mini11/111@1.png"  
-            alt="instax mini 11">
-    <p class="center__camera--price">RRP £69.99</p> 
-  </a>
 
-  <a class="center__camera">
-    <button class="center__camera--series">mini series</button>
-    <img class="center__camera--arrow" src="img/Arrow2.svg"  
-            alt="arrow">
-    <button class="center__camera--add"></button>
-    <h3 class="center__camera--brand">instax <span class="center__camera--model">SQ 17</span> </h3>
-    <img class="center__camera--image" src="img/mini11/111@1.png"  
-            alt="instax mini 11">
-    <p class="center__camera--price">RRP £69.99</p> 
-  </a>
 
-  <a class="center__camera">
-    <button class="center__camera--series">mini series</button>
-    <img class="center__camera--arrow" src="img/Arrow2.svg"  
-            alt="arrow">
-    <button class="center__camera--add"></button>
-    <h3 class="center__camera--brand">instax <span class="center__camera--model">mini L25</span> </h3>
-    <img class="center__camera--image" src="img/mini11/111@1.png"  
-            alt="instax mini 11">
-    <p class="center__camera--price">RRP £69.99</p>   
-  </a>
+
+
+    <div class="center__quiz target">
+      <p class="center__quiz--header">Which instax is right for you?</p>
+      <p class="center__quiz--text">Take our quiz and find your new favourite!<br>'Opens in Facebook Messenger'</p>
+    </div>
+
+
+
+    <video controls muted autoplay class="center__video target">
+      <source src="img/mini11/11.mp4"
+              type="video/mp4">
+      Sorry, your browser doesn't support embedded videos.
+     </video>
+
+
+
   </main>
 
+  <section class="description">
 
+    <div class="description__top">
+      <h3 class="description__top--text">Beware of fraudulent websites.</h3>
 
+      <div class="description__top--video toggle-button">
+        <picture class="description__top--picture">
+          <source srcset="img/mini11/video@1.avif 1x,
+                        img/mini11/video@2.avif 2x"
+                        type="image/avif">
+          <source srcset="img/mini11/video@1.webp 1x,
+                        img/mini11/video@2.webp 2x"
+                        type="image/webp">
+         <img  src="img/mini11/video@1.jpg" 
+              srcset="img/mini11/video@2.jpg 2x" 
+              alt="video instax mini 11">
+        </picture>
+        <img class="description__top--triangle" src="img/triangle.svg" alt="video play button">
+      </div>
+    </div>
 
- 
+    <div class="description__bottom">
+      <a class="description__bottom--previous" href="/WIDE300">PREVIOUS</a>
+      <a class="description__bottom--number-first" href="/WIDE300">07</a>
+
+      <a class="description__bottom--next description__bottom--next01" href="/mini40">NEXT</a>
+      <a class="description__bottom--number-second description__bottom--01" href="/mini40">01</a>
+
+    </div>
+
+  </section>
+
+  <section class="penultimate">
+    <h4 class="penultimate__text"><a class="penultimate__link" href="#">Now even more ways to give</a></h4>
+  </section>
 
   <div class="sidebar-right">
     <div class="sidebar-right__top">
