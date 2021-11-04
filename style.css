@@ -1855,13 +1855,13 @@ body > *:nth-child(30) {
 	position: absolute;
 	right: 0.5vw; /* 10px */
 	top: 2.86458333333vw;
-	font-size: max(27px, 1.40625vw);
+	font-size: clamp(16px, 1.40625vw, 1.5vw);
 	letter-spacing: -0.1em;
 	color: var(--grey);
 	font-weight: 300;
 }
 .center__camera--model{
-	font-size: max(27px, 1.40625vw);
+	font-size: clamp(16px, 1.40625vw, 1.5vw);
 	letter-spacing: -0.1em;
 	color: var(--black);
 	font-weight: 500;
@@ -1909,10 +1909,19 @@ body > *:nth-child(30) {
 
 .center__camera:nth-of-type(8) .center__camera--image{
 	margin-top: 4vw;
-	max-height: 47%;
+	max-height: 40%;
 }
-
-
+.center__camera:nth-of-type(9) .center__camera--image{
+	margin-top: 4vw;
+	max-height: 57%;
+}
+.center__camera:nth-of-type(10) .center__camera--image{
+	margin-top: 6vw;
+	max-height: 45%;
+}.center__camera:nth-of-type(11) .center__camera--image{
+	margin-top: 6vw;
+	max-height: 55%;
+}
 .center__camera--price{
 	position: absolute;
 	left: 0.52083333333vw; /* 10px */
