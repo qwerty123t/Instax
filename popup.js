@@ -63,13 +63,16 @@ document.addEventListener('keydown', function (evt) {
 
   miniFilmHeader.onclick = function() {
   miniFilmList.classList.toggle('hidden');  
-  miniFilmHeaderSvg.classList.toggle('rotate');}
+  miniFilmHeaderSvg.classList.toggle('rotate');  
+  miniFilmHeaderSvg.classList.toggle('opacity');}
 
   squareFilmHeader.onclick = function() {
   squareFilmList.classList.toggle('hidden');  
-  squareFilmHeaderSvg.classList.toggle('rotate');}
+  squareFilmHeaderSvg.classList.toggle('rotate');
+  squareFilmHeaderSvg.classList.toggle('opacity');}
 
   wideFilmHeader.onclick = function() {
   wideFilmList.classList.toggle('hidden');  
-  wideFilmHeaderSvg.classList.toggle('rotate');}
+  wideFilmHeaderSvg.classList.toggle('rotate');
+  wideFilmHeaderSvg.classList.toggle('opacity');}
 
