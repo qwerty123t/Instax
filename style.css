@@ -97,7 +97,7 @@ body {
 	    -ms-flex-pack: end;
 	        justify-content: flex-end;
 	border-bottom: 2px solid var(--border);
-	margin-top: 68px;
+	margin-top: 5vh;
 	padding-bottom: 2vw;
 
 }
@@ -191,7 +191,7 @@ body {
 	background-color: var(--full-black);
 	box-shadow: 0 0 0 200px var(--full-black);
 	position: sticky;
-	top: 68px;
+	top: 5vh;
 	z-index: 10;
 }
 
@@ -310,9 +310,17 @@ body {
 
 
 
+.hidden	{
+	display: none !important;}
 
-
-
+.rotate  {
+	-webkit-transform: rotate(180deg) !important;
+	    -ms-transform: rotate(180deg) !important;
+	        transform: rotate(180deg) !important;
+}
+.opacity  {
+	opacity:  0.5 !important;
+}
 
 
 
@@ -336,9 +344,8 @@ body {
 	background-color: var(--full-black);
 	z-index: 10;
 	border-bottom: none;
-	overflow: hidden;
 	left: 0;
-	top: 120px;
+	top: 11vh;
 	bottom: 0;
 	right: 0;
 	padding-left: 11.224489796%;
@@ -363,9 +370,9 @@ body {
 
 .nav-top__menu1--alternative {
 	list-style: none;
-	margin: 3.2vh 0px 0px 0px;
-	font-size: max(14px, 0.72916666666vw); /*14px 1.296296296vh*/
-	line-height: max(20px, 1.04166666667vw); /*20px 1.851851851vh*/
+	margin: 2vh 0px 0px 0px;
+	font-size: max(10px, 0.72916666666vw); /*14px 1.296296296vh*/
+	line-height: max(16px, 1.04166666667vw); /*20px 1.851851851vh*/
 	letter-spacing: -0.03em;
 	font-weight: 300;
 	text-align: left;
@@ -375,7 +382,7 @@ body {
 .nav-top__alternative .nav-top__menu1_header--alternative {
 	color: var(--full-white);
 	text-decoration: none;
-	font-size: clamp(60px, 6.25vw, 7vw); /*120px*/
+	font-size: clamp(55px, 6.25vw, 7vw); /*120px*/
 	line-height: 80%; 
 	letter-spacing: -0.05em;
 	font-weight: 300;
@@ -490,9 +497,11 @@ body {
 	width: 100%;
 	height: 100%;
 	border-radius: 36px;
-	font-size: 15px;
+	font-size: 14px;
 	font-weight: 400;
 	letter-spacing: -0.05em;
+	line-height: 100%;
+	text-align: center;
 }
 
 .nav-top__item--alternative .active{
@@ -632,6 +641,7 @@ body {
 	height: max(20px, 1.6vw);
 	border: 2px solid var(--border-alternative);
 	border-radius: 50%;	
+	aspect-ratio: 1/1;
 }
 
 .nav-top__menu2--alternative__joinus {

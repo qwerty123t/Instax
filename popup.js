@@ -1,3 +1,4 @@
+"use strict";
 let popup = document.querySelector('.nav-top__alternative');
 let openPopupButton = document.querySelector('.sidebar-left__center--button-menu');
 

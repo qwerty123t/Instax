@@ -1,3 +1,4 @@
+"use strict";
 let navBottomMenu3Header = document.querySelector('.nav-bottom__menu3_header');
 let navBottomMenu3HeaderSvg = document.querySelector('.nav-bottom__menu3_header--svg');
 let subMenus = document.querySelectorAll('.sub-menu');
