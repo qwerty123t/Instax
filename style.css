@@ -2,16 +2,12 @@
 to do list
 
 1 проверить на валидаторе
-2 Добавить use strict в js
 3 Добавить кнопки переключения цветов
 4 добавить content-visibility: auto; для страниц learn more чтобы увеличить скорость рендера (как lazy load)
 5 улучшить UX увеличив область кнопок как тут
 https://web.dev/learn/css/logical-properties/
 6 Кастомизировать видеоплеер 
-7 добавить звуки
-8 сделать кнопку меню работоспособной в мобильной версии
-9 умкеньшить минимальый размер шрифта для цфир справа
-*/
+7 добавить звуки*/
 ::-webkit-scrollbar {
     width: 0.2vw;
 }
@@ -1416,6 +1412,107 @@ body > *:nth-child(30) {
 	height: 100%;
 }
 
+.header__nav {
+	grid-column: 4/-1;
+	grid-row: 2/3;
+	border-bottom: 3px solid var(--grey);
+	display: flex;
+}
+
+.header__nav--select {
+	font-size: 30px;
+	font-weight: 400;
+	letter-spacing: -0.09em;
+	margin-top: 0.6vw;
+	margin-left: 1vw;
+}
+.header__nav--cameras {
+	font-size: 12px;
+	font-weight: 400;
+	margin-top: 3.55vw;
+	margin-left: 1.7vw;
+	color: var(--grey);
+}
+.header__nav--cameras a{
+	color: var(--black);
+}
+
+.header__nav--series {
+	margin-top: 1vw;
+	margin-left: 13.6vw;
+	width: max(130px, 6.77083333333vw); /*130px 12.037037037vh*/
+	height: max(40px, 2.08333333333vw); /*40px 3.703703703vh*/
+	border: 1px solid var(--border);
+  	font-family: 'DIN Pro';
+	font-size: max(15px, 0.83333333333vw); /*16px*/
+	line-height: 100%;
+	letter-spacing: -0.03em;
+	font-weight: 400;
+	text-align: left;
+	padding-left: 15px;
+	background-color: transparent; 
+	position: relative; 
+}
+
+.header__nav--series::after {
+	position: absolute;
+	content: "";
+	width: max(10px, 0.52083333333vw);	/*10px = 0.925925925vh*/
+	height: max(7px, 0.36458333333vw);	/*7px = 0.648148148vh*/
+	top: max(17px, 0.4vh); /*4px = 0.37037037vh*/
+	right: 1.04166666667vw;
+	background-size: max(10px, 0.52083333333vw) max(7px, 0.36458333333vw);	/*10px 7px*/
+	background-image: url(img/arrowmini.svg);
+	background-repeat: no-repeat; transform: rotate(180deg)
+}
+
+.header__nav--search {
+	width: 29.1666666667vw;
+	height: max(41px,2.13541666667vw);
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid var(--border);
+	color: var(--black);
+	font-size: 12px;
+	letter-spacing: -0.025em;
+	margin-left: 8.33333333333vw; /*160px*/
+	margin-top: 0.88541666666vw; /*17px*/
+}
+.header__nav--search::placeholder {
+	color: var(--border);
+	font-weight: 400;
+  }
+
+  .header__nav--search:focus{
+    outline: none;
+}
+
+.header__nav--search-submit {
+	background-color: transparent;
+	box-sizing: border-box;
+	border: none;
+	border-bottom: 1px solid var(--border);
+	height: max(41px,2.13541666667vw);
+	padding: 10px;
+	margin-top: 0.88541666666vw;
+}
+
+.header__nav--compare {
+	margin-top: 1vw;
+	margin-left: 2.6vw;
+	width: max(130px, 6.77083333333vw); /*130px 12.037037037vh*/
+	height: max(40px, 2.08333333333vw); /*40px 3.703703703vh*/
+  	padding-bottom: 0.462962962vh; /*5px*/
+	border: 1px solid var(--border);
+  	font-family: 'DIN Pro';
+	font-size: max(15px, 0.83333333333vw); /*16px*/
+	line-height: 100%;
+	letter-spacing: -0.03em;
+	font-weight: 400;
+	background-color: transparent; 
+}
+
+
 .sidebar-left {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -2403,6 +2500,7 @@ body > *:nth-child(30) {
 	color: var(--black);
 	font-size: max(12px, 0.625vw);
 	line-height: 70%;
+	text-align: center;
 }
 
 .center__camera--arrow{
@@ -2427,6 +2525,13 @@ body > *:nth-child(30) {
 .center__camera:nth-of-type(1) .center__camera--add{
 	width: 62.711864406%;  /*370px*/
 }
+.center__camera:nth-of-type(6) .center__camera--add{
+	width: 62.711864406%;  /*370px*/
+}
+.center__camera:nth-of-type(10) .center__camera--add{
+	width: 62.711864406%;  /*370px*/
+}
+
 .center__camera--add::before {
 	position: absolute;
 	bottom: -11px;
@@ -2475,6 +2580,7 @@ body > *:nth-child(30) {
 .center__camera--image img{
 	max-width: 100%;
 	max-height: 100%;
+	object-fit: cover;
 }
 .center__camera:nth-of-type(1) .center__camera--image{
 	max-height: 74%;
