@@ -739,6 +739,7 @@ body {
 }
 .center__camera:nth-of-type(7) {
 	background-color: #F9F9F9;
+	height: 50vw;
 }
 .center__camera:nth-of-type(8) {
 	background-color: #F5F5F5;
@@ -836,32 +837,47 @@ body {
 }
 .center__camera:nth-of-type(1) .center__camera--image{
 	max-height: 74%;
-	align-self: flex-end;
 	display: flex;
+	align-self: flex-end;
 	justify-content: center;
 }
 
 .center__camera:nth-of-type(2) .center__camera--image{
-	max-height: 45%;
-	margin-top: 4vw;
+	max-height: 65%;
+	margin-top: 7vw;
+	display: flex;
+	align-self: center;
+	justify-content: center;
 }
 .center__camera:nth-of-type(3) .center__camera--image{
-	max-height: 50%;
+	max-height: 70%;
 	margin-top: 1vw;
+	display: flex;
+	align-self: center;
+	justify-content: center;
 }
 
 .center__camera:nth-of-type(4) .center__camera--image{
-	max-height: 50%;
+	max-height: 70%;
 	margin-top: 1vw;
+	display: flex;
+	align-self: center;
+	justify-content: center;
 }
 .center__camera:nth-of-type(5) .center__camera--image{
-	max-height: 50%;
+	max-height: 70%;
 	margin-top: 3vw;
+	display: flex;
+	align-self: center;
+	justify-content: center;
 }
 .center__camera:nth-of-type(6) .center__camera--image{
-	max-height: 47%;
+	max-height: 60%;
 	margin-top: 5vw;
 	margin-right: 1vw;
+	display: flex;
+	align-self: center;
+	justify-content: center;
 }
 .center__camera:nth-of-type(7) .center__camera--image{
 	max-width: 80%;
@@ -869,25 +885,29 @@ body {
 }
 .center__camera--triangle{
 	position: absolute;
-	bottom: 1.2vw;
-	left: 50%;
+	display: flex;
+	align-self: center;
+	justify-content: center;
+	margin-left: 25%;
+	width: 20vw;
+}
+.center__video{
+	width: 80%;
 }
 
 .center__camera:nth-of-type(8) .center__camera--image{
 	margin-top: 4vw;
-	max-height: 40%;
+	max-height: 60%;
+	display: flex;
+	align-self: center;
+	justify-content: center;
 }
-.center__camera:nth-of-type(9) .center__camera--image{
-	margin-top: 4vw;
-	max-height: 57%;
+
+.center__camera:nth-of-type(9), .center__camera:nth-of-type(10), .center__camera:nth-of-type(11){
+	display: none;
 }
-.center__camera:nth-of-type(10) .center__camera--image{
-	margin-top: 5.5vw;
-	max-height: 45%;
-}.center__camera:nth-of-type(11) .center__camera--image{
-	margin-top: 5vw;
-	max-height: 55%;
-}
+
+
 .center__camera--price{
 	position: absolute;
 	left: 0.52083333333vw; /* 10px */
