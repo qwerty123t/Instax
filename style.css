@@ -215,6 +215,7 @@ body {
 	padding-bottom: 5%;
 	border-bottom: 2px solid var(--black);}
 
+
 .header3__brand {
 	font-weight: 300;
 	font-size: 14.285714285vw; /* 70px from 490px */
@@ -303,6 +304,30 @@ body {
 	margin-bottom: 2vw;
 	margin-left: -0.7vw;
 }
+
+.header__nav {
+	padding-top: 5%;
+	padding-bottom: 5%;}
+
+.header__nav--select {
+	font-weight: 300;
+	font-size: 14.285714285vw; /* 70px from 490px */
+	line-height: 100%; 
+	letter-spacing: -0.1em;
+	color: var(--black);
+	margin: 0 0 0 -1.6vw;}
+
+.header__nav--series {
+	display: none;}
+
+.header__nav--search {
+	display: none;}
+
+.header__nav--search-submit {
+	display: none;}
+
+.header__nav--compare {
+	display: none;}
 
 
 
@@ -689,14 +714,13 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100%;
 	border: 1px solid var(--border);  
-	width: 100%;
-
-	
+	width: 77.551020408vw;
+	height: 77.551020408vw;
 }
 .center__camera:nth-of-type(1) {
-	background-color: var(--full-white);border-collapse: collapse;
+	background-color: var(--full-white);
+	border-collapse: collapse;
 }
 .center__camera:nth-of-type(2) {
 	background-color: #FDF8F5;
@@ -728,18 +752,22 @@ body {
 .center__camera:nth-of-type(11) {
 	background-color: var(--full-white);
 }
-
-
-.center__camera--series{
+.center__camera--series-wrapper{
 	border: 1px solid var(--border);
 	position: absolute;
 	top: 1vw; /* 20px */
 	left: 0.52083333333vw; /* 10px */
 	width: 15.20833333333vw; /*100px*/
 	height: 5.08333333333vw; /*40px*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.center__camera--series{
 	font-size: max(12px, 0.625vw);
 	line-height: 70%;
-	background-color: transparent;
+	color: var(--black);
 }
 
 .center__camera--arrow{
@@ -759,6 +787,8 @@ body {
 	width: 39.057239057%; 
 	height: 6.08333333333vw; /* 40px */
 	background-color: transparent;
+	color: var(--grey);
+	text-align: right;
 }
 
 .center__camera:nth-of-type(1) .center__camera--add{
@@ -778,21 +808,11 @@ body {
 	border: 1px solid var(--border);
 	}
 
-.center__camera--add::after {
-	content: "Add to Wishlist";
-	position: absolute;
-	right: 0; 
-	top: 1vw;
-	font-size: max(10px, 0.52083333333vw);
-	letter-spacing: -0.03em;
-	color: var(--grey);
-}
-
 
 .center__camera--brand{
 	position: absolute;
 	right: 0.5vw; /* 10px */
-	top: 2.86458333333vw;
+	top: 12.86458333333vw;
 	font-size: clamp(16px, 1.40625vw, 1.5vw);
 	letter-spacing: -0.1em;
 	color: var(--grey);
@@ -804,18 +824,21 @@ body {
 	color: var(--black);
 	font-weight: 500;
 }
-
-
 .center__camera--image{
 	object-fit: contain;
-	max-width: 100%;
-	max-height: 60%;
+	width: 100%;
+	height: 100%;
 }
-.center__camera:nth-of-type(1) picture img{
-	display: block;max-width: 100%;
-	max-height: 60%;
+.center__camera--image img{
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: cover;
+}
+.center__camera:nth-of-type(1) .center__camera--image{
+	max-height: 74%;
 	align-self: flex-end;
-	margin-right: 0.9vw;	
+	display: flex;
+	justify-content: center;
 }
 
 .center__camera:nth-of-type(2) .center__camera--image{
@@ -1500,6 +1523,7 @@ body > *:nth-child(30) {
 .header__nav--compare {
 	margin-top: 1vw;
 	margin-left: 2.6vw;
+	margin-right: 1vw;
 	width: max(130px, 6.77083333333vw); /*130px 12.037037037vh*/
 	height: max(40px, 2.08333333333vw); /*40px 3.703703703vh*/
   	padding-bottom: 0.462962962vh; /*5px*/
@@ -2449,7 +2473,7 @@ body > *:nth-child(30) {
 }
 .center__camera:nth-of-type(1) {
 	grid-column: 1 / 3;
-	background-color: var(--full-white);border-collapse: collapse;
+	background-color: var(--full-white);
 }
 .center__camera:nth-of-type(2) {
 	background-color: #FDF8F5;
@@ -2518,8 +2542,14 @@ body > *:nth-child(30) {
 	border: none;
 	border-bottom: 2px solid var(--border);
 	width: 39.057239057%; 
-	height: 2.08333333333vw; /* 40px */
+	height: max(20px, 2.08333333333vw); /* 40px */
 	background-color: transparent;
+	font-size: max(10px, 0.52083333333vw);
+	letter-spacing: -0.03em;
+	color: var(--grey);
+	text-align: right;
+	padding-top: 10px;
+	padding-bottom: 2px;
 }
 
 .center__camera:nth-of-type(1) .center__camera--add{
@@ -2546,21 +2576,12 @@ body > *:nth-child(30) {
 	border: 1px solid var(--border);
 	}
 
-.center__camera--add::after {
-	content: "Add to Wishlist";
-	position: absolute;
-	right: 0; 
-	top: 1vw;
-	font-size: max(10px, 0.52083333333vw);
-	letter-spacing: -0.03em;
-	color: var(--grey);
-}
 
 
 .center__camera--brand{
 	position: absolute;
 	right: 0.5vw; /* 10px */
-	top: 2.86458333333vw;
+	top: max(30px, 2.86458333333vw);
 	font-size: clamp(16px, 1.40625vw, 1.5vw);
 	letter-spacing: -0.1em;
 	color: var(--grey);
@@ -2637,6 +2658,7 @@ body > *:nth-child(30) {
 	position: absolute;
 	bottom: 1.2vw;
 	left: 50%;
+	pointer-events: none;
 }
 .center__camera:nth-of-type(8) .center__camera--image{
 	max-height: 40%;
