@@ -3230,7 +3230,7 @@ body > *:nth-child(30) {
 
 
 
-.sidebar-right__bottom--facebook{
+.sidebar-right__bottom--bacebook{
 	width: 2.27272727273vw; /*45px*/
 }
 .sidebar-right__bottom--instagram{
@@ -3242,13 +3242,13 @@ body > *:nth-child(30) {
 
 /* Обертка для svg, чтобы при наведении border не окрашивался*/
 
-.sidebar-right__bottom--link-fb{
+.sidebar-right__bottom--link-bb{
 	width: 2.27272727273vw; /*45px*/
 	height: 2.27272727273vw; /*45px*/
 	border: 1px solid var(--grey);
 	border-radius: 50%;
 }
-.sidebar-right__bottom--link-fb:hover .sidebar-right__bottom--facebook{
+.sidebar-right__bottom--link-bb:hover .sidebar-right__bottom--facebook{
 	filter: grayscale(100%) brightness(0%);
 	-webkit-filter: grayscale(100%) brightness(0%);
 	-moz-filter: grayscale(100%) brightness(0%);
