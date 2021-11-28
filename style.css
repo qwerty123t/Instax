@@ -1439,7 +1439,9 @@ body > *:nth-child(30) {
 	grid-column: 4/-1;
 	grid-row: 2/3;
 	border-bottom: 3px solid var(--grey);
-	display: flex;
+	display: grid;
+	grid-template-columns: 38.461538461% 10.256410256% 38.461538461% 12.82051284%; /*600px, 160px, 600px, 200px from 1560px*/
+	grid-template-rows: 50% 50%;
 }
 
 .header__nav--select {
@@ -1448,21 +1450,23 @@ body > *:nth-child(30) {
 	letter-spacing: -0.09em;
 	margin-top: 0.6vw;
 	margin-left: 1vw;
+	grid-column: 1/2;
+	grid-row: 1/2;
 }
 .header__nav--cameras {
 	font-size: 12px;
 	font-weight: 400;
-	margin-top: 3.55vw;
-	margin-left: 1.7vw;
+	margin: 1vh 0 0 6.2vw;
 	color: var(--grey);
+	grid-column: 1/2;
+	grid-row: 2/3;
 }
 .header__nav--cameras a{
 	color: var(--black);
 }
 
 .header__nav--series {
-	margin-top: 1vw;
-	margin-left: 13.6vw;
+	margin: auto 0 0 auto;
 	width: max(130px, 6.77083333333vw); /*130px 12.037037037vh*/
 	height: max(40px, 2.08333333333vw); /*40px 3.703703703vh*/
 	border: 1px solid var(--border);
@@ -1475,6 +1479,8 @@ body > *:nth-child(30) {
 	padding-left: 15px;
 	background-color: transparent; 
 	position: relative; 
+	grid-column: 1/2;
+	grid-row: 1/2;
 }
 
 .header__nav--series::after {
@@ -1490,7 +1496,7 @@ body > *:nth-child(30) {
 }
 
 .header__nav--search {
-	width: 29.1666666667vw;
+	width: 100%;
 	height: max(41px,2.13541666667vw);
 	background-color: transparent;
 	border: none;
@@ -1498,8 +1504,9 @@ body > *:nth-child(30) {
 	color: var(--black);
 	font-size: 12px;
 	letter-spacing: -0.025em;
-	margin-left: 8.33333333333vw; /*160px*/
-	margin-top: 0.88541666666vw; /*17px*/
+	margin-top: auto;
+	grid-column: 3/4;
+	grid-row: 1/2;
 }
 .header__nav--search::placeholder {
 	color: var(--border);
@@ -1517,16 +1524,17 @@ body > *:nth-child(30) {
 	border-bottom: 1px solid var(--border);
 	height: max(41px,2.13541666667vw);
 	padding: 10px;
-	margin-top: 0.88541666666vw;
+	margin: auto 0 0 auto;
+	grid-column: 3/4;
+	grid-row: 1/2;
+
 }
 
 .header__nav--compare {
-	margin-top: 1vw;
-	margin-left: 2.6vw;
-	margin-right: 1vw;
-	width: max(130px, 6.77083333333vw); /*130px 12.037037037vh*/
+	margin: auto 1vw 0 auto;
+	width: max(80px, 6.77083333333vw); /*130px 12.037037037vh*/
 	height: max(40px, 2.08333333333vw); /*40px 3.703703703vh*/
-  	padding-bottom: 0.462962962vh; /*5px*/
+  	padding-bottom: 2px; 
 	border: 1px solid var(--border);
   	font-family: 'DIN Pro';
 	font-size: max(15px, 0.83333333333vw); /*16px*/
@@ -1534,6 +1542,8 @@ body > *:nth-child(30) {
 	letter-spacing: -0.03em;
 	font-weight: 400;
 	background-color: transparent; 
+	grid-column: 4/5;
+	grid-row: 1/2;
 }
 
 
