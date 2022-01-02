@@ -61,12 +61,14 @@ https://web.dev/learn/css/logical-properties/
 	margin: 0;
 	padding: 0;
 }
-
+body {
+	font-family: 'DIN Pro', system-ui, sans-serif;
+	}
 
 /*mobile*/
 @media screen and (max-width: 699px) { 
 body {
-	font-family: 'DIN Pro', 'Helvetica Neue', 'Helvetica', sans-serif;
+	font-family: 'DIN Pro', system-ui, sans-serif;
 	background-color: var(--background);
 	max-width: 77.551020408%;
 	margin: 0 auto;
@@ -1060,7 +1062,7 @@ body {
 
 
 body {
-	font-family: 'DIN Pro', sans-serif;
+	font-family: 'DIN Pro', system-ui, sans-serif;
 	display: -ms-grid;
 	display: grid;
 	gap: 0px;
@@ -1445,7 +1447,7 @@ body > *:nth-child(30) {
 }
 
 .header__nav--select {
-	font-size: 30px;
+	font-size: 1.5625vw;
 	font-weight: 400;
 	letter-spacing: -0.09em;
 	margin-top: 0.6vw;
@@ -1454,7 +1456,7 @@ body > *:nth-child(30) {
 	grid-row: 1/2;
 }
 .header__nav--cameras {
-	font-size: 12px;
+	font-size: 0.625vw;
 	font-weight: 400;
 	margin: 1vh 0 0 6.2vw;
 	color: var(--grey);
@@ -1481,6 +1483,8 @@ body > *:nth-child(30) {
 	position: relative; 
 	grid-column: 1/2;
 	grid-row: 1/2;
+	display: flex;
+	align-items: center;
 }
 
 .header__nav--series::after {
@@ -1488,7 +1492,6 @@ body > *:nth-child(30) {
 	content: "";
 	width: max(10px, 0.52083333333vw);	/*10px = 0.925925925vh*/
 	height: max(7px, 0.36458333333vw);	/*7px = 0.648148148vh*/
-	top: max(17px, 0.4vh); /*4px = 0.37037037vh*/
 	right: 1.04166666667vw;
 	background-size: max(10px, 0.52083333333vw) max(7px, 0.36458333333vw);	/*10px 7px*/
 	background-image: url(img/arrowmini.svg);
@@ -1502,7 +1505,7 @@ body > *:nth-child(30) {
 	border: none;
 	border-bottom: 1px solid var(--border);
 	color: var(--black);
-	font-size: 12px;
+	font-size: 0.625vw;
 	letter-spacing: -0.025em;
 	margin-top: auto;
 	grid-column: 3/4;
