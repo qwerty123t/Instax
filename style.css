@@ -1447,7 +1447,7 @@ body > *:nth-child(30) {
 }
 
 .header__nav--select {
-	font-size: 1.5625vw;
+	font-size: max(18px, 1.5625vw);
 	font-weight: 400;
 	letter-spacing: -0.09em;
 	margin-top: 0.6vw;
@@ -1456,7 +1456,7 @@ body > *:nth-child(30) {
 	grid-row: 1/2;
 }
 .header__nav--cameras {
-	font-size: 0.625vw;
+	font-size: max(14px, 0.625vw);
 	font-weight: 400;
 	margin: 1vh 0 0 6.2vw;
 	color: var(--grey);
@@ -1505,7 +1505,7 @@ body > *:nth-child(30) {
 	border: none;
 	border-bottom: 1px solid var(--border);
 	color: var(--black);
-	font-size: 0.625vw;
+	font-size: max(14px, 0.625vw);
 	letter-spacing: -0.025em;
 	margin-top: auto;
 	grid-column: 3/4;
