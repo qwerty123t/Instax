@@ -1299,7 +1299,7 @@ body > *:nth-child(30) {
 	color: var(--black);
 	border: none;
 	background: none;
-	font-family: 'DIN Pro', 'Helvetica Neue', 'Helvetica', sans-serif;
+	font-family: 'DIN Pro', system-ui, sans-serif;
 	font-size: clamp(14px, 0.729166666vw, 2vh); /*14px = 1.3vh*/
 	line-height: clamp(14px, 0.729166666vw, 2vh);
 	font-weight: 500;
@@ -1314,7 +1314,7 @@ body > *:nth-child(30) {
 	border: none;
 	margin-top: -0.2vh;
 	margin-right: 1vw;
-	font-family: 'DIN Pro', 'Helvetica Neue', 'Helvetica', sans-serif;
+	font-family: 'DIN Pro', system-ui, sans-serif;
 	font-size: clamp(14px, 0.729166666vw, 2vh); /*14px = 1.3vh*/
 	line-height: clamp(14px, 0.729166666vw, 2vh);
 	font-weight: 300;
@@ -1472,7 +1472,7 @@ body > *:nth-child(30) {
 	width: max(130px, 6.77083333333vw); /*130px 12.037037037vh*/
 	height: max(40px, 2.08333333333vw); /*40px 3.703703703vh*/
 	border: 1px solid var(--border);
-  	font-family: 'DIN Pro';
+	font-family: 'DIN Pro', system-ui, sans-serif;
 	font-size: max(15px, 0.83333333333vw); /*16px*/
 	line-height: 100%;
 	letter-spacing: -0.03em;
@@ -1539,7 +1539,7 @@ body > *:nth-child(30) {
 	height: max(40px, 2.08333333333vw); /*40px 3.703703703vh*/
   	padding-bottom: 2px; 
 	border: 1px solid var(--border);
-  	font-family: 'DIN Pro';
+	font-family: 'DIN Pro', system-ui, sans-serif;
 	font-size: max(15px, 0.83333333333vw); /*16px*/
 	line-height: 100%;
 	letter-spacing: -0.03em;
@@ -2868,7 +2868,7 @@ body > *:nth-child(30) {
 	height: max(40px, 2.08333333333vw); /*40px 3.703703703vh*/
   	padding-bottom: 0.462962962vh; /*5px*/
 	border: 1px solid var(--border);
-  	font-family: 'DIN Pro';
+	font-family: 'DIN Pro', system-ui, sans-serif;
 	font-size: max(16px, 0.83333333333vw); /*16px*/
 	line-height: 100%;
 	letter-spacing: -0.03em;
@@ -2909,7 +2909,7 @@ body > *:nth-child(30) {
 	height: max(40px, 2.08333333333vw); /*40px 3.703703703vh*/
   	padding-bottom: 0.462962962vh; /*5px*/
 	border: 1px solid var(--border);
-  	font-family: 'DIN Pro';
+	font-family: 'DIN Pro', system-ui, sans-serif;
 	font-size: max(16px, 0.83333333333vw); /*16px*/
 	line-height: 100%;
 	letter-spacing: -0.03em;
